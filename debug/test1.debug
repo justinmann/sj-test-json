@@ -1,0 +1,137 @@
+document_root()'stack value {
+  v'stack value : value(this = value(
+    root'heap document : root,
+    v'ptr : v
+  ))
+  --c--
+  v.v = _parent->d;
+  --c--
+  v
+}
+
+hash![type, bool]()'stack hash![type, bool] {
+  --cdefine--
+  #ifndef type_bool_hash_typedef
+  #define type_bool_hash_typedef
+  KHASH_INIT_TYPEDEF(type_bool_hash_type, int32_t, bool)
+  #endif
+  --cdefine--
+  --cfunction--
+  #ifndef type_bool_hash_function
+  #define type_bool_hash_function
+  #if false
+  KHASH_INIT_FUNCTION_DEREF(type_bool_hash_type, int32_t, bool, 1, INVALID, INVALID)
+  #else
+  KHASH_INIT_FUNCTION(type_bool_hash_type, int32_t, bool, 1, INVALID, INVALID)
+  #endif
+  #endif
+  --cfunction--
+  --c--
+  _this->_hash = kh_init(type_bool_hash_type);
+  --c--
+  this
+}
+
+log(minlevel'loglevel=, traceincludes'stack hash![type, bool]?=, debugincludes'stack hash![type, bool]?=, infoincludes'stack hash![type, bool]?=, warnincludes'stack hash![type, bool]?=, errorincludes'stack hash![type, bool]?=, fatalincludes'stack hash![type, bool]?=)'stack log {
+  this
+}
+
+string(offset'i32=, count'i32=, data'stack array!char=, _isnullterminated'bool=)'stack string {
+  this
+}
+
+value(root'heap document:, v'ptr:)'stack value {
+  this
+}
+
+writeline(data'stack string:)'void {
+  --c--
+  debugout("%s\n", string_char(data));
+  --c--
+}
+
+global()'void {
+  import  {
+  }
+  --cstruct--
+  struct {
+  int refcount;
+  int size;
+  int count;
+  char data[0];
+  } g_empty = { 1, 0, 0 };
+  --cstruct--
+  import  {
+  }
+  import  {
+  }
+  f32_pi'f32 : 3.14159265358979323846ff
+  u32_maxvalue'u32 : (uint32_t)4294967295uu
+  i32_maxvalue'i32 : -1i - 2147483647i
+  i32_minvalue'i32 : 2147483647i
+  {
+    trace'loglevel : 0
+    debug'loglevel : 1
+    info'loglevel : 2
+    warn'loglevel : 3
+    error'loglevel : 4
+    fatal'loglevel : 5
+  }
+  log_includeall'stack hash![type, bool]? : empty'stack hash![type, bool]?
+  log_excludeall'stack hash![type, bool]? : value(hash![type, bool](this = hash![type, bool]()))
+  log'stack log : log(this = log(
+    minlevel'loglevel = minlevel,
+    traceincludes'stack hash![type, bool]? = traceincludes,
+    debugincludes'stack hash![type, bool]? = debugincludes,
+    infoincludes'stack hash![type, bool]? = infoincludes,
+    warnincludes'stack hash![type, bool]? = warnincludes,
+    errorincludes'stack hash![type, bool]? = errorincludes,
+    fatalincludes'stack hash![type, bool]? = fatalincludes
+  ))
+  --cdefine--
+  char* string_char(sjs_string* str);
+  --cdefine--
+  --cfunction--
+  char* string_char(sjs_string* str) {
+  INVALID(str);
+  return ((sjs_array*)str->data.v)->data;
+  }
+  --cfunction--
+  --c--
+  ptr_init();
+  weakptr_init();
+  --c--
+  clocks_per_sec'i32 = 0i
+  --c--
+  g_clocks_per_sec = CLOCKS_PER_SEC;
+  --c--
+  import  {
+  }
+  --cinclude--
+  #include <lib/sj-lib-common/common.h>
+  --cinclude--
+  --cfunction--
+  #include <lib/sj-lib-common/common.cpp>
+  --cfunction--
+  --cinclude--
+  --cinclude--
+  --cfunction--
+  typedef rapidjson::GenericValue<rapidjson::UTF8<>, rapidjson::MemoryPoolAllocator<> > JsonValue;
+  --cfunction--
+  import  {
+  }
+  text'stack string : string(this = string(
+    offset'i32 = offset,
+    count'i32 = count,
+    data'stack array!char = data,
+    _isnullterminated'bool = _isnullterminated
+  ))
+  data'stack value : document_root(
+    parent: this
+  )
+  writeline(
+    data'stack string : data
+  )
+  void
+}
+

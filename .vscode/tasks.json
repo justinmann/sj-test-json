@@ -1,0 +1,76 @@
+{
+    // See https://go.microsoft.com/fwlink/?LinkId=733558
+    // for the documentation about the tasks.json format
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "sjc",
+            "type": "shell",
+            "command": "../sj/sjc main.sj --no-lines --c-file=main.cpp",
+            "promptOnClose": true,
+            "group": "build",
+            "presentation": {
+                "echo": true,
+                "reveal": "always",
+                "focus": true,
+                "panel": "shared"
+            },
+            "problemMatcher": [
+                "$gcc"
+            ]
+        },
+        {
+            "label": "gcc",
+            "type": "shell",
+            "command": "g++ -g main.cpp -I. -o ${workspaceFolderBasename}",
+            "dependsOn" : "sjc",
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            },
+            "problemMatcher": [
+                "$gcc"
+            ]
+        },
+        {
+            "label": "gcc-release",
+            "type": "shell",
+            "command": "g++ -O3 -g main.cpp -I. -o ${workspaceFolderBasename}",
+            "dependsOn" : "sjc",
+            "group": "build",
+            "problemMatcher": [
+                "$gcc"
+            ]
+        },
+        {
+            "label": "gcc-profiler",
+            "type": "shell",
+            "command": "g++ -O3 -pg main.cpp -I. -o ${workspaceFolderBasename}",
+            "dependsOn" : "sjc",
+            "group": "build",
+            "problemMatcher": [
+                "$gcc"
+            ]
+        },
+        {
+            "label": "run",
+            "type": "shell",
+            "command": "./${workspaceFolderBasename}.exe",
+            "dependsOn" : "gcc-profiler",
+            "group": "build",
+            "problemMatcher": [
+                "$gcc"
+            ]
+        },
+        {
+            "label": "profile",
+            "type": "shell",
+            "command": "gprof ${workspaceFolderBasename}.exe > prof.stats",
+            "dependsOn" : "run",
+            "group": "build",
+            "problemMatcher": [
+                "$gcc"
+            ]
+        }
+    ]
+}
