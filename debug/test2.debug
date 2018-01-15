@@ -41,6 +41,16 @@ array_clone(offset'i32:, count'i32:, newsize'i32:)'stack array!json.value {
   ))
 }
 
+array_each(cb'local (:stack value)void:)'void {
+  for i : 0i to array_getcount(
+      parent: this
+    ) {
+    cb(
+      param0'stack value : param0
+    )
+  }
+}
+
 array_getat(index'i32:)'char {
   --c--
   sjs_array* arr = (sjs_array*)_parent->v;
@@ -48,6 +58,17 @@ array_getat(index'i32:)'char {
   halt("getAt: out of bounds\n");
   }
   char* p = (char*)arr->data;
+  return;;       
+  --c--
+}
+
+array_getat(index'i32:)'stack value {
+  --c--
+  sjs_array* arr = (sjs_array*)_parent->v;
+  if (index >= arr->count || index < 0) {
+  halt("getAt: out of bounds\n");
+  }
+  sjs_json_value* p = (sjs_json_value*)arr->data;
   return;;       
   --c--
 }
@@ -84,6 +105,8 @@ array_initat(index'i32:, item'stack value:)'void {
   arr->count = index + 1;
   --c--
 }
+
+
 
 halt(reason'stack string:)'void {
   --c--
@@ -135,6 +158,44 @@ hash![type, bool]()'stack hash![type, bool] {
   _this->_hash = kh_init(type_bool_hash_type);
   --c--
   this
+}
+
+hash_each(cb'local (:stack string, :stack value)void:)'void {
+  --c--
+  khash_t(string_value_hash_type)* p = (khash_t(string_value_hash_type)*)_parent->_hash;
+  for (khiter_t k = kh_begin(p); k != kh_end(p); ++k) {
+  if (kh_exist(p, k)) {
+  cb._cb(
+  cb._parent, 
+  #if true
+  &kh_key(p, k), 
+  #else
+  kh_key(p, k), 
+  #endif
+  #if true
+  &kh_value(p, k)
+  #else
+  kh_value(p, k)
+  #endif
+  );
+  }
+  }
+  --c--
+}
+
+hash_getat(key'stack string:)'stack value? {
+  --c--
+  khash_t(string_value_hash_type)* p = (khash_t(string_value_hash_type)*)_parent->_hash;
+  #if true
+  khiter_t k = kh_get(string_value_hash_type, p, *key);
+  #else
+  khiter_t k = kh_get(string_value_hash_type, p, key);
+  #endif
+  if (k == kh_end(p)) {
+  return;
+  }
+  return;;
+  --c--
 }
 
 hash_setat(key'stack string:, val'stack value:)'void {
@@ -505,27 +566,27 @@ string_substr(o'i32:, c'i32:)'stack string {
   ))
 }
 
-test(s'stack string:)'void {
-  data'stack value? : parse(
-    s'stack string : s
-  )
-  ifValue  {
-    writeline(
-      data'stack string : data
-    )
-  } elseEmpty {
-    writeline(
-      data'stack string : data
-    )
-  }
-}
-
 tuple2![i32, stack string](item1'i32:, item2'stack string:)'stack tuple2![i32, string] {
   this
 }
 
 tuple2![i32, stack value](item1'i32:, item2'stack value:)'stack tuple2![i32, json.value] {
   this
+}
+
+value(s'stack string?:, a'stack array!json.value?:, h'stack hash![string, json.value]?:)'stack value {
+  this
+}
+
+value_getat(key'stack string:)'stack value? {
+  ifValue  {
+    hash_getat(
+      parent: this,
+      key'stack string : key
+    )
+  } elseEmpty {
+    empty'stack value?
+  }
 }
 
 writeline(data'stack string:)'void {
@@ -607,30 +668,60 @@ global()'void {
     data'stack array!char = data,
     _isnullterminated'bool = _isnullterminated
   ))
-  test(
+  data'stack value? : parse(
     s'stack string : s
   )
-  test(
-    s'stack string : s
-  )
-  test(
-    s'stack string : s
-  )
-  test(
-    s'stack string : s
-  )
-  test(
-    s'stack string : s
-  )
-  test(
-    s'stack string : s
-  )
-  test(
-    s'stack string : s
-  )
-  test(
-    s'stack string : s
-  )
+  ifValue  {
+    t'stack value : if isValid(if isValid(if isValid(value_getat(
+      parent: this,
+      key'stack string : key
+    )) getValue(value_getat(
+      parent: this,
+      key'stack string : key
+    )).a else empty'stack array!json.value?) value(array_getat(
+      parent: this,
+      index'i32 : index
+    )) else empty'stack value?) getValue(if isValid(if isValid(value_getat(
+      parent: this,
+      key'stack string : key
+    )) getValue(value_getat(
+      parent: this,
+      key'stack string : key
+    )).a else empty'stack array!json.value?) value(array_getat(
+      parent: this,
+      index'i32 : index
+    )) else empty'stack value?) else value(this = value(
+      s'stack string? : s,
+      a'stack array!json.value? : a,
+      h'stack hash![string, json.value]? : h
+    ))
+    writeline(
+      data'stack string : data
+    )
+    writeline(
+      data'stack string : data
+    )
+    writeline(
+      data'stack string : data
+    )
+    writeline(
+      data'stack string : data
+    )
+    if isValid(data.h) hash_each(
+      parent: this,
+      cb'local (:stack string, :stack value)void : cb
+    )
+    if isValid(if isValid(value_getat(
+      parent: this,
+      key'stack string : key
+    )) getValue(value_getat(
+      parent: this,
+      key'stack string : key
+    )).a else empty'stack array!json.value?) array_each(
+      parent: this,
+      cb'local (:stack value)void : cb
+    )
+  }
   void
 }
 

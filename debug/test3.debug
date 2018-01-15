@@ -1,0 +1,189 @@
+array!json.value_asjson.value(x'stack array!json.value:)'stack value {
+  value(this = value(
+    s'stack string? : s,
+    a'stack array!json.value? : a,
+    h'stack hash![string, json.value]? : h
+  ))
+}
+
+bool_asjson.value(x'bool:)'stack value {
+  value(this = value(
+    s'stack string? : s,
+    a'stack array!json.value? : a,
+    h'stack hash![string, json.value]? : h
+  ))
+}
+
+f32_asjson.value(x'f32:)'stack value {
+  value(this = value(
+    s'stack string? : s,
+    a'stack array!json.value? : a,
+    h'stack hash![string, json.value]? : h
+  ))
+}
+
+hash![string, json.value]_asjson.value(x'stack hash![string, json.value]:)'stack value {
+  value(this = value(
+    s'stack string? : s,
+    a'stack array!json.value? : a,
+    h'stack hash![string, json.value]? : h
+  ))
+}
+
+hash![type, bool]()'stack hash![type, bool] {
+  --cdefine--
+  #ifndef type_bool_hash_typedef
+  #define type_bool_hash_typedef
+  KHASH_INIT_TYPEDEF(type_bool_hash_type, int32_t, bool)
+  #endif
+  --cdefine--
+  --cfunction--
+  #ifndef type_bool_hash_function
+  #define type_bool_hash_function
+  #if false
+  KHASH_INIT_FUNCTION_DEREF(type_bool_hash_type, int32_t, bool, 1, INVALID, INVALID)
+  #else
+  KHASH_INIT_FUNCTION(type_bool_hash_type, int32_t, bool, 1, INVALID, INVALID)
+  #endif
+  #endif
+  --cfunction--
+  --c--
+  _this->_hash = kh_init(type_bool_hash_type);
+  --c--
+  this
+}
+
+i32_asjson.value(x'i32:)'stack value {
+  value(this = value(
+    s'stack string? : s,
+    a'stack array!json.value? : a,
+    h'stack hash![string, json.value]? : h
+  ))
+}
+
+log(minlevel'loglevel=, traceincludes'stack hash![type, bool]?=, debugincludes'stack hash![type, bool]?=, infoincludes'stack hash![type, bool]?=, warnincludes'stack hash![type, bool]?=, errorincludes'stack hash![type, bool]?=, fatalincludes'stack hash![type, bool]?=)'stack log {
+  this
+}
+
+string(offset'i32=, count'i32=, data'stack array!char=, _isnullterminated'bool=)'stack string {
+  this
+}
+
+string_asjson.value(x'stack string:)'stack value {
+  value(this = value(
+    s'stack string? : s,
+    a'stack array!json.value? : a,
+    h'stack hash![string, json.value]? : h
+  ))
+}
+
+value(s'stack string?:, a'stack array!json.value?:, h'stack hash![string, json.value]?:)'stack value {
+  this
+}
+
+writeline(data'stack string:)'void {
+  --c--
+  debugout("%s\n", string_char(data));
+  --c--
+}
+
+global()'void {
+  import  {
+  }
+  --cstruct--
+  struct {
+  int refcount;
+  int size;
+  int count;
+  char data[0];
+  } g_empty = { 1, 0, 0 };
+  --cstruct--
+  import  {
+  }
+  import  {
+  }
+  f32_pi'f32 : 3.14159265358979323846ff
+  u32_maxvalue'u32 : (uint32_t)4294967295uu
+  i32_maxvalue'i32 : -1i - 2147483647i
+  i32_minvalue'i32 : 2147483647i
+  {
+    trace'loglevel : 0
+    debug'loglevel : 1
+    info'loglevel : 2
+    warn'loglevel : 3
+    error'loglevel : 4
+    fatal'loglevel : 5
+  }
+  log_includeall'stack hash![type, bool]? : empty'stack hash![type, bool]?
+  log_excludeall'stack hash![type, bool]? : value(hash![type, bool](this = hash![type, bool]()))
+  log'stack log : log(this = log(
+    minlevel'loglevel = minlevel,
+    traceincludes'stack hash![type, bool]? = traceincludes,
+    debugincludes'stack hash![type, bool]? = debugincludes,
+    infoincludes'stack hash![type, bool]? = infoincludes,
+    warnincludes'stack hash![type, bool]? = warnincludes,
+    errorincludes'stack hash![type, bool]? = errorincludes,
+    fatalincludes'stack hash![type, bool]? = fatalincludes
+  ))
+  --cdefine--
+  char* string_char(sjs_string* str);
+  --cdefine--
+  --cfunction--
+  char* string_char(sjs_string* str) {
+  INVALID(str);
+  return ((sjs_array*)str->data.v)->data + str->offset;
+  }
+  --cfunction--
+  --c--
+  ptr_init();
+  weakptr_init();
+  --c--
+  clocks_per_sec'i32 = 0i
+  --c--
+  g_clocks_per_sec = CLOCKS_PER_SEC;
+  --c--
+  import  {
+  }
+  --cinclude--
+  #include <lib/sj-lib-common/common.h>
+  --cinclude--
+  --cfunction--
+  #include <lib/sj-lib-common/common.cpp>
+  --cfunction--
+  import  {
+  }
+  import  {
+  }
+  allthespaces'stack string : string(this = string(
+    offset'i32 = offset,
+    count'i32 = count,
+    data'stack array!char = data,
+    _isnullterminated'bool = _isnullterminated
+  ))
+  v1'stack value : i32_asjson.value(
+    x'i32 : x
+  )
+  v2'stack value : bool_asjson.value(
+    x'bool : x
+  )
+  v3'stack value : f32_asjson.value(
+    x'f32 : x
+  )
+  v4'stack value : string_asjson.value(
+    x'stack string : x
+  )
+  v5'stack value : array!json.value_asjson.value(
+    x'stack array!json.value : x
+  )
+  v6'stack value : hash![string, json.value]_asjson.value(
+    x'stack hash![string, json.value] : x
+  )
+  writeline(
+    data'stack string : data
+  )
+  writeline(
+    data'stack string : data
+  )
+  void
+}
+

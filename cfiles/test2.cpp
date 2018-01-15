@@ -10,62 +10,26 @@ struct {
     int refcount;
     int size;
     int count;
-    char data[3];
-} sjg_string10 = { 1, 3, 2, "[ "};
+    char data[5];
+} sjg_string10 = { 1, 5, 4, "\" : "};
 struct {
     int refcount;
     int size;
     int count;
     char data[3];
-} sjg_string11 = { 1, 3, 2, " ]"};
-struct {
-    int refcount;
-    int size;
-    int count;
-    char data[6];
-} sjg_string12 = { 1, 6, 5, "\"abc\""};
+} sjg_string11 = { 1, 3, 2, " }"};
 struct {
     int refcount;
     int size;
     int count;
     char data[3];
-} sjg_string13 = { 1, 3, 2, "12"};
+} sjg_string12 = { 1, 3, 2, "[ "};
 struct {
     int refcount;
     int size;
     int count;
-    char data[13];
-} sjg_string14 = { 1, 13, 12, "[\"abc\" , 12]"};
-struct {
-    int refcount;
-    int size;
-    int count;
-    char data[4];
-} sjg_string15 = { 1, 4, 3, "{ }"};
-struct {
-    int refcount;
-    int size;
-    int count;
-    char data[20];
-} sjg_string16 = { 1, 20, 19, "{ \n\n\"abc\" : \"foo\" }"};
-struct {
-    int refcount;
-    int size;
-    int count;
-    char data[33];
-} sjg_string17 = { 1, 33, 32, "{ \n\n\"abc\" : { \"foo\" : \"bar\" }  }"};
-struct {
-    int refcount;
-    int size;
-    int count;
-    char data[301];
-} sjg_string18 = { 1, 301, 300, "{\r\n    \"title\" : \"This is a title\",\r\n    \"parentalAdvisory\" : \"This is a parental advisory\",\r\n      \"hasAdultText\" : true,\r\n    \"strings\" : {\r\n        \"adult_17481\" : \"Adult Text\",\r\n        \"dp_product_info_energy_class\" : \"Energy Class Level\"\r\n    },\r\n    \"energyEfficiencyClass\" : \"Energy Class\"\r\n}"};
-struct {
-    int refcount;
-    int size;
-    int count;
-    char data[370];
-} sjg_string19 = { 1, 370, 369, "{\r\n    \"title\" : \"This is a title\",\r\n    \"parentalAdvisory\" : \"This is a parental advisory\",\r\n    \"formatList\" : [\r\n        \"Format 1\",\r\n        \"Format 2\"\r\n    ],\r\n    \"hasAdultText\" : true,\r\n    \"strings\" : {\r\n        \"adult_17481\" : \"Adult Text\",\r\n        \"dp_product_info_energy_class\" : \"Energy Class Level\"\r\n    },\r\n    \"energyEfficiencyClass\" : \"Energy Class\"\r\n}"};
+    char data[3];
+} sjg_string13 = { 1, 3, 2, " ]"};
 struct {
     int refcount;
     int size;
@@ -82,38 +46,38 @@ struct {
     int refcount;
     int size;
     int count;
-    char data[12];
-} sjg_string4 = { 1, 12, 11, "Parse Error"};
+    char data[89];
+} sjg_string4 = { 1, 89, 88, "{ \"member1\" : \"value1\", \"member2\" : \"value2\", \"member3\" : [ \"item1\", \"item2\", \"item3\"] }"};
+struct {
+    int refcount;
+    int size;
+    int count;
+    char data[8];
+} sjg_string5 = { 1, 8, 7, "member3"};
 struct {
     int refcount;
     int size;
     int count;
     char data[3];
-} sjg_string5 = { 1, 3, 2, "{ "};
-struct {
-    int refcount;
-    int size;
-    int count;
-    char data[2];
-} sjg_string6 = { 1, 2, 1, "\""};
+} sjg_string6 = { 1, 3, 2, ", "};
 struct {
     int refcount;
     int size;
     int count;
     char data[5];
-} sjg_string7 = { 1, 5, 4, "\" : "};
+} sjg_string7 = { 1, 5, 4, " == "};
 struct {
     int refcount;
     int size;
     int count;
     char data[3];
-} sjg_string8 = { 1, 3, 2, ", "};
+} sjg_string8 = { 1, 3, 2, "{ "};
 struct {
     int refcount;
     int size;
     int count;
-    char data[3];
-} sjg_string9 = { 1, 3, 2, " }"};
+    char data[2];
+} sjg_string9 = { 1, 2, 1, "\""};
 
 struct {
     int refcount;
@@ -125,27 +89,31 @@ struct {
 #define sjs_log_typeId 20
 #define sjs_array_char_typeId 23
 #define sjs_string_typeId 21
-#define sjs_array_value_typeId 45
-#define sjs_hash_string_value_typeId 35
-#define sjs_json_value_typeId 28
-#define sjs_tuple2_i32_string_typeId 40
-#define sjs_tuple2_i32_value_typeId 30
-#define sjs_list_value_typeId 46
-#define sjs_array_string_typeId 59
-#define cb_value_string_typeId 78
-#define cb_value_string_heap_typeId 78
-#define sjs_lambda3_typeId 80
-#define cb_value_string_heap_string_typeId 82
-#define cb_value_string_heap_string_heap_typeId 82
-#define sjs_list_string_typeId 58
-#define cb_string_value_void_typeId 61
-#define cb_string_value_void_heap_typeId 61
-#define cb_string_value_string_typeId 57
-#define cb_string_value_string_heap_typeId 57
-#define sjs_lambda1_typeId 62
-#define sjs_lambda2_typeId 69
-#define cb_string_value_string_heap_string_typeId 73
-#define cb_string_value_string_heap_string_heap_typeId 73
+#define sjs_array_value_typeId 44
+#define sjs_hash_string_value_typeId 34
+#define sjs_json_value_typeId 27
+#define sjs_tuple2_i32_string_typeId 39
+#define sjs_tuple2_i32_value_typeId 29
+#define sjs_list_value_typeId 45
+#define cb_string_value_void_typeId 62
+#define cb_string_value_void_heap_typeId 62
+#define sjs_lambda6_typeId 63
+#define sjs_array_string_typeId 69
+#define cb_value_string_typeId 84
+#define cb_value_string_heap_typeId 84
+#define sjs_lambda3_typeId 85
+#define cb_value_string_heap_string_typeId 87
+#define cb_value_string_heap_string_heap_typeId 87
+#define sjs_list_string_typeId 68
+#define cb_string_value_string_typeId 67
+#define cb_string_value_string_heap_typeId 67
+#define sjs_lambda1_typeId 70
+#define sjs_lambda2_typeId 77
+#define cb_string_value_string_heap_string_typeId 79
+#define cb_string_value_string_heap_string_heap_typeId 79
+#define cb_value_void_typeId 89
+#define cb_value_void_heap_typeId 89
+#define sjs_lambda7_typeId 90
 
 typedef struct td_sjs_hash_type_bool sjs_hash_type_bool;
 typedef struct td_sjs_log sjs_log;
@@ -157,6 +125,9 @@ typedef struct td_sjs_json_value sjs_json_value;
 typedef struct td_sjs_tuple2_i32_string sjs_tuple2_i32_string;
 typedef struct td_sjs_tuple2_i32_value sjs_tuple2_i32_value;
 typedef struct td_sjs_list_value sjs_list_value;
+typedef struct td_cb_string_value_void cb_string_value_void;
+typedef struct td_cb_string_value_void_heap cb_string_value_void_heap;
+typedef struct td_sjs_lambda6 sjs_lambda6;
 typedef struct td_sjs_array_string sjs_array_string;
 typedef struct td_cb_value_string cb_value_string;
 typedef struct td_cb_value_string_heap cb_value_string_heap;
@@ -164,14 +135,15 @@ typedef struct td_sjs_lambda3 sjs_lambda3;
 typedef struct td_cb_value_string_heap_string cb_value_string_heap_string;
 typedef struct td_cb_value_string_heap_string_heap cb_value_string_heap_string_heap;
 typedef struct td_sjs_list_string sjs_list_string;
-typedef struct td_cb_string_value_void cb_string_value_void;
-typedef struct td_cb_string_value_void_heap cb_string_value_void_heap;
 typedef struct td_cb_string_value_string cb_string_value_string;
 typedef struct td_cb_string_value_string_heap cb_string_value_string_heap;
 typedef struct td_sjs_lambda1 sjs_lambda1;
 typedef struct td_sjs_lambda2 sjs_lambda2;
 typedef struct td_cb_string_value_string_heap_string cb_string_value_string_heap_string;
 typedef struct td_cb_string_value_string_heap_string_heap cb_string_value_string_heap_string_heap;
+typedef struct td_cb_value_void cb_value_void;
+typedef struct td_cb_value_void_heap cb_value_void_heap;
+typedef struct td_sjs_lambda7 sjs_lambda7;
 
 struct td_sjs_hash_type_bool {
     int _refCount;
@@ -236,6 +208,20 @@ struct td_sjs_list_value {
     sjs_array_value arr;
 };
 
+struct td_cb_string_value_void {
+    sjs_object* _parent;
+    void (*_cb)(sjs_object* _parent, sjs_string*, sjs_json_value*);
+};
+
+struct td_cb_string_value_void_heap {
+    cb_string_value_void inner;
+    void (*_destroy)(sjs_object*);
+};
+
+struct td_sjs_lambda6 {
+    int _refCount;
+};
+
 struct td_sjs_array_string {
     int _refCount;
     void* v;
@@ -271,16 +257,6 @@ struct td_sjs_list_string {
     sjs_array_string arr;
 };
 
-struct td_cb_string_value_void {
-    sjs_object* _parent;
-    void (*_cb)(sjs_object* _parent, sjs_string*, sjs_json_value*);
-};
-
-struct td_cb_string_value_void_heap {
-    cb_string_value_void inner;
-    void (*_destroy)(sjs_object*);
-};
-
 struct td_cb_string_value_string {
     sjs_object* _parent;
     void (*_cb)(sjs_object* _parent, sjs_string*, sjs_json_value*, sjs_string* _return);
@@ -313,6 +289,20 @@ struct td_cb_string_value_string_heap_string_heap {
     void (*_destroy)(sjs_object*);
 };
 
+struct td_cb_value_void {
+    sjs_object* _parent;
+    void (*_cb)(sjs_object* _parent, sjs_json_value*);
+};
+
+struct td_cb_value_void_heap {
+    cb_value_void inner;
+    void (*_destroy)(sjs_object*);
+};
+
+struct td_sjs_lambda7 {
+    int _refCount;
+};
+
 #ifndef type_bool_hash_typedef
 #define type_bool_hash_typedef
 KHASH_INIT_TYPEDEF(type_bool_hash_type, int32_t, bool)
@@ -339,6 +329,7 @@ int32_t g_loglevel_warn;
 
 sjs_string g_allthespaces = { -1 };
 int32_t g_clocks_per_sec;
+sjs_json_value g_data = { -1 };
 float g_f32_pi;
 int32_t g_i32_maxvalue;
 int32_t g_i32_minvalue;
@@ -347,22 +338,8 @@ sjs_hash_type_bool g_log_excludeall = { -1 };
 sjs_hash_type_bool g_log_includeall = { -1 };
 uint32_t g_u32_maxvalue;
 int32_t result1;
-sjs_string sjt_call56 = { -1 };
-sjs_string sjt_call57 = { -1 };
-sjs_string sjt_call58 = { -1 };
-sjs_string sjt_call59 = { -1 };
-sjs_string sjt_call60 = { -1 };
-sjs_string sjt_call61 = { -1 };
-sjs_string sjt_call62 = { -1 };
-sjs_string sjt_call63 = { -1 };
-sjs_string* sjt_functionParam176 = 0;
-sjs_string* sjt_functionParam177 = 0;
-sjs_string* sjt_functionParam178 = 0;
-sjs_string* sjt_functionParam179 = 0;
-sjs_string* sjt_functionParam180 = 0;
-sjs_string* sjt_functionParam181 = 0;
-sjs_string* sjt_functionParam182 = 0;
-sjs_string* sjt_functionParam183 = 0;
+sjs_string sjt_call7 = { -1 };
+sjs_string* sjt_functionParam111 = 0;
 sjs_hash_type_bool sjt_value1 = { -1 };
 
 void sjf_array_char(sjs_array_char* _this);
@@ -389,10 +366,13 @@ void sjf_array_string_gettotalcount(sjs_array_string* _parent, int32_t* _return)
 void sjf_array_string_heap(sjs_array_string* _this);
 void sjf_array_string_initat(sjs_array_string* _parent, int32_t index, sjs_string* item);
 void sjf_array_value(sjs_array_value* _this);
+void sjf_array_value_asstring(sjs_array_value* _parent, sjs_string* sep, sjs_string* _return);
+void sjf_array_value_asstring_heap(sjs_array_value* _parent, sjs_string* sep, sjs_string** _return);
 void sjf_array_value_clone(sjs_array_value* _parent, int32_t offset, int32_t count, int32_t newsize, sjs_array_value* _return);
 void sjf_array_value_clone_heap(sjs_array_value* _parent, int32_t offset, int32_t count, int32_t newsize, sjs_array_value** _return);
 void sjf_array_value_copy(sjs_array_value* _this, sjs_array_value* _from);
 void sjf_array_value_destroy(sjs_array_value* _this);
+void sjf_array_value_each(sjs_array_value* _parent, cb_value_void cb);
 void sjf_array_value_getat(sjs_array_value* _parent, int32_t index, sjs_json_value* _return);
 void sjf_array_value_getat_heap(sjs_array_value* _parent, int32_t index, sjs_json_value** _return);
 void sjf_array_value_getcount(sjs_array_value* _parent, int32_t* _return);
@@ -411,6 +391,8 @@ void sjf_hash_string_value_asarray_string_heap(sjs_hash_string_value* _parent, c
 void sjf_hash_string_value_copy(sjs_hash_string_value* _this, sjs_hash_string_value* _from);
 void sjf_hash_string_value_destroy(sjs_hash_string_value* _this);
 void sjf_hash_string_value_each(sjs_hash_string_value* _parent, cb_string_value_void cb);
+void sjf_hash_string_value_getat(sjs_hash_string_value* _parent, sjs_string* key, sjs_json_value* _return);
+void sjf_hash_string_value_getat_heap(sjs_hash_string_value* _parent, sjs_string* key, sjs_json_value** _return);
 void sjf_hash_string_value_heap(sjs_hash_string_value* _this);
 void sjf_hash_string_value_setat(sjs_hash_string_value* _parent, sjs_string* key, sjs_json_value* val);
 void sjf_hash_type_bool(sjs_hash_type_bool* _this);
@@ -430,8 +412,12 @@ void sjf_json_parse_value(sjs_string* s, int32_t startindex, sjs_tuple2_i32_valu
 void sjf_json_parse_value_heap(sjs_string* s, int32_t startindex, sjs_tuple2_i32_value** _return);
 void sjf_json_parse_whitespace(sjs_string* s, int32_t startindex, int32_t* _return);
 void sjf_json_value(sjs_json_value* _this);
+void sjf_json_value_asstring(sjs_json_value* _parent, sjs_string* _return);
+void sjf_json_value_asstring_heap(sjs_json_value* _parent, sjs_string** _return);
 void sjf_json_value_copy(sjs_json_value* _this, sjs_json_value* _from);
 void sjf_json_value_destroy(sjs_json_value* _this);
+void sjf_json_value_getat(sjs_json_value* _parent, sjs_string* key, sjs_json_value* _return);
+void sjf_json_value_getat_heap(sjs_json_value* _parent, sjs_string* key, sjs_json_value** _return);
 void sjf_json_value_heap(sjs_json_value* _this);
 void sjf_json_value_render(sjs_json_value* _parent, sjs_string* _return);
 void sjf_json_value_render_heap(sjs_json_value* _parent, sjs_string** _return);
@@ -452,6 +438,16 @@ void sjf_lambda3_destroy(sjs_lambda3* _this);
 void sjf_lambda3_heap(sjs_lambda3* _this);
 void sjf_lambda3_invoke(sjs_lambda3* _parent, sjs_json_value* _1, sjs_string* _return);
 void sjf_lambda3_invoke_heap(sjs_lambda3* _parent, sjs_json_value* _1, sjs_string** _return);
+void sjf_lambda6(sjs_lambda6* _this);
+void sjf_lambda6_copy(sjs_lambda6* _this, sjs_lambda6* _from);
+void sjf_lambda6_destroy(sjs_lambda6* _this);
+void sjf_lambda6_heap(sjs_lambda6* _this);
+void sjf_lambda6_invoke(sjs_lambda6* _parent, sjs_string* _1, sjs_json_value* _2);
+void sjf_lambda7(sjs_lambda7* _this);
+void sjf_lambda7_copy(sjs_lambda7* _this, sjs_lambda7* _from);
+void sjf_lambda7_destroy(sjs_lambda7* _this);
+void sjf_lambda7_heap(sjs_lambda7* _this);
+void sjf_lambda7_invoke(sjs_lambda7* _parent, sjs_json_value* _1);
 void sjf_list_string(sjs_list_string* _this);
 void sjf_list_string_add(sjs_list_string* _parent, sjs_string* item);
 void sjf_list_string_copy(sjs_list_string* _this, sjs_list_string* _from);
@@ -480,7 +476,6 @@ void sjf_string_isequal(sjs_string* _parent, sjs_string* test, bool* _return);
 void sjf_string_nullterminate(sjs_string* _parent);
 void sjf_string_substr(sjs_string* _parent, int32_t o, int32_t c, sjs_string* _return);
 void sjf_string_substr_heap(sjs_string* _parent, int32_t o, int32_t c, sjs_string** _return);
-void sjf_test(sjs_string* s);
 void sjf_tuple2_i32_string(sjs_tuple2_i32_string* _this);
 void sjf_tuple2_i32_string_copy(sjs_tuple2_i32_string* _this, sjs_tuple2_i32_string* _from);
 void sjf_tuple2_i32_string_destroy(sjs_tuple2_i32_string* _this);
@@ -786,8 +781,8 @@ void sjf_array_string(sjs_array_string* _this) {
 void sjf_array_string_asstring(sjs_array_string* _parent, sjs_string* sep, sjs_string* _return) {
     int32_t i;
     sjs_string result = { -1 };
-    int32_t sjt_forEnd5;
-    int32_t sjt_forStart5;
+    int32_t sjt_forEnd7;
+    int32_t sjt_forStart7;
 
     result._refCount = 1;
 #line 295 "lib/sj-lib-common/array.sj"
@@ -805,67 +800,67 @@ void sjf_array_string_asstring(sjs_array_string* _parent, sjs_string* sep, sjs_s
 #line 16
     sjf_string(&result);
 #line 296 "lib/sj-lib-common/array.sj"
-    sjt_forStart5 = 0;
+    sjt_forStart7 = 0;
 #line 296
-    sjf_array_string_getcount(_parent, &sjt_forEnd5);
+    sjf_array_string_getcount(_parent, &sjt_forEnd7);
 #line 296
-    i = sjt_forStart5;
-    while (i < sjt_forEnd5) {
-        sjs_string sjt_call11 = { -1 };
-        sjs_string sjt_call12 = { -1 };
-        sjs_string sjt_funcold17 = { -1 };
-        sjs_string sjt_funcold18 = { -1 };
-        sjs_string* sjt_functionParam133 = 0;
-        int32_t sjt_functionParam134;
-        sjs_string* sjt_parent66 = 0;
-        sjs_string* sjt_parent67 = 0;
+    i = sjt_forStart7;
+    while (i < sjt_forEnd7) {
+        sjs_string sjt_call70 = { -1 };
+        sjs_string sjt_call71 = { -1 };
+        sjs_string sjt_funcold21 = { -1 };
+        sjs_string sjt_funcold22 = { -1 };
+        sjs_string* sjt_functionParam181 = 0;
+        int32_t sjt_functionParam182;
+        sjs_string* sjt_parent111 = 0;
+        sjs_string* sjt_parent112 = 0;
 
         if (i != 0) {
-            sjs_string* sjt_functionParam132 = 0;
-            sjs_string* sjt_parent65 = 0;
+            sjs_string* sjt_functionParam180 = 0;
+            sjs_string* sjt_parent110 = 0;
 
 #line 18 "lib/sj-lib-common/string.sj"
-            sjt_parent65 = &result;
+            sjt_parent110 = &result;
 #line 294 "lib/sj-lib-common/array.sj"
-            sjt_functionParam132 = sep;
+            sjt_functionParam180 = sep;
 #line 294
-            sjf_string_add(sjt_parent65, sjt_functionParam132, &sjt_funcold17);
+            sjf_string_add(sjt_parent110, sjt_functionParam180, &sjt_funcold21);
 #line 294
             if (result._refCount == 1) { sjf_string_destroy(&result); }
 ;
 #line 18 "lib/sj-lib-common/string.sj"
-            sjf_string_copy(&result, &sjt_funcold17);
+            sjf_string_copy(&result, &sjt_funcold21);
         }
 
 #line 18 "lib/sj-lib-common/string.sj"
-        sjt_parent66 = &result;
+        sjt_parent111 = &result;
 #line 296 "lib/sj-lib-common/array.sj"
-        sjt_functionParam134 = i;
+        sjt_functionParam182 = i;
 #line 296
-        sjf_array_string_getat(_parent, sjt_functionParam134, &sjt_call12);
+        sjf_array_string_getat(_parent, sjt_functionParam182, &sjt_call71);
 #line 300
-        sjt_parent67 = &sjt_call12;
+        sjt_parent112 = &sjt_call71;
 #line 300
-        sjf_string_asstring(sjt_parent67, &sjt_call11);
+        sjf_string_asstring(sjt_parent112, &sjt_call70);
 #line 300
-        sjt_functionParam133 = &sjt_call11;
+        sjt_functionParam181 = &sjt_call70;
 #line 300
-        sjf_string_add(sjt_parent66, sjt_functionParam133, &sjt_funcold18);
+        sjf_string_add(sjt_parent111, sjt_functionParam181, &sjt_funcold22);
 #line 300
         if (result._refCount == 1) { sjf_string_destroy(&result); }
 ;
 #line 18 "lib/sj-lib-common/string.sj"
-        sjf_string_copy(&result, &sjt_funcold18);
+        sjf_string_copy(&result, &sjt_funcold22);
 #line 296 "lib/sj-lib-common/array.sj"
         i++;
 
-        if (sjt_call11._refCount == 1) { sjf_string_destroy(&sjt_call11); }
+        if (sjt_call70._refCount == 1) { sjf_string_destroy(&sjt_call70); }
 ;
-        if (sjt_call12._refCount == 1) { sjf_string_destroy(&sjt_call12); }
+        if (sjt_call71._refCount == 1) { sjf_string_destroy(&sjt_call71); }
 ;
-        if (sjt_funcold17._refCount == 1) { sjf_string_destroy(&sjt_funcold17); }
+        if (sjt_funcold21._refCount == 1) { sjf_string_destroy(&sjt_funcold21); }
 ;
-        if (sjt_funcold18._refCount == 1) { sjf_string_destroy(&sjt_funcold18); }
+        if (sjt_funcold22._refCount == 1) { sjf_string_destroy(&sjt_funcold22); }
 ;
     }
 
@@ -881,8 +876,8 @@ void sjf_array_string_asstring(sjs_array_string* _parent, sjs_string* sep, sjs_s
 void sjf_array_string_asstring_heap(sjs_array_string* _parent, sjs_string* sep, sjs_string** _return) {
     int32_t i;
     sjs_string result = { -1 };
-    int32_t sjt_forEnd6;
-    int32_t sjt_forStart6;
+    int32_t sjt_forEnd8;
+    int32_t sjt_forStart8;
 
     result._refCount = 1;
 #line 295 "lib/sj-lib-common/array.sj"
@@ -900,67 +895,67 @@ void sjf_array_string_asstring_heap(sjs_array_string* _parent, sjs_string* sep, 
 #line 16
     sjf_string(&result);
 #line 296 "lib/sj-lib-common/array.sj"
-    sjt_forStart6 = 0;
+    sjt_forStart8 = 0;
 #line 296
-    sjf_array_string_getcount(_parent, &sjt_forEnd6);
+    sjf_array_string_getcount(_parent, &sjt_forEnd8);
 #line 296
-    i = sjt_forStart6;
-    while (i < sjt_forEnd6) {
-        sjs_string sjt_call13 = { -1 };
-        sjs_string sjt_call14 = { -1 };
-        sjs_string sjt_funcold19 = { -1 };
-        sjs_string sjt_funcold20 = { -1 };
-        sjs_string* sjt_functionParam136 = 0;
-        int32_t sjt_functionParam137;
-        sjs_string* sjt_parent69 = 0;
-        sjs_string* sjt_parent70 = 0;
+    i = sjt_forStart8;
+    while (i < sjt_forEnd8) {
+        sjs_string sjt_call72 = { -1 };
+        sjs_string sjt_call73 = { -1 };
+        sjs_string sjt_funcold23 = { -1 };
+        sjs_string sjt_funcold24 = { -1 };
+        sjs_string* sjt_functionParam184 = 0;
+        int32_t sjt_functionParam185;
+        sjs_string* sjt_parent114 = 0;
+        sjs_string* sjt_parent115 = 0;
 
         if (i != 0) {
-            sjs_string* sjt_functionParam135 = 0;
-            sjs_string* sjt_parent68 = 0;
+            sjs_string* sjt_functionParam183 = 0;
+            sjs_string* sjt_parent113 = 0;
 
 #line 18 "lib/sj-lib-common/string.sj"
-            sjt_parent68 = &result;
+            sjt_parent113 = &result;
 #line 294 "lib/sj-lib-common/array.sj"
-            sjt_functionParam135 = sep;
+            sjt_functionParam183 = sep;
 #line 294
-            sjf_string_add(sjt_parent68, sjt_functionParam135, &sjt_funcold19);
+            sjf_string_add(sjt_parent113, sjt_functionParam183, &sjt_funcold23);
 #line 294
             if (result._refCount == 1) { sjf_string_destroy(&result); }
 ;
 #line 18 "lib/sj-lib-common/string.sj"
-            sjf_string_copy(&result, &sjt_funcold19);
+            sjf_string_copy(&result, &sjt_funcold23);
         }
 
 #line 18 "lib/sj-lib-common/string.sj"
-        sjt_parent69 = &result;
+        sjt_parent114 = &result;
 #line 296 "lib/sj-lib-common/array.sj"
-        sjt_functionParam137 = i;
+        sjt_functionParam185 = i;
 #line 296
-        sjf_array_string_getat(_parent, sjt_functionParam137, &sjt_call14);
+        sjf_array_string_getat(_parent, sjt_functionParam185, &sjt_call73);
 #line 300
-        sjt_parent70 = &sjt_call14;
+        sjt_parent115 = &sjt_call73;
 #line 300
-        sjf_string_asstring(sjt_parent70, &sjt_call13);
+        sjf_string_asstring(sjt_parent115, &sjt_call72);
 #line 300
-        sjt_functionParam136 = &sjt_call13;
+        sjt_functionParam184 = &sjt_call72;
 #line 300
-        sjf_string_add(sjt_parent69, sjt_functionParam136, &sjt_funcold20);
+        sjf_string_add(sjt_parent114, sjt_functionParam184, &sjt_funcold24);
 #line 300
         if (result._refCount == 1) { sjf_string_destroy(&result); }
 ;
 #line 18 "lib/sj-lib-common/string.sj"
-        sjf_string_copy(&result, &sjt_funcold20);
+        sjf_string_copy(&result, &sjt_funcold24);
 #line 296 "lib/sj-lib-common/array.sj"
         i++;
 
-        if (sjt_call13._refCount == 1) { sjf_string_destroy(&sjt_call13); }
+        if (sjt_call72._refCount == 1) { sjf_string_destroy(&sjt_call72); }
 ;
-        if (sjt_call14._refCount == 1) { sjf_string_destroy(&sjt_call14); }
+        if (sjt_call73._refCount == 1) { sjf_string_destroy(&sjt_call73); }
 ;
-        if (sjt_funcold19._refCount == 1) { sjf_string_destroy(&sjt_funcold19); }
+        if (sjt_funcold23._refCount == 1) { sjf_string_destroy(&sjt_funcold23); }
 ;
-        if (sjt_funcold20._refCount == 1) { sjf_string_destroy(&sjt_funcold20); }
+        if (sjt_funcold24._refCount == 1) { sjf_string_destroy(&sjt_funcold24); }
 ;
     }
 
@@ -1238,6 +1233,198 @@ void sjf_array_value(sjs_array_value* _this) {
     arr->refcount++;
 }
 
+void sjf_array_value_asstring(sjs_array_value* _parent, sjs_string* sep, sjs_string* _return) {
+    int32_t i;
+    sjs_string result = { -1 };
+    int32_t sjt_forEnd1;
+    int32_t sjt_forStart1;
+
+    result._refCount = 1;
+#line 295 "lib/sj-lib-common/array.sj"
+    result.offset = 0;
+#line 295
+    result.count = 0;
+#line 295
+    result.data._refCount = 1;
+#line 295
+    result.data.v = &sjg_string2;
+#line 295
+    sjf_array_char(&result.data);
+#line 16 "lib/sj-lib-common/string.sj"
+    result._isnullterminated = false;
+#line 16
+    sjf_string(&result);
+#line 296 "lib/sj-lib-common/array.sj"
+    sjt_forStart1 = 0;
+#line 296
+    sjf_array_value_getcount(_parent, &sjt_forEnd1);
+#line 296
+    i = sjt_forStart1;
+    while (i < sjt_forEnd1) {
+        sjs_string sjt_call48 = { -1 };
+        sjs_json_value sjt_call49 = { -1 };
+        sjs_string sjt_funcold17 = { -1 };
+        sjs_string sjt_funcold18 = { -1 };
+        sjs_string* sjt_functionParam165 = 0;
+        int32_t sjt_functionParam166;
+        sjs_string* sjt_parent95 = 0;
+        sjs_json_value* sjt_parent96 = 0;
+
+        if (i != 0) {
+            sjs_string* sjt_functionParam164 = 0;
+            sjs_string* sjt_parent94 = 0;
+
+#line 18 "lib/sj-lib-common/string.sj"
+            sjt_parent94 = &result;
+#line 294 "lib/sj-lib-common/array.sj"
+            sjt_functionParam164 = sep;
+#line 294
+            sjf_string_add(sjt_parent94, sjt_functionParam164, &sjt_funcold17);
+#line 294
+            if (result._refCount == 1) { sjf_string_destroy(&result); }
+;
+#line 18 "lib/sj-lib-common/string.sj"
+            sjf_string_copy(&result, &sjt_funcold17);
+        }
+
+#line 18 "lib/sj-lib-common/string.sj"
+        sjt_parent95 = &result;
+#line 296 "lib/sj-lib-common/array.sj"
+        sjt_functionParam166 = i;
+#line 296
+        sjf_array_value_getat(_parent, sjt_functionParam166, &sjt_call49);
+#line 300
+        sjt_parent96 = &sjt_call49;
+#line 300
+        sjf_json_value_asstring(sjt_parent96, &sjt_call48);
+#line 300
+        sjt_functionParam165 = &sjt_call48;
+#line 300
+        sjf_string_add(sjt_parent95, sjt_functionParam165, &sjt_funcold18);
+#line 300
+        if (result._refCount == 1) { sjf_string_destroy(&result); }
+;
+#line 18 "lib/sj-lib-common/string.sj"
+        sjf_string_copy(&result, &sjt_funcold18);
+#line 296 "lib/sj-lib-common/array.sj"
+        i++;
+
+        if (sjt_call48._refCount == 1) { sjf_string_destroy(&sjt_call48); }
+;
+        if (sjt_call49._refCount == 1) { sjf_json_value_destroy(&sjt_call49); }
+;
+        if (sjt_funcold17._refCount == 1) { sjf_string_destroy(&sjt_funcold17); }
+;
+        if (sjt_funcold18._refCount == 1) { sjf_string_destroy(&sjt_funcold18); }
+;
+    }
+
+#line 296
+    _return->_refCount = 1;
+#line 294
+    sjf_string_copy(_return, &result);
+
+    if (result._refCount == 1) { sjf_string_destroy(&result); }
+;
+}
+
+void sjf_array_value_asstring_heap(sjs_array_value* _parent, sjs_string* sep, sjs_string** _return) {
+    int32_t i;
+    sjs_string result = { -1 };
+    int32_t sjt_forEnd6;
+    int32_t sjt_forStart6;
+
+    result._refCount = 1;
+#line 295 "lib/sj-lib-common/array.sj"
+    result.offset = 0;
+#line 295
+    result.count = 0;
+#line 295
+    result.data._refCount = 1;
+#line 295
+    result.data.v = &sjg_string2;
+#line 295
+    sjf_array_char(&result.data);
+#line 16 "lib/sj-lib-common/string.sj"
+    result._isnullterminated = false;
+#line 16
+    sjf_string(&result);
+#line 296 "lib/sj-lib-common/array.sj"
+    sjt_forStart6 = 0;
+#line 296
+    sjf_array_value_getcount(_parent, &sjt_forEnd6);
+#line 296
+    i = sjt_forStart6;
+    while (i < sjt_forEnd6) {
+        sjs_string sjt_call50 = { -1 };
+        sjs_json_value sjt_call51 = { -1 };
+        sjs_string sjt_funcold19 = { -1 };
+        sjs_string sjt_funcold20 = { -1 };
+        sjs_string* sjt_functionParam168 = 0;
+        int32_t sjt_functionParam169;
+        sjs_string* sjt_parent98 = 0;
+        sjs_json_value* sjt_parent99 = 0;
+
+        if (i != 0) {
+            sjs_string* sjt_functionParam167 = 0;
+            sjs_string* sjt_parent97 = 0;
+
+#line 18 "lib/sj-lib-common/string.sj"
+            sjt_parent97 = &result;
+#line 294 "lib/sj-lib-common/array.sj"
+            sjt_functionParam167 = sep;
+#line 294
+            sjf_string_add(sjt_parent97, sjt_functionParam167, &sjt_funcold19);
+#line 294
+            if (result._refCount == 1) { sjf_string_destroy(&result); }
+;
+#line 18 "lib/sj-lib-common/string.sj"
+            sjf_string_copy(&result, &sjt_funcold19);
+        }
+
+#line 18 "lib/sj-lib-common/string.sj"
+        sjt_parent98 = &result;
+#line 296 "lib/sj-lib-common/array.sj"
+        sjt_functionParam169 = i;
+#line 296
+        sjf_array_value_getat(_parent, sjt_functionParam169, &sjt_call51);
+#line 300
+        sjt_parent99 = &sjt_call51;
+#line 300
+        sjf_json_value_asstring(sjt_parent99, &sjt_call50);
+#line 300
+        sjt_functionParam168 = &sjt_call50;
+#line 300
+        sjf_string_add(sjt_parent98, sjt_functionParam168, &sjt_funcold20);
+#line 300
+        if (result._refCount == 1) { sjf_string_destroy(&result); }
+;
+#line 18 "lib/sj-lib-common/string.sj"
+        sjf_string_copy(&result, &sjt_funcold20);
+#line 296 "lib/sj-lib-common/array.sj"
+        i++;
+
+        if (sjt_call50._refCount == 1) { sjf_string_destroy(&sjt_call50); }
+;
+        if (sjt_call51._refCount == 1) { sjf_json_value_destroy(&sjt_call51); }
+;
+        if (sjt_funcold19._refCount == 1) { sjf_string_destroy(&sjt_funcold19); }
+;
+        if (sjt_funcold20._refCount == 1) { sjf_string_destroy(&sjt_funcold20); }
+;
+    }
+
+#line 296
+    (*_return) = (sjs_string*)malloc(sizeof(sjs_string));
+#line 296
+    (*_return)->_refCount = 1;
+#line 294
+    sjf_string_copy((*_return), &result);
+
+    if (result._refCount == 1) { sjf_string_destroy(&result); }
+;
+}
+
 void sjf_array_value_clone(sjs_array_value* _parent, int32_t offset, int32_t count, int32_t newsize, sjs_array_value* _return) {
     void* newv;
 
@@ -1398,6 +1585,38 @@ void sjf_array_value_destroy(sjs_array_value* _this) {
     }
 }
 
+void sjf_array_value_each(sjs_array_value* _parent, cb_value_void cb) {
+    int32_t i;
+    int32_t sjt_forEnd11;
+    int32_t sjt_forStart11;
+
+#line 109 "lib/sj-lib-common/array.sj"
+    sjt_forStart11 = 0;
+#line 109
+    sjf_array_value_getcount(_parent, &sjt_forEnd11);
+#line 109
+    i = sjt_forStart11;
+    while (i < sjt_forEnd11) {
+        sjs_json_value sjt_call118 = { -1 };
+        sjs_json_value* sjt_functionParam225 = 0;
+        int32_t sjt_functionParam226;
+
+#line 109 "lib/sj-lib-common/array.sj"
+        sjt_functionParam226 = i;
+#line 109
+        sjf_array_value_getat(_parent, sjt_functionParam226, &sjt_call118);
+#line 110
+        sjt_functionParam225 = &sjt_call118;
+#line 110
+        cb._cb(cb._parent, sjt_functionParam225);
+#line 109
+        i++;
+
+        if (sjt_call118._refCount == 1) { sjf_json_value_destroy(&sjt_call118); }
+;
+    }
+}
+
 void sjf_array_value_getat(sjs_array_value* _parent, int32_t index, sjs_json_value* _return) {
 #line 43 "lib/sj-lib-common/array.sj"
     sjs_array* arr = (sjs_array*)_parent->v;
@@ -1491,8 +1710,8 @@ sjf_json_value_copy(&p[index], item);
 void sjf_array_value_map_string(sjs_array_value* _parent, cb_value_string cb, sjs_array_string* _return) {
     int32_t i;
     void* newdata;
-    int32_t sjt_forEnd7;
-    int32_t sjt_forStart7;
+    int32_t sjt_forEnd9;
+    int32_t sjt_forStart9;
 
 #line 115 "lib/sj-lib-common/array.sj"
     newdata = 0;
@@ -1505,25 +1724,25 @@ void sjf_array_value_map_string(sjs_array_value* _parent, cb_value_string cb, sj
 #line 120
     newdata = (void*)newArr;
 #line 122
-    sjt_forStart7 = 0;
+    sjt_forStart9 = 0;
 #line 122
-    sjf_array_value_getcount(_parent, &sjt_forEnd7);
+    sjf_array_value_getcount(_parent, &sjt_forEnd9);
 #line 122
-    i = sjt_forStart7;
-    while (i < sjt_forEnd7) {
+    i = sjt_forStart9;
+    while (i < sjt_forEnd9) {
         sjs_string newitem = { -1 };
-        sjs_json_value sjt_call16 = { -1 };
-        sjs_json_value* sjt_functionParam138 = 0;
-        int32_t sjt_functionParam139;
+        sjs_json_value sjt_call75 = { -1 };
+        sjs_json_value* sjt_functionParam186 = 0;
+        int32_t sjt_functionParam187;
 
 #line 122 "lib/sj-lib-common/array.sj"
-        sjt_functionParam139 = i;
+        sjt_functionParam187 = i;
 #line 122
-        sjf_array_value_getat(_parent, sjt_functionParam139, &sjt_call16);
+        sjf_array_value_getat(_parent, sjt_functionParam187, &sjt_call75);
 #line 123
-        sjt_functionParam138 = &sjt_call16;
+        sjt_functionParam186 = &sjt_call75;
 #line 123
-        cb._cb(cb._parent, sjt_functionParam138, &newitem);
+        cb._cb(cb._parent, sjt_functionParam186, &newitem);
 #line 125
         sjs_string* p = (sjs_string*)newArr->data;
 #line 126
@@ -1536,7 +1755,7 @@ sjf_string_copy(&p[i], &newitem);
 
         if (newitem._refCount == 1) { sjf_string_destroy(&newitem); }
 ;
-        if (sjt_call16._refCount == 1) { sjf_json_value_destroy(&sjt_call16); }
+        if (sjt_call75._refCount == 1) { sjf_json_value_destroy(&sjt_call75); }
 ;
     }
 
@@ -1551,8 +1770,8 @@ sjf_string_copy(&p[i], &newitem);
 void sjf_array_value_map_string_heap(sjs_array_value* _parent, cb_value_string cb, sjs_array_string** _return) {
     int32_t i;
     void* newdata;
-    int32_t sjt_forEnd8;
-    int32_t sjt_forStart8;
+    int32_t sjt_forEnd10;
+    int32_t sjt_forStart10;
 
 #line 115 "lib/sj-lib-common/array.sj"
     newdata = 0;
@@ -1565,25 +1784,25 @@ void sjf_array_value_map_string_heap(sjs_array_value* _parent, cb_value_string c
 #line 120
     newdata = (void*)newArr;
 #line 122
-    sjt_forStart8 = 0;
+    sjt_forStart10 = 0;
 #line 122
-    sjf_array_value_getcount(_parent, &sjt_forEnd8);
+    sjf_array_value_getcount(_parent, &sjt_forEnd10);
 #line 122
-    i = sjt_forStart8;
-    while (i < sjt_forEnd8) {
+    i = sjt_forStart10;
+    while (i < sjt_forEnd10) {
         sjs_string newitem = { -1 };
-        sjs_json_value sjt_call17 = { -1 };
-        sjs_json_value* sjt_functionParam140 = 0;
-        int32_t sjt_functionParam141;
+        sjs_json_value sjt_call76 = { -1 };
+        sjs_json_value* sjt_functionParam188 = 0;
+        int32_t sjt_functionParam189;
 
 #line 122 "lib/sj-lib-common/array.sj"
-        sjt_functionParam141 = i;
+        sjt_functionParam189 = i;
 #line 122
-        sjf_array_value_getat(_parent, sjt_functionParam141, &sjt_call17);
+        sjf_array_value_getat(_parent, sjt_functionParam189, &sjt_call76);
 #line 123
-        sjt_functionParam140 = &sjt_call17;
+        sjt_functionParam188 = &sjt_call76;
 #line 123
-        cb._cb(cb._parent, sjt_functionParam140, &newitem);
+        cb._cb(cb._parent, sjt_functionParam188, &newitem);
 #line 125
         sjs_string* p = (sjs_string*)newArr->data;
 #line 126
@@ -1596,7 +1815,7 @@ sjf_string_copy(&p[i], &newitem);
 
         if (newitem._refCount == 1) { sjf_string_destroy(&newitem); }
 ;
-        if (sjt_call17._refCount == 1) { sjf_json_value_destroy(&sjt_call17); }
+        if (sjt_call76._refCount == 1) { sjf_json_value_destroy(&sjt_call76); }
 ;
     }
 
@@ -1669,52 +1888,8 @@ void sjf_hash_string_value__weakptrremovevalue(sjs_hash_string_value* _parent, s
 
 void sjf_hash_string_value_asarray_string(sjs_hash_string_value* _parent, cb_string_value_string cb, sjs_array_string* _return) {
     sjs_list_string result = { -1 };
-    sjs_lambda1 sjt_call25 = { -1 };
-    cb_string_value_void sjt_functionParam146;
-
-    result._refCount = 1;
-    result.arr._refCount = 1;
-#line 27 "lib/sj-lib-common/array.sj"
-    result.arr.v = 0;
-#line 27
-    sjf_array_string(&result.arr);
-#line 27
-    sjf_list_string(&result);
-#line 172 "lib/sj-lib-common/hash.sj"
-    sjs_lambda1* lambainit1;
-#line 172
-    sjt_call25._refCount = 1;
-#line 172
-    sjt_call25.lambdaparam1 = &result;
-#line 170
-    sjt_call25.lambdaparam2 = cb;
-#line 170
-    sjt_call25.lambdaparam3 = cb;
-#line 170
-    sjf_lambda1(&sjt_call25);
-#line 172
-    lambainit1 = &sjt_call25;
-#line 172
-    sjt_functionParam146._parent = (sjs_object*)lambainit1;
-#line 172
-    sjt_functionParam146._cb = (void(*)(sjs_object*,sjs_string*,sjs_json_value*))sjf_lambda1_invoke;
-#line 172
-    sjf_hash_string_value_each(_parent, sjt_functionParam146);
-#line 172
-    _return->_refCount = 1;
-#line 170
-    sjf_array_string_copy(_return, &(&result)->arr);
-
-    if (result._refCount == 1) { sjf_list_string_destroy(&result); }
-;
-    if (sjt_call25._refCount == 1) { sjf_lambda1_destroy(&sjt_call25); }
-;
-}
-
-void sjf_hash_string_value_asarray_string_heap(sjs_hash_string_value* _parent, cb_string_value_string cb, sjs_array_string** _return) {
-    sjs_list_string result = { -1 };
-    sjs_lambda1 sjt_call27 = { -1 };
-    cb_string_value_void sjt_functionParam157;
+    sjs_lambda1 sjt_call84 = { -1 };
+    cb_string_value_void sjt_functionParam194;
 
     result._refCount = 1;
     result.arr._refCount = 1;
@@ -1727,23 +1902,67 @@ void sjf_hash_string_value_asarray_string_heap(sjs_hash_string_value* _parent, c
 #line 172 "lib/sj-lib-common/hash.sj"
     sjs_lambda1* lambainit2;
 #line 172
-    sjt_call27._refCount = 1;
+    sjt_call84._refCount = 1;
 #line 172
-    sjt_call27.lambdaparam1 = &result;
+    sjt_call84.lambdaparam1 = &result;
 #line 170
-    sjt_call27.lambdaparam2 = cb;
+    sjt_call84.lambdaparam2 = cb;
 #line 170
-    sjt_call27.lambdaparam3 = cb;
+    sjt_call84.lambdaparam3 = cb;
 #line 170
-    sjf_lambda1(&sjt_call27);
+    sjf_lambda1(&sjt_call84);
 #line 172
-    lambainit2 = &sjt_call27;
+    lambainit2 = &sjt_call84;
 #line 172
-    sjt_functionParam157._parent = (sjs_object*)lambainit2;
+    sjt_functionParam194._parent = (sjs_object*)lambainit2;
 #line 172
-    sjt_functionParam157._cb = (void(*)(sjs_object*,sjs_string*,sjs_json_value*))sjf_lambda1_invoke;
+    sjt_functionParam194._cb = (void(*)(sjs_object*,sjs_string*,sjs_json_value*))sjf_lambda1_invoke;
 #line 172
-    sjf_hash_string_value_each(_parent, sjt_functionParam157);
+    sjf_hash_string_value_each(_parent, sjt_functionParam194);
+#line 172
+    _return->_refCount = 1;
+#line 170
+    sjf_array_string_copy(_return, &(&result)->arr);
+
+    if (result._refCount == 1) { sjf_list_string_destroy(&result); }
+;
+    if (sjt_call84._refCount == 1) { sjf_lambda1_destroy(&sjt_call84); }
+;
+}
+
+void sjf_hash_string_value_asarray_string_heap(sjs_hash_string_value* _parent, cb_string_value_string cb, sjs_array_string** _return) {
+    sjs_list_string result = { -1 };
+    sjs_lambda1 sjt_call86 = { -1 };
+    cb_string_value_void sjt_functionParam205;
+
+    result._refCount = 1;
+    result.arr._refCount = 1;
+#line 27 "lib/sj-lib-common/array.sj"
+    result.arr.v = 0;
+#line 27
+    sjf_array_string(&result.arr);
+#line 27
+    sjf_list_string(&result);
+#line 172 "lib/sj-lib-common/hash.sj"
+    sjs_lambda1* lambainit3;
+#line 172
+    sjt_call86._refCount = 1;
+#line 172
+    sjt_call86.lambdaparam1 = &result;
+#line 170
+    sjt_call86.lambdaparam2 = cb;
+#line 170
+    sjt_call86.lambdaparam3 = cb;
+#line 170
+    sjf_lambda1(&sjt_call86);
+#line 172
+    lambainit3 = &sjt_call86;
+#line 172
+    sjt_functionParam205._parent = (sjs_object*)lambainit3;
+#line 172
+    sjt_functionParam205._cb = (void(*)(sjs_object*,sjs_string*,sjs_json_value*))sjf_lambda1_invoke;
+#line 172
+    sjf_hash_string_value_each(_parent, sjt_functionParam205);
 #line 172
     (*_return) = (sjs_array_string*)malloc(sizeof(sjs_array_string));
 #line 172
@@ -1753,7 +1972,7 @@ void sjf_hash_string_value_asarray_string_heap(sjs_hash_string_value* _parent, c
 
     if (result._refCount == 1) { sjf_list_string_destroy(&result); }
 ;
-    if (sjt_call27._refCount == 1) { sjf_lambda1_destroy(&sjt_call27); }
+    if (sjt_call86._refCount == 1) { sjf_lambda1_destroy(&sjt_call86); }
 ;
 }
 
@@ -1848,6 +2067,77 @@ void sjf_hash_string_value_each(sjs_hash_string_value* _parent, cb_string_value_
         }
 #line 116
     }
+}
+
+void sjf_hash_string_value_getat(sjs_hash_string_value* _parent, sjs_string* key, sjs_json_value* _return) {
+#line 23 "lib/sj-lib-common/hash.sj"
+    khash_t(string_value_hash_type)* p = (khash_t(string_value_hash_type)*)_parent->_hash;
+#line 25
+    #if true
+#line 26
+    khiter_t k = kh_get(string_value_hash_type, p, *key);
+#line 27
+    #else
+#line 28
+    khiter_t k = kh_get(string_value_hash_type, p, key);
+#line 29
+    #endif
+#line 31
+    if (k == kh_end(p)) {
+#line 32
+        #line 22 "lib/sj-lib-common/hash.sj"
+_return->_refCount = -1;
+return;
+#line 33
+    }
+#line 34
+    #line 22 "lib/sj-lib-common/hash.sj"
+sjs_json_value* copyoption26 = (kh_val(p, k)._refCount != -1 ? &kh_val(p, k) : 0);
+if (copyoption26 != 0) {
+    _return->_refCount = 1;
+#line 22 "lib/sj-lib-common/hash.sj"
+    sjf_json_value_copy(_return, copyoption26);
+} else {
+    _return->_refCount = -1;
+}
+return;;
+}
+
+void sjf_hash_string_value_getat_heap(sjs_hash_string_value* _parent, sjs_string* key, sjs_json_value** _return) {
+#line 23 "lib/sj-lib-common/hash.sj"
+    khash_t(string_value_hash_type)* p = (khash_t(string_value_hash_type)*)_parent->_hash;
+#line 25
+    #if true
+#line 26
+    khiter_t k = kh_get(string_value_hash_type, p, *key);
+#line 27
+    #else
+#line 28
+    khiter_t k = kh_get(string_value_hash_type, p, key);
+#line 29
+    #endif
+#line 31
+    if (k == kh_end(p)) {
+#line 32
+        #line 22 "lib/sj-lib-common/hash.sj"
+(*_return) = 0;
+if ((*_return) != 0) {
+    (*_return)->_refCount++;
+}
+return;
+#line 33
+    }
+#line 34
+    #line 22 "lib/sj-lib-common/hash.sj"
+sjs_json_value* copyoption27 = (kh_val(p, k)._refCount != -1 ? &kh_val(p, k) : 0);
+if (copyoption27 != 0) {
+    (*_return) = 0;
+#line 22 "lib/sj-lib-common/hash.sj"
+    sjf_json_value_copy((*_return), copyoption27);
+} else {
+    (*_return) = 0;
+}
+return;;
 }
 
 void sjf_hash_string_value_heap(sjs_hash_string_value* _this) {
@@ -3836,6 +4126,150 @@ void sjf_json_parse_whitespace(sjs_string* s, int32_t startindex, int32_t* _retu
 void sjf_json_value(sjs_json_value* _this) {
 }
 
+void sjf_json_value_asstring(sjs_json_value* _parent, sjs_string* _return) {
+    if (((_parent->s._refCount != -1 ? &_parent->s : 0) != 0)) {
+        sjs_string* ifValue4 = 0;
+        bool sjt_capture47;
+        char sjt_capture48;
+        int32_t sjt_functionParam125;
+        sjs_string* sjt_parent59 = 0;
+
+#line 16 "lib/sj-lib-json/value.sj"
+        ifValue4 = (_parent->s._refCount != -1 ? &_parent->s : 0);
+#line 63 "lib/sj-lib-common/string.sj"
+        sjt_parent59 = ifValue4;
+#line 17 "lib/sj-lib-json/value.sj"
+        sjt_functionParam125 = 0;
+#line 17
+        sjf_string_getat(sjt_parent59, sjt_functionParam125, &sjt_capture48);
+        if (sjt_capture48 == '\"') {
+            char sjt_capture49;
+            int32_t sjt_functionParam126;
+            sjs_string* sjt_parent60 = 0;
+
+#line 63 "lib/sj-lib-common/string.sj"
+            sjt_parent60 = ifValue4;
+#line 17 "lib/sj-lib-json/value.sj"
+            sjt_functionParam126 = ifValue4->count - 1;
+#line 17
+            sjf_string_getat(sjt_parent60, sjt_functionParam126, &sjt_capture49);
+#line 17
+            sjt_capture47 = (sjt_capture49 == '\"');
+        } else {
+#line 17 "lib/sj-lib-json/value.sj"
+            sjt_capture47 = false;
+        }
+
+        if (sjt_capture47) {
+            int32_t sjt_functionParam127;
+            int32_t sjt_functionParam128;
+            sjs_string* sjt_parent61 = 0;
+
+#line 47 "lib/sj-lib-common/string.sj"
+            sjt_parent61 = ifValue4;
+#line 18 "lib/sj-lib-json/value.sj"
+            sjt_functionParam127 = 1;
+#line 18
+            sjt_functionParam128 = ifValue4->count - 2;
+#line 18
+            sjf_string_substr(sjt_parent61, sjt_functionParam127, sjt_functionParam128, _return);
+        } else {
+            _return->_refCount = 1;
+#line 20 "lib/sj-lib-json/value.sj"
+            sjf_string_copy(_return, ifValue4);
+        }
+    } else {
+        _return->_refCount = 1;
+#line 23 "lib/sj-lib-json/value.sj"
+        _return->offset = 0;
+#line 23
+        _return->count = 0;
+#line 23
+        _return->data._refCount = 1;
+#line 23
+        _return->data.v = &sjg_string2;
+#line 23
+        sjf_array_char(&_return->data);
+#line 16 "lib/sj-lib-common/string.sj"
+        _return->_isnullterminated = false;
+#line 16
+        sjf_string(_return);
+    }
+}
+
+void sjf_json_value_asstring_heap(sjs_json_value* _parent, sjs_string** _return) {
+    if (((_parent->s._refCount != -1 ? &_parent->s : 0) != 0)) {
+        sjs_string* ifValue5 = 0;
+        bool sjt_capture50;
+        char sjt_capture51;
+        int32_t sjt_functionParam129;
+        sjs_string* sjt_parent62 = 0;
+
+#line 16 "lib/sj-lib-json/value.sj"
+        ifValue5 = (_parent->s._refCount != -1 ? &_parent->s : 0);
+#line 63 "lib/sj-lib-common/string.sj"
+        sjt_parent62 = ifValue5;
+#line 17 "lib/sj-lib-json/value.sj"
+        sjt_functionParam129 = 0;
+#line 17
+        sjf_string_getat(sjt_parent62, sjt_functionParam129, &sjt_capture51);
+        if (sjt_capture51 == '\"') {
+            char sjt_capture52;
+            int32_t sjt_functionParam130;
+            sjs_string* sjt_parent63 = 0;
+
+#line 63 "lib/sj-lib-common/string.sj"
+            sjt_parent63 = ifValue5;
+#line 17 "lib/sj-lib-json/value.sj"
+            sjt_functionParam130 = ifValue5->count - 1;
+#line 17
+            sjf_string_getat(sjt_parent63, sjt_functionParam130, &sjt_capture52);
+#line 17
+            sjt_capture50 = (sjt_capture52 == '\"');
+        } else {
+#line 17 "lib/sj-lib-json/value.sj"
+            sjt_capture50 = false;
+        }
+
+        if (sjt_capture50) {
+            int32_t sjt_functionParam131;
+            int32_t sjt_functionParam132;
+            sjs_string* sjt_parent64 = 0;
+
+#line 47 "lib/sj-lib-common/string.sj"
+            sjt_parent64 = ifValue5;
+#line 18 "lib/sj-lib-json/value.sj"
+            sjt_functionParam131 = 1;
+#line 18
+            sjt_functionParam132 = ifValue5->count - 2;
+#line 18
+            sjf_string_substr_heap(sjt_parent64, sjt_functionParam131, sjt_functionParam132, _return);
+        } else {
+            (*_return) = (sjs_string*)malloc(sizeof(sjs_string));
+            (*_return)->_refCount = 1;
+#line 20 "lib/sj-lib-json/value.sj"
+            sjf_string_copy((*_return), ifValue5);
+        }
+    } else {
+        (*_return) = (sjs_string*)malloc(sizeof(sjs_string));
+        (*_return)->_refCount = 1;
+#line 23 "lib/sj-lib-json/value.sj"
+        (*_return)->offset = 0;
+#line 23
+        (*_return)->count = 0;
+#line 23
+        (*_return)->data._refCount = 1;
+#line 23
+        (*_return)->data.v = &sjg_string2;
+#line 23
+        sjf_array_char(&(*_return)->data);
+#line 16 "lib/sj-lib-common/string.sj"
+        (*_return)->_isnullterminated = false;
+#line 16
+        sjf_string_heap((*_return));
+    }
+}
+
 void sjf_json_value_copy(sjs_json_value* _this, sjs_json_value* _from) {
 #line 2 "lib/sj-lib-json/value.sj"
     sjs_string* copyoption14 = (_from->s._refCount != -1 ? &_from->s : 0);
@@ -3877,254 +4311,297 @@ void sjf_json_value_destroy(sjs_json_value* _this) {
 ;
 }
 
+void sjf_json_value_getat(sjs_json_value* _parent, sjs_string* key, sjs_json_value* _return) {
+    if (((_parent->h._refCount != -1 ? &_parent->h : 0) != 0)) {
+        sjs_hash_string_value* ifValue2 = 0;
+        sjs_string* sjt_functionParam112 = 0;
+        sjs_hash_string_value* sjt_parent47 = 0;
+
+#line 8 "lib/sj-lib-json/value.sj"
+        ifValue2 = (_parent->h._refCount != -1 ? &_parent->h : 0);
+#line 21 "lib/sj-lib-common/hash.sj"
+        sjt_parent47 = ifValue2;
+#line 7 "lib/sj-lib-json/value.sj"
+        sjt_functionParam112 = key;
+#line 7
+        sjf_hash_string_value_getat(sjt_parent47, sjt_functionParam112, _return);
+    } else {
+#line 11 "lib/sj-lib-json/value.sj"
+        _return->_refCount = -1;
+    }
+}
+
+void sjf_json_value_getat_heap(sjs_json_value* _parent, sjs_string* key, sjs_json_value** _return) {
+    if (((_parent->h._refCount != -1 ? &_parent->h : 0) != 0)) {
+        sjs_hash_string_value* ifValue3 = 0;
+        sjs_string* sjt_functionParam113 = 0;
+        sjs_hash_string_value* sjt_parent48 = 0;
+
+#line 8 "lib/sj-lib-json/value.sj"
+        ifValue3 = (_parent->h._refCount != -1 ? &_parent->h : 0);
+#line 21 "lib/sj-lib-common/hash.sj"
+        sjt_parent48 = ifValue3;
+#line 7 "lib/sj-lib-json/value.sj"
+        sjt_functionParam113 = key;
+#line 7
+        sjf_hash_string_value_getat_heap(sjt_parent48, sjt_functionParam113, _return);
+    } else {
+#line 11 "lib/sj-lib-json/value.sj"
+        (*_return) = 0;
+        if ((*_return) != 0) {
+            (*_return)->_refCount++;
+        }
+    }
+}
+
 void sjf_json_value_heap(sjs_json_value* _this) {
 }
 
 void sjf_json_value_render(sjs_json_value* _parent, sjs_string* _return) {
     if (((_parent->s._refCount != -1 ? &_parent->s : 0) != 0)) {
-        sjs_string* ifValue2 = 0;
+        sjs_string* ifValue6 = 0;
 
 #line 40 "lib/sj-lib-json/value.sj"
-        ifValue2 = (_parent->s._refCount != -1 ? &_parent->s : 0);
+        ifValue6 = (_parent->s._refCount != -1 ? &_parent->s : 0);
 #line 40
         _return->_refCount = 1;
 #line 41
-        sjf_string_copy(_return, ifValue2);
+        sjf_string_copy(_return, ifValue6);
     } else {
         if (((_parent->a._refCount != -1 ? &_parent->a : 0) != 0)) {
-            sjs_array_value* ifValue3 = 0;
-            sjs_string sjt_call10 = { -1 };
-            sjs_array_string sjt_call15 = { -1 };
-            sjs_lambda3 sjt_call18 = { -1 };
-            sjs_string sjt_call19 = { -1 };
-            sjs_string sjt_call20 = { -1 };
-            sjs_string sjt_call8 = { -1 };
-            sjs_string sjt_call9 = { -1 };
-            sjs_string* sjt_functionParam131 = 0;
-            cb_value_string sjt_functionParam142;
-            sjs_string* sjt_functionParam143 = 0;
-            sjs_string* sjt_functionParam144 = 0;
-            sjs_string* sjt_parent63 = 0;
-            sjs_string* sjt_parent64 = 0;
-            sjs_array_string* sjt_parent71 = 0;
-            sjs_array_value* sjt_parent72 = 0;
+            sjs_array_value* ifValue7 = 0;
+            sjs_string sjt_call67 = { -1 };
+            sjs_string sjt_call68 = { -1 };
+            sjs_string sjt_call69 = { -1 };
+            sjs_array_string sjt_call74 = { -1 };
+            sjs_lambda3 sjt_call77 = { -1 };
+            sjs_string sjt_call78 = { -1 };
+            sjs_string sjt_call79 = { -1 };
+            sjs_string* sjt_functionParam179 = 0;
+            cb_value_string sjt_functionParam190;
+            sjs_string* sjt_functionParam191 = 0;
+            sjs_string* sjt_functionParam192 = 0;
+            sjs_string* sjt_parent108 = 0;
+            sjs_string* sjt_parent109 = 0;
+            sjs_array_string* sjt_parent116 = 0;
+            sjs_array_value* sjt_parent117 = 0;
 
 #line 43 "lib/sj-lib-json/value.sj"
-            ifValue3 = (_parent->a._refCount != -1 ? &_parent->a : 0);
+            ifValue7 = (_parent->a._refCount != -1 ? &_parent->a : 0);
 #line 43
-            sjt_call9._refCount = 1;
+            sjt_call68._refCount = 1;
 #line 44
-            sjt_call9.offset = 0;
+            sjt_call68.offset = 0;
 #line 44
-            sjt_call9.count = 2;
+            sjt_call68.count = 2;
 #line 44
-            sjt_call9.data._refCount = 1;
+            sjt_call68.data._refCount = 1;
 #line 44
-            sjt_call9.data.v = &sjg_string10;
+            sjt_call68.data.v = &sjg_string12;
 #line 44
-            sjf_array_char(&sjt_call9.data);
+            sjf_array_char(&sjt_call68.data);
 #line 16 "lib/sj-lib-common/string.sj"
-            sjt_call9._isnullterminated = false;
+            sjt_call68._isnullterminated = false;
 #line 16
-            sjf_string(&sjt_call9);
+            sjf_string(&sjt_call68);
 #line 44 "lib/sj-lib-json/value.sj"
-            sjt_parent64 = &sjt_call9;
+            sjt_parent109 = &sjt_call68;
 #line 114 "lib/sj-lib-common/array.sj"
-            sjt_parent72 = ifValue3;
+            sjt_parent117 = ifValue7;
 #line 44 "lib/sj-lib-json/value.sj"
-            sjs_lambda3* lambainit4;
+            sjs_lambda3* lambainit5;
 #line 44
-            sjt_call18._refCount = 1;
+            sjt_call77._refCount = 1;
 #line 44
-            sjf_lambda3(&sjt_call18);
+            sjf_lambda3(&sjt_call77);
 #line 44
-            lambainit4 = &sjt_call18;
+            lambainit5 = &sjt_call77;
 #line 44
-            sjt_functionParam142._parent = (sjs_object*)lambainit4;
+            sjt_functionParam190._parent = (sjs_object*)lambainit5;
 #line 44
-            sjt_functionParam142._cb = (void(*)(sjs_object*,sjs_json_value*, sjs_string*))sjf_lambda3_invoke;
+            sjt_functionParam190._cb = (void(*)(sjs_object*,sjs_json_value*, sjs_string*))sjf_lambda3_invoke;
 #line 44
-            sjf_array_value_map_string(sjt_parent72, sjt_functionParam142, &sjt_call15);
+            sjf_array_value_map_string(sjt_parent117, sjt_functionParam190, &sjt_call74);
 #line 44
-            sjt_parent71 = &sjt_call15;
+            sjt_parent116 = &sjt_call74;
 #line 44
-            sjt_call19._refCount = 1;
+            sjt_call78._refCount = 1;
 #line 294 "lib/sj-lib-common/array.sj"
-            sjt_call19.offset = 0;
+            sjt_call78.offset = 0;
 #line 294
-            sjt_call19.count = 2;
+            sjt_call78.count = 2;
 #line 294
-            sjt_call19.data._refCount = 1;
+            sjt_call78.data._refCount = 1;
 #line 294
-            sjt_call19.data.v = &sjg_string8;
+            sjt_call78.data.v = &sjg_string6;
 #line 294
-            sjf_array_char(&sjt_call19.data);
+            sjf_array_char(&sjt_call78.data);
 #line 16 "lib/sj-lib-common/string.sj"
-            sjt_call19._isnullterminated = false;
+            sjt_call78._isnullterminated = false;
 #line 16
-            sjf_string(&sjt_call19);
+            sjf_string(&sjt_call78);
 #line 294 "lib/sj-lib-common/array.sj"
-            sjt_functionParam143 = &sjt_call19;
+            sjt_functionParam191 = &sjt_call78;
 #line 294
-            sjf_array_string_asstring(sjt_parent71, sjt_functionParam143, &sjt_call10);
+            sjf_array_string_asstring(sjt_parent116, sjt_functionParam191, &sjt_call69);
 #line 44 "lib/sj-lib-json/value.sj"
-            sjt_functionParam131 = &sjt_call10;
+            sjt_functionParam179 = &sjt_call69;
 #line 44
-            sjf_string_add(sjt_parent64, sjt_functionParam131, &sjt_call8);
+            sjf_string_add(sjt_parent109, sjt_functionParam179, &sjt_call67);
 #line 44
-            sjt_parent63 = &sjt_call8;
+            sjt_parent108 = &sjt_call67;
 #line 44
-            sjt_call20._refCount = 1;
+            sjt_call79._refCount = 1;
 #line 44
-            sjt_call20.offset = 0;
+            sjt_call79.offset = 0;
 #line 44
-            sjt_call20.count = 2;
+            sjt_call79.count = 2;
 #line 44
-            sjt_call20.data._refCount = 1;
+            sjt_call79.data._refCount = 1;
 #line 44
-            sjt_call20.data.v = &sjg_string11;
+            sjt_call79.data.v = &sjg_string13;
 #line 44
-            sjf_array_char(&sjt_call20.data);
+            sjf_array_char(&sjt_call79.data);
 #line 16 "lib/sj-lib-common/string.sj"
-            sjt_call20._isnullterminated = false;
+            sjt_call79._isnullterminated = false;
 #line 16
-            sjf_string(&sjt_call20);
+            sjf_string(&sjt_call79);
 #line 44 "lib/sj-lib-json/value.sj"
-            sjt_functionParam144 = &sjt_call20;
+            sjt_functionParam192 = &sjt_call79;
 #line 44
-            sjf_string_add(sjt_parent63, sjt_functionParam144, _return);
+            sjf_string_add(sjt_parent108, sjt_functionParam192, _return);
 
-            if (sjt_call10._refCount == 1) { sjf_string_destroy(&sjt_call10); }
+            if (sjt_call67._refCount == 1) { sjf_string_destroy(&sjt_call67); }
 ;
-            if (sjt_call15._refCount == 1) { sjf_array_string_destroy(&sjt_call15); }
+            if (sjt_call68._refCount == 1) { sjf_string_destroy(&sjt_call68); }
 ;
-            if (sjt_call18._refCount == 1) { sjf_lambda3_destroy(&sjt_call18); }
+            if (sjt_call69._refCount == 1) { sjf_string_destroy(&sjt_call69); }
 ;
-            if (sjt_call19._refCount == 1) { sjf_string_destroy(&sjt_call19); }
+            if (sjt_call74._refCount == 1) { sjf_array_string_destroy(&sjt_call74); }
 ;
-            if (sjt_call20._refCount == 1) { sjf_string_destroy(&sjt_call20); }
+            if (sjt_call77._refCount == 1) { sjf_lambda3_destroy(&sjt_call77); }
 ;
-            if (sjt_call8._refCount == 1) { sjf_string_destroy(&sjt_call8); }
+            if (sjt_call78._refCount == 1) { sjf_string_destroy(&sjt_call78); }
 ;
-            if (sjt_call9._refCount == 1) { sjf_string_destroy(&sjt_call9); }
+            if (sjt_call79._refCount == 1) { sjf_string_destroy(&sjt_call79); }
 ;
         } else {
             if (((_parent->h._refCount != -1 ? &_parent->h : 0) != 0)) {
-                sjs_hash_string_value* ifValue4 = 0;
-                sjs_string sjt_call21 = { -1 };
-                sjs_string sjt_call22 = { -1 };
-                sjs_string sjt_call23 = { -1 };
-                sjs_array_string sjt_call24 = { -1 };
-                sjs_lambda2 sjt_call28 = { -1 };
-                sjs_string sjt_call39 = { -1 };
-                sjs_string sjt_call40 = { -1 };
-                sjs_string* sjt_functionParam145 = 0;
-                cb_string_value_string sjt_functionParam158;
-                sjs_string* sjt_functionParam165 = 0;
-                sjs_string* sjt_functionParam166 = 0;
-                sjs_string* sjt_parent75 = 0;
-                sjs_string* sjt_parent76 = 0;
-                sjs_array_string* sjt_parent77 = 0;
-                sjs_hash_string_value* sjt_parent86 = 0;
+                sjs_hash_string_value* ifValue8 = 0;
+                sjs_string sjt_call80 = { -1 };
+                sjs_string sjt_call81 = { -1 };
+                sjs_string sjt_call82 = { -1 };
+                sjs_array_string sjt_call83 = { -1 };
+                sjs_lambda2 sjt_call87 = { -1 };
+                sjs_string sjt_call98 = { -1 };
+                sjs_string sjt_call99 = { -1 };
+                sjs_string* sjt_functionParam193 = 0;
+                cb_string_value_string sjt_functionParam206;
+                sjs_string* sjt_functionParam213 = 0;
+                sjs_string* sjt_functionParam214 = 0;
+                sjs_string* sjt_parent120 = 0;
+                sjs_string* sjt_parent121 = 0;
+                sjs_array_string* sjt_parent122 = 0;
+                sjs_hash_string_value* sjt_parent131 = 0;
 
 #line 46 "lib/sj-lib-json/value.sj"
-                ifValue4 = (_parent->h._refCount != -1 ? &_parent->h : 0);
+                ifValue8 = (_parent->h._refCount != -1 ? &_parent->h : 0);
 #line 46
-                sjt_call22._refCount = 1;
+                sjt_call81._refCount = 1;
 #line 47
-                sjt_call22.offset = 0;
+                sjt_call81.offset = 0;
 #line 47
-                sjt_call22.count = 2;
+                sjt_call81.count = 2;
 #line 47
-                sjt_call22.data._refCount = 1;
+                sjt_call81.data._refCount = 1;
 #line 47
-                sjt_call22.data.v = &sjg_string5;
+                sjt_call81.data.v = &sjg_string8;
 #line 47
-                sjf_array_char(&sjt_call22.data);
+                sjf_array_char(&sjt_call81.data);
 #line 16 "lib/sj-lib-common/string.sj"
-                sjt_call22._isnullterminated = false;
+                sjt_call81._isnullterminated = false;
 #line 16
-                sjf_string(&sjt_call22);
+                sjf_string(&sjt_call81);
 #line 47 "lib/sj-lib-json/value.sj"
-                sjt_parent76 = &sjt_call22;
+                sjt_parent121 = &sjt_call81;
 #line 170 "lib/sj-lib-common/hash.sj"
-                sjt_parent86 = ifValue4;
+                sjt_parent131 = ifValue8;
 #line 47 "lib/sj-lib-json/value.sj"
-                sjs_lambda2* lambainit3;
+                sjs_lambda2* lambainit4;
 #line 47
-                sjt_call28._refCount = 1;
+                sjt_call87._refCount = 1;
 #line 47
-                sjf_lambda2(&sjt_call28);
+                sjf_lambda2(&sjt_call87);
 #line 47
-                lambainit3 = &sjt_call28;
+                lambainit4 = &sjt_call87;
 #line 47
-                sjt_functionParam158._parent = (sjs_object*)lambainit3;
+                sjt_functionParam206._parent = (sjs_object*)lambainit4;
 #line 47
-                sjt_functionParam158._cb = (void(*)(sjs_object*,sjs_string*,sjs_json_value*, sjs_string*))sjf_lambda2_invoke;
+                sjt_functionParam206._cb = (void(*)(sjs_object*,sjs_string*,sjs_json_value*, sjs_string*))sjf_lambda2_invoke;
 #line 47
-                sjf_hash_string_value_asarray_string(sjt_parent86, sjt_functionParam158, &sjt_call24);
+                sjf_hash_string_value_asarray_string(sjt_parent131, sjt_functionParam206, &sjt_call83);
 #line 47
-                sjt_parent77 = &sjt_call24;
+                sjt_parent122 = &sjt_call83;
 #line 47
-                sjt_call39._refCount = 1;
+                sjt_call98._refCount = 1;
 #line 294 "lib/sj-lib-common/array.sj"
-                sjt_call39.offset = 0;
+                sjt_call98.offset = 0;
 #line 294
-                sjt_call39.count = 2;
+                sjt_call98.count = 2;
 #line 294
-                sjt_call39.data._refCount = 1;
+                sjt_call98.data._refCount = 1;
 #line 294
-                sjt_call39.data.v = &sjg_string8;
+                sjt_call98.data.v = &sjg_string6;
 #line 294
-                sjf_array_char(&sjt_call39.data);
+                sjf_array_char(&sjt_call98.data);
 #line 16 "lib/sj-lib-common/string.sj"
-                sjt_call39._isnullterminated = false;
+                sjt_call98._isnullterminated = false;
 #line 16
-                sjf_string(&sjt_call39);
+                sjf_string(&sjt_call98);
 #line 294 "lib/sj-lib-common/array.sj"
-                sjt_functionParam165 = &sjt_call39;
+                sjt_functionParam213 = &sjt_call98;
 #line 294
-                sjf_array_string_asstring(sjt_parent77, sjt_functionParam165, &sjt_call23);
+                sjf_array_string_asstring(sjt_parent122, sjt_functionParam213, &sjt_call82);
 #line 47 "lib/sj-lib-json/value.sj"
-                sjt_functionParam145 = &sjt_call23;
+                sjt_functionParam193 = &sjt_call82;
 #line 47
-                sjf_string_add(sjt_parent76, sjt_functionParam145, &sjt_call21);
+                sjf_string_add(sjt_parent121, sjt_functionParam193, &sjt_call80);
 #line 47
-                sjt_parent75 = &sjt_call21;
+                sjt_parent120 = &sjt_call80;
 #line 47
-                sjt_call40._refCount = 1;
+                sjt_call99._refCount = 1;
 #line 49
-                sjt_call40.offset = 0;
+                sjt_call99.offset = 0;
 #line 49
-                sjt_call40.count = 2;
+                sjt_call99.count = 2;
 #line 49
-                sjt_call40.data._refCount = 1;
+                sjt_call99.data._refCount = 1;
 #line 49
-                sjt_call40.data.v = &sjg_string9;
+                sjt_call99.data.v = &sjg_string11;
 #line 49
-                sjf_array_char(&sjt_call40.data);
+                sjf_array_char(&sjt_call99.data);
 #line 16 "lib/sj-lib-common/string.sj"
-                sjt_call40._isnullterminated = false;
+                sjt_call99._isnullterminated = false;
 #line 16
-                sjf_string(&sjt_call40);
+                sjf_string(&sjt_call99);
 #line 49 "lib/sj-lib-json/value.sj"
-                sjt_functionParam166 = &sjt_call40;
+                sjt_functionParam214 = &sjt_call99;
 #line 49
-                sjf_string_add(sjt_parent75, sjt_functionParam166, _return);
+                sjf_string_add(sjt_parent120, sjt_functionParam214, _return);
 
-                if (sjt_call21._refCount == 1) { sjf_string_destroy(&sjt_call21); }
+                if (sjt_call80._refCount == 1) { sjf_string_destroy(&sjt_call80); }
 ;
-                if (sjt_call22._refCount == 1) { sjf_string_destroy(&sjt_call22); }
+                if (sjt_call81._refCount == 1) { sjf_string_destroy(&sjt_call81); }
 ;
-                if (sjt_call23._refCount == 1) { sjf_string_destroy(&sjt_call23); }
+                if (sjt_call82._refCount == 1) { sjf_string_destroy(&sjt_call82); }
 ;
-                if (sjt_call24._refCount == 1) { sjf_array_string_destroy(&sjt_call24); }
+                if (sjt_call83._refCount == 1) { sjf_array_string_destroy(&sjt_call83); }
 ;
-                if (sjt_call28._refCount == 1) { sjf_lambda2_destroy(&sjt_call28); }
+                if (sjt_call87._refCount == 1) { sjf_lambda2_destroy(&sjt_call87); }
 ;
-                if (sjt_call39._refCount == 1) { sjf_string_destroy(&sjt_call39); }
+                if (sjt_call98._refCount == 1) { sjf_string_destroy(&sjt_call98); }
 ;
-                if (sjt_call40._refCount == 1) { sjf_string_destroy(&sjt_call40); }
+                if (sjt_call99._refCount == 1) { sjf_string_destroy(&sjt_call99); }
 ;
             } else {
                 _return->_refCount = 1;
@@ -4149,251 +4626,251 @@ void sjf_json_value_render(sjs_json_value* _parent, sjs_string* _return) {
 
 void sjf_json_value_render_heap(sjs_json_value* _parent, sjs_string** _return) {
     if (((_parent->s._refCount != -1 ? &_parent->s : 0) != 0)) {
-        sjs_string* ifValue5 = 0;
+        sjs_string* ifValue9 = 0;
 
 #line 40 "lib/sj-lib-json/value.sj"
-        ifValue5 = (_parent->s._refCount != -1 ? &_parent->s : 0);
+        ifValue9 = (_parent->s._refCount != -1 ? &_parent->s : 0);
 #line 40
         (*_return) = (sjs_string*)malloc(sizeof(sjs_string));
 #line 40
         (*_return)->_refCount = 1;
 #line 41
-        sjf_string_copy((*_return), ifValue5);
+        sjf_string_copy((*_return), ifValue9);
     } else {
         if (((_parent->a._refCount != -1 ? &_parent->a : 0) != 0)) {
-            sjs_array_value* ifValue6 = 0;
-            sjs_string sjt_call41 = { -1 };
-            sjs_string sjt_call42 = { -1 };
-            sjs_string sjt_call43 = { -1 };
-            sjs_array_string sjt_call44 = { -1 };
-            sjs_lambda3 sjt_call45 = { -1 };
-            sjs_string sjt_call46 = { -1 };
-            sjs_string sjt_call47 = { -1 };
-            sjs_string* sjt_functionParam167 = 0;
-            cb_value_string sjt_functionParam168;
-            sjs_string* sjt_functionParam169 = 0;
-            sjs_string* sjt_functionParam170 = 0;
-            sjs_string* sjt_parent95 = 0;
-            sjs_string* sjt_parent96 = 0;
-            sjs_array_string* sjt_parent97 = 0;
-            sjs_array_value* sjt_parent98 = 0;
+            sjs_array_value* ifValue10 = 0;
+            sjs_string sjt_call100 = { -1 };
+            sjs_string sjt_call101 = { -1 };
+            sjs_string sjt_call102 = { -1 };
+            sjs_array_string sjt_call103 = { -1 };
+            sjs_lambda3 sjt_call104 = { -1 };
+            sjs_string sjt_call105 = { -1 };
+            sjs_string sjt_call106 = { -1 };
+            sjs_string* sjt_functionParam215 = 0;
+            cb_value_string sjt_functionParam216;
+            sjs_string* sjt_functionParam217 = 0;
+            sjs_string* sjt_functionParam218 = 0;
+            sjs_string* sjt_parent140 = 0;
+            sjs_string* sjt_parent141 = 0;
+            sjs_array_string* sjt_parent142 = 0;
+            sjs_array_value* sjt_parent143 = 0;
 
 #line 43 "lib/sj-lib-json/value.sj"
-            ifValue6 = (_parent->a._refCount != -1 ? &_parent->a : 0);
+            ifValue10 = (_parent->a._refCount != -1 ? &_parent->a : 0);
 #line 43
-            sjt_call42._refCount = 1;
+            sjt_call101._refCount = 1;
 #line 44
-            sjt_call42.offset = 0;
+            sjt_call101.offset = 0;
 #line 44
-            sjt_call42.count = 2;
+            sjt_call101.count = 2;
 #line 44
-            sjt_call42.data._refCount = 1;
+            sjt_call101.data._refCount = 1;
 #line 44
-            sjt_call42.data.v = &sjg_string10;
+            sjt_call101.data.v = &sjg_string12;
 #line 44
-            sjf_array_char(&sjt_call42.data);
+            sjf_array_char(&sjt_call101.data);
 #line 16 "lib/sj-lib-common/string.sj"
-            sjt_call42._isnullterminated = false;
+            sjt_call101._isnullterminated = false;
 #line 16
-            sjf_string(&sjt_call42);
+            sjf_string(&sjt_call101);
 #line 44 "lib/sj-lib-json/value.sj"
-            sjt_parent96 = &sjt_call42;
+            sjt_parent141 = &sjt_call101;
 #line 114 "lib/sj-lib-common/array.sj"
-            sjt_parent98 = ifValue6;
+            sjt_parent143 = ifValue10;
 #line 44 "lib/sj-lib-json/value.sj"
-            sjs_lambda3* lambainit6;
+            sjs_lambda3* lambainit7;
 #line 44
-            sjt_call45._refCount = 1;
+            sjt_call104._refCount = 1;
 #line 44
-            sjf_lambda3(&sjt_call45);
+            sjf_lambda3(&sjt_call104);
 #line 44
-            lambainit6 = &sjt_call45;
+            lambainit7 = &sjt_call104;
 #line 44
-            sjt_functionParam168._parent = (sjs_object*)lambainit6;
+            sjt_functionParam216._parent = (sjs_object*)lambainit7;
 #line 44
-            sjt_functionParam168._cb = (void(*)(sjs_object*,sjs_json_value*, sjs_string*))sjf_lambda3_invoke;
+            sjt_functionParam216._cb = (void(*)(sjs_object*,sjs_json_value*, sjs_string*))sjf_lambda3_invoke;
 #line 44
-            sjf_array_value_map_string(sjt_parent98, sjt_functionParam168, &sjt_call44);
+            sjf_array_value_map_string(sjt_parent143, sjt_functionParam216, &sjt_call103);
 #line 44
-            sjt_parent97 = &sjt_call44;
+            sjt_parent142 = &sjt_call103;
 #line 44
-            sjt_call46._refCount = 1;
+            sjt_call105._refCount = 1;
 #line 294 "lib/sj-lib-common/array.sj"
-            sjt_call46.offset = 0;
+            sjt_call105.offset = 0;
 #line 294
-            sjt_call46.count = 2;
+            sjt_call105.count = 2;
 #line 294
-            sjt_call46.data._refCount = 1;
+            sjt_call105.data._refCount = 1;
 #line 294
-            sjt_call46.data.v = &sjg_string8;
+            sjt_call105.data.v = &sjg_string6;
 #line 294
-            sjf_array_char(&sjt_call46.data);
+            sjf_array_char(&sjt_call105.data);
 #line 16 "lib/sj-lib-common/string.sj"
-            sjt_call46._isnullterminated = false;
+            sjt_call105._isnullterminated = false;
 #line 16
-            sjf_string(&sjt_call46);
+            sjf_string(&sjt_call105);
 #line 294 "lib/sj-lib-common/array.sj"
-            sjt_functionParam169 = &sjt_call46;
+            sjt_functionParam217 = &sjt_call105;
 #line 294
-            sjf_array_string_asstring(sjt_parent97, sjt_functionParam169, &sjt_call43);
+            sjf_array_string_asstring(sjt_parent142, sjt_functionParam217, &sjt_call102);
 #line 44 "lib/sj-lib-json/value.sj"
-            sjt_functionParam167 = &sjt_call43;
+            sjt_functionParam215 = &sjt_call102;
 #line 44
-            sjf_string_add(sjt_parent96, sjt_functionParam167, &sjt_call41);
+            sjf_string_add(sjt_parent141, sjt_functionParam215, &sjt_call100);
 #line 44
-            sjt_parent95 = &sjt_call41;
+            sjt_parent140 = &sjt_call100;
 #line 44
-            sjt_call47._refCount = 1;
+            sjt_call106._refCount = 1;
 #line 44
-            sjt_call47.offset = 0;
+            sjt_call106.offset = 0;
 #line 44
-            sjt_call47.count = 2;
+            sjt_call106.count = 2;
 #line 44
-            sjt_call47.data._refCount = 1;
+            sjt_call106.data._refCount = 1;
 #line 44
-            sjt_call47.data.v = &sjg_string11;
+            sjt_call106.data.v = &sjg_string13;
 #line 44
-            sjf_array_char(&sjt_call47.data);
+            sjf_array_char(&sjt_call106.data);
 #line 16 "lib/sj-lib-common/string.sj"
-            sjt_call47._isnullterminated = false;
+            sjt_call106._isnullterminated = false;
 #line 16
-            sjf_string(&sjt_call47);
+            sjf_string(&sjt_call106);
 #line 44 "lib/sj-lib-json/value.sj"
-            sjt_functionParam170 = &sjt_call47;
+            sjt_functionParam218 = &sjt_call106;
 #line 44
-            sjf_string_add_heap(sjt_parent95, sjt_functionParam170, _return);
+            sjf_string_add_heap(sjt_parent140, sjt_functionParam218, _return);
 
-            if (sjt_call41._refCount == 1) { sjf_string_destroy(&sjt_call41); }
+            if (sjt_call100._refCount == 1) { sjf_string_destroy(&sjt_call100); }
 ;
-            if (sjt_call42._refCount == 1) { sjf_string_destroy(&sjt_call42); }
+            if (sjt_call101._refCount == 1) { sjf_string_destroy(&sjt_call101); }
 ;
-            if (sjt_call43._refCount == 1) { sjf_string_destroy(&sjt_call43); }
+            if (sjt_call102._refCount == 1) { sjf_string_destroy(&sjt_call102); }
 ;
-            if (sjt_call44._refCount == 1) { sjf_array_string_destroy(&sjt_call44); }
+            if (sjt_call103._refCount == 1) { sjf_array_string_destroy(&sjt_call103); }
 ;
-            if (sjt_call45._refCount == 1) { sjf_lambda3_destroy(&sjt_call45); }
+            if (sjt_call104._refCount == 1) { sjf_lambda3_destroy(&sjt_call104); }
 ;
-            if (sjt_call46._refCount == 1) { sjf_string_destroy(&sjt_call46); }
+            if (sjt_call105._refCount == 1) { sjf_string_destroy(&sjt_call105); }
 ;
-            if (sjt_call47._refCount == 1) { sjf_string_destroy(&sjt_call47); }
+            if (sjt_call106._refCount == 1) { sjf_string_destroy(&sjt_call106); }
 ;
         } else {
             if (((_parent->h._refCount != -1 ? &_parent->h : 0) != 0)) {
-                sjs_hash_string_value* ifValue7 = 0;
-                sjs_string sjt_call48 = { -1 };
-                sjs_string sjt_call49 = { -1 };
-                sjs_string sjt_call50 = { -1 };
-                sjs_array_string sjt_call51 = { -1 };
-                sjs_lambda2 sjt_call52 = { -1 };
-                sjs_string sjt_call53 = { -1 };
-                sjs_string sjt_call54 = { -1 };
-                sjs_string* sjt_functionParam171 = 0;
-                cb_string_value_string sjt_functionParam172;
-                sjs_string* sjt_functionParam173 = 0;
-                sjs_string* sjt_functionParam174 = 0;
-                sjs_string* sjt_parent100 = 0;
-                sjs_array_string* sjt_parent101 = 0;
-                sjs_hash_string_value* sjt_parent102 = 0;
-                sjs_string* sjt_parent99 = 0;
+                sjs_hash_string_value* ifValue11 = 0;
+                sjs_string sjt_call107 = { -1 };
+                sjs_string sjt_call108 = { -1 };
+                sjs_string sjt_call109 = { -1 };
+                sjs_array_string sjt_call110 = { -1 };
+                sjs_lambda2 sjt_call111 = { -1 };
+                sjs_string sjt_call112 = { -1 };
+                sjs_string sjt_call113 = { -1 };
+                sjs_string* sjt_functionParam219 = 0;
+                cb_string_value_string sjt_functionParam220;
+                sjs_string* sjt_functionParam221 = 0;
+                sjs_string* sjt_functionParam222 = 0;
+                sjs_string* sjt_parent144 = 0;
+                sjs_string* sjt_parent145 = 0;
+                sjs_array_string* sjt_parent146 = 0;
+                sjs_hash_string_value* sjt_parent147 = 0;
 
 #line 46 "lib/sj-lib-json/value.sj"
-                ifValue7 = (_parent->h._refCount != -1 ? &_parent->h : 0);
+                ifValue11 = (_parent->h._refCount != -1 ? &_parent->h : 0);
 #line 46
-                sjt_call49._refCount = 1;
+                sjt_call108._refCount = 1;
 #line 47
-                sjt_call49.offset = 0;
+                sjt_call108.offset = 0;
 #line 47
-                sjt_call49.count = 2;
+                sjt_call108.count = 2;
 #line 47
-                sjt_call49.data._refCount = 1;
+                sjt_call108.data._refCount = 1;
 #line 47
-                sjt_call49.data.v = &sjg_string5;
+                sjt_call108.data.v = &sjg_string8;
 #line 47
-                sjf_array_char(&sjt_call49.data);
+                sjf_array_char(&sjt_call108.data);
 #line 16 "lib/sj-lib-common/string.sj"
-                sjt_call49._isnullterminated = false;
+                sjt_call108._isnullterminated = false;
 #line 16
-                sjf_string(&sjt_call49);
+                sjf_string(&sjt_call108);
 #line 47 "lib/sj-lib-json/value.sj"
-                sjt_parent100 = &sjt_call49;
+                sjt_parent145 = &sjt_call108;
 #line 170 "lib/sj-lib-common/hash.sj"
-                sjt_parent102 = ifValue7;
+                sjt_parent147 = ifValue11;
 #line 47 "lib/sj-lib-json/value.sj"
-                sjs_lambda2* lambainit5;
+                sjs_lambda2* lambainit6;
 #line 47
-                sjt_call52._refCount = 1;
+                sjt_call111._refCount = 1;
 #line 47
-                sjf_lambda2(&sjt_call52);
+                sjf_lambda2(&sjt_call111);
 #line 47
-                lambainit5 = &sjt_call52;
+                lambainit6 = &sjt_call111;
 #line 47
-                sjt_functionParam172._parent = (sjs_object*)lambainit5;
+                sjt_functionParam220._parent = (sjs_object*)lambainit6;
 #line 47
-                sjt_functionParam172._cb = (void(*)(sjs_object*,sjs_string*,sjs_json_value*, sjs_string*))sjf_lambda2_invoke;
+                sjt_functionParam220._cb = (void(*)(sjs_object*,sjs_string*,sjs_json_value*, sjs_string*))sjf_lambda2_invoke;
 #line 47
-                sjf_hash_string_value_asarray_string(sjt_parent102, sjt_functionParam172, &sjt_call51);
+                sjf_hash_string_value_asarray_string(sjt_parent147, sjt_functionParam220, &sjt_call110);
 #line 47
-                sjt_parent101 = &sjt_call51;
+                sjt_parent146 = &sjt_call110;
 #line 47
-                sjt_call53._refCount = 1;
+                sjt_call112._refCount = 1;
 #line 294 "lib/sj-lib-common/array.sj"
-                sjt_call53.offset = 0;
+                sjt_call112.offset = 0;
 #line 294
-                sjt_call53.count = 2;
+                sjt_call112.count = 2;
 #line 294
-                sjt_call53.data._refCount = 1;
+                sjt_call112.data._refCount = 1;
 #line 294
-                sjt_call53.data.v = &sjg_string8;
+                sjt_call112.data.v = &sjg_string6;
 #line 294
-                sjf_array_char(&sjt_call53.data);
+                sjf_array_char(&sjt_call112.data);
 #line 16 "lib/sj-lib-common/string.sj"
-                sjt_call53._isnullterminated = false;
+                sjt_call112._isnullterminated = false;
 #line 16
-                sjf_string(&sjt_call53);
+                sjf_string(&sjt_call112);
 #line 294 "lib/sj-lib-common/array.sj"
-                sjt_functionParam173 = &sjt_call53;
+                sjt_functionParam221 = &sjt_call112;
 #line 294
-                sjf_array_string_asstring(sjt_parent101, sjt_functionParam173, &sjt_call50);
+                sjf_array_string_asstring(sjt_parent146, sjt_functionParam221, &sjt_call109);
 #line 47 "lib/sj-lib-json/value.sj"
-                sjt_functionParam171 = &sjt_call50;
+                sjt_functionParam219 = &sjt_call109;
 #line 47
-                sjf_string_add(sjt_parent100, sjt_functionParam171, &sjt_call48);
+                sjf_string_add(sjt_parent145, sjt_functionParam219, &sjt_call107);
 #line 47
-                sjt_parent99 = &sjt_call48;
+                sjt_parent144 = &sjt_call107;
 #line 47
-                sjt_call54._refCount = 1;
+                sjt_call113._refCount = 1;
 #line 49
-                sjt_call54.offset = 0;
+                sjt_call113.offset = 0;
 #line 49
-                sjt_call54.count = 2;
+                sjt_call113.count = 2;
 #line 49
-                sjt_call54.data._refCount = 1;
+                sjt_call113.data._refCount = 1;
 #line 49
-                sjt_call54.data.v = &sjg_string9;
+                sjt_call113.data.v = &sjg_string11;
 #line 49
-                sjf_array_char(&sjt_call54.data);
+                sjf_array_char(&sjt_call113.data);
 #line 16 "lib/sj-lib-common/string.sj"
-                sjt_call54._isnullterminated = false;
+                sjt_call113._isnullterminated = false;
 #line 16
-                sjf_string(&sjt_call54);
+                sjf_string(&sjt_call113);
 #line 49 "lib/sj-lib-json/value.sj"
-                sjt_functionParam174 = &sjt_call54;
+                sjt_functionParam222 = &sjt_call113;
 #line 49
-                sjf_string_add_heap(sjt_parent99, sjt_functionParam174, _return);
+                sjf_string_add_heap(sjt_parent144, sjt_functionParam222, _return);
 
-                if (sjt_call48._refCount == 1) { sjf_string_destroy(&sjt_call48); }
+                if (sjt_call107._refCount == 1) { sjf_string_destroy(&sjt_call107); }
 ;
-                if (sjt_call49._refCount == 1) { sjf_string_destroy(&sjt_call49); }
+                if (sjt_call108._refCount == 1) { sjf_string_destroy(&sjt_call108); }
 ;
-                if (sjt_call50._refCount == 1) { sjf_string_destroy(&sjt_call50); }
+                if (sjt_call109._refCount == 1) { sjf_string_destroy(&sjt_call109); }
 ;
-                if (sjt_call51._refCount == 1) { sjf_array_string_destroy(&sjt_call51); }
+                if (sjt_call110._refCount == 1) { sjf_array_string_destroy(&sjt_call110); }
 ;
-                if (sjt_call52._refCount == 1) { sjf_lambda2_destroy(&sjt_call52); }
+                if (sjt_call111._refCount == 1) { sjf_lambda2_destroy(&sjt_call111); }
 ;
-                if (sjt_call53._refCount == 1) { sjf_string_destroy(&sjt_call53); }
+                if (sjt_call112._refCount == 1) { sjf_string_destroy(&sjt_call112); }
 ;
-                if (sjt_call54._refCount == 1) { sjf_string_destroy(&sjt_call54); }
+                if (sjt_call113._refCount == 1) { sjf_string_destroy(&sjt_call113); }
 ;
             } else {
                 (*_return) = (sjs_string*)malloc(sizeof(sjs_string));
@@ -4436,26 +4913,26 @@ void sjf_lambda1_heap(sjs_lambda1* _this) {
 }
 
 void sjf_lambda1_invoke(sjs_lambda1* _parent, sjs_string* _1, sjs_json_value* _2) {
-    sjs_string sjt_call26 = { -1 };
-    sjs_string* sjt_functionParam154 = 0;
-    sjs_string* sjt_functionParam155 = 0;
-    sjs_json_value* sjt_functionParam156 = 0;
-    sjs_list_string* sjt_parent85 = 0;
+    sjs_string sjt_call85 = { -1 };
+    sjs_string* sjt_functionParam202 = 0;
+    sjs_string* sjt_functionParam203 = 0;
+    sjs_json_value* sjt_functionParam204 = 0;
+    sjs_list_string* sjt_parent130 = 0;
 
 #line 44 "lib/sj-lib-common/list.sj"
-    sjt_parent85 = _parent->lambdaparam1;
+    sjt_parent130 = _parent->lambdaparam1;
 #line 172 "lib/sj-lib-common/hash.sj"
-    sjt_functionParam155 = _1;
+    sjt_functionParam203 = _1;
 #line 172
-    sjt_functionParam156 = _2;
+    sjt_functionParam204 = _2;
 #line 172
-    _parent->lambdaparam2._cb(_parent->lambdaparam2._parent, sjt_functionParam155, sjt_functionParam156, &sjt_call26);
+    _parent->lambdaparam2._cb(_parent->lambdaparam2._parent, sjt_functionParam203, sjt_functionParam204, &sjt_call85);
 #line 173
-    sjt_functionParam154 = &sjt_call26;
+    sjt_functionParam202 = &sjt_call85;
 #line 173
-    sjf_list_string_add(sjt_parent85, sjt_functionParam154);
+    sjf_list_string_add(sjt_parent130, sjt_functionParam202);
 
-    if (sjt_call26._refCount == 1) { sjf_string_destroy(&sjt_call26); }
+    if (sjt_call85._refCount == 1) { sjf_string_destroy(&sjt_call85); }
 ;
 }
 
@@ -4472,162 +4949,162 @@ void sjf_lambda2_heap(sjs_lambda2* _this) {
 }
 
 void sjf_lambda2_invoke(sjs_lambda2* _parent, sjs_string* _1, sjs_json_value* _2, sjs_string* _return) {
-    sjs_string sjt_call29 = { -1 };
-    sjs_string sjt_call30 = { -1 };
-    sjs_string sjt_call31 = { -1 };
-    sjs_string sjt_call32 = { -1 };
-    sjs_string sjt_call33 = { -1 };
-    sjs_string* sjt_functionParam159 = 0;
-    sjs_string* sjt_functionParam160 = 0;
-    sjs_string* sjt_functionParam161 = 0;
-    sjs_string* sjt_parent87 = 0;
-    sjs_string* sjt_parent88 = 0;
-    sjs_string* sjt_parent89 = 0;
-    sjs_json_value* sjt_parent90 = 0;
+    sjs_string sjt_call88 = { -1 };
+    sjs_string sjt_call89 = { -1 };
+    sjs_string sjt_call90 = { -1 };
+    sjs_string sjt_call91 = { -1 };
+    sjs_string sjt_call92 = { -1 };
+    sjs_string* sjt_functionParam207 = 0;
+    sjs_string* sjt_functionParam208 = 0;
+    sjs_string* sjt_functionParam209 = 0;
+    sjs_string* sjt_parent132 = 0;
+    sjs_string* sjt_parent133 = 0;
+    sjs_string* sjt_parent134 = 0;
+    sjs_json_value* sjt_parent135 = 0;
 
-    sjt_call31._refCount = 1;
+    sjt_call90._refCount = 1;
 #line 48 "lib/sj-lib-json/value.sj"
-    sjt_call31.offset = 0;
+    sjt_call90.offset = 0;
 #line 48
-    sjt_call31.count = 1;
+    sjt_call90.count = 1;
 #line 48
-    sjt_call31.data._refCount = 1;
+    sjt_call90.data._refCount = 1;
 #line 48
-    sjt_call31.data.v = &sjg_string6;
+    sjt_call90.data.v = &sjg_string9;
 #line 48
-    sjf_array_char(&sjt_call31.data);
+    sjf_array_char(&sjt_call90.data);
 #line 16 "lib/sj-lib-common/string.sj"
-    sjt_call31._isnullterminated = false;
+    sjt_call90._isnullterminated = false;
 #line 16
-    sjf_string(&sjt_call31);
+    sjf_string(&sjt_call90);
 #line 48 "lib/sj-lib-json/value.sj"
-    sjt_parent89 = &sjt_call31;
+    sjt_parent134 = &sjt_call90;
 #line 47
-    sjt_functionParam159 = _1;
+    sjt_functionParam207 = _1;
 #line 47
-    sjf_string_add(sjt_parent89, sjt_functionParam159, &sjt_call30);
+    sjf_string_add(sjt_parent134, sjt_functionParam207, &sjt_call89);
 #line 48
-    sjt_parent88 = &sjt_call30;
+    sjt_parent133 = &sjt_call89;
 #line 48
-    sjt_call32._refCount = 1;
+    sjt_call91._refCount = 1;
 #line 48
-    sjt_call32.offset = 0;
+    sjt_call91.offset = 0;
 #line 48
-    sjt_call32.count = 4;
+    sjt_call91.count = 4;
 #line 48
-    sjt_call32.data._refCount = 1;
+    sjt_call91.data._refCount = 1;
 #line 48
-    sjt_call32.data.v = &sjg_string7;
+    sjt_call91.data.v = &sjg_string10;
 #line 48
-    sjf_array_char(&sjt_call32.data);
+    sjf_array_char(&sjt_call91.data);
 #line 16 "lib/sj-lib-common/string.sj"
-    sjt_call32._isnullterminated = false;
+    sjt_call91._isnullterminated = false;
 #line 16
-    sjf_string(&sjt_call32);
+    sjf_string(&sjt_call91);
 #line 48 "lib/sj-lib-json/value.sj"
-    sjt_functionParam160 = &sjt_call32;
+    sjt_functionParam208 = &sjt_call91;
 #line 48
-    sjf_string_add(sjt_parent88, sjt_functionParam160, &sjt_call29);
+    sjf_string_add(sjt_parent133, sjt_functionParam208, &sjt_call88);
 #line 48
-    sjt_parent87 = &sjt_call29;
+    sjt_parent132 = &sjt_call88;
 #line 47
-    sjt_parent90 = _2;
+    sjt_parent135 = _2;
 #line 47
-    sjf_json_value_render(sjt_parent90, &sjt_call33);
+    sjf_json_value_render(sjt_parent135, &sjt_call92);
 #line 48
-    sjt_functionParam161 = &sjt_call33;
+    sjt_functionParam209 = &sjt_call92;
 #line 48
-    sjf_string_add(sjt_parent87, sjt_functionParam161, _return);
+    sjf_string_add(sjt_parent132, sjt_functionParam209, _return);
 
-    if (sjt_call29._refCount == 1) { sjf_string_destroy(&sjt_call29); }
+    if (sjt_call88._refCount == 1) { sjf_string_destroy(&sjt_call88); }
 ;
-    if (sjt_call30._refCount == 1) { sjf_string_destroy(&sjt_call30); }
+    if (sjt_call89._refCount == 1) { sjf_string_destroy(&sjt_call89); }
 ;
-    if (sjt_call31._refCount == 1) { sjf_string_destroy(&sjt_call31); }
+    if (sjt_call90._refCount == 1) { sjf_string_destroy(&sjt_call90); }
 ;
-    if (sjt_call32._refCount == 1) { sjf_string_destroy(&sjt_call32); }
+    if (sjt_call91._refCount == 1) { sjf_string_destroy(&sjt_call91); }
 ;
-    if (sjt_call33._refCount == 1) { sjf_string_destroy(&sjt_call33); }
+    if (sjt_call92._refCount == 1) { sjf_string_destroy(&sjt_call92); }
 ;
 }
 
 void sjf_lambda2_invoke_heap(sjs_lambda2* _parent, sjs_string* _1, sjs_json_value* _2, sjs_string** _return) {
-    sjs_string sjt_call34 = { -1 };
-    sjs_string sjt_call35 = { -1 };
-    sjs_string sjt_call36 = { -1 };
-    sjs_string sjt_call37 = { -1 };
-    sjs_string sjt_call38 = { -1 };
-    sjs_string* sjt_functionParam162 = 0;
-    sjs_string* sjt_functionParam163 = 0;
-    sjs_string* sjt_functionParam164 = 0;
-    sjs_string* sjt_parent91 = 0;
-    sjs_string* sjt_parent92 = 0;
-    sjs_string* sjt_parent93 = 0;
-    sjs_json_value* sjt_parent94 = 0;
+    sjs_string sjt_call93 = { -1 };
+    sjs_string sjt_call94 = { -1 };
+    sjs_string sjt_call95 = { -1 };
+    sjs_string sjt_call96 = { -1 };
+    sjs_string sjt_call97 = { -1 };
+    sjs_string* sjt_functionParam210 = 0;
+    sjs_string* sjt_functionParam211 = 0;
+    sjs_string* sjt_functionParam212 = 0;
+    sjs_string* sjt_parent136 = 0;
+    sjs_string* sjt_parent137 = 0;
+    sjs_string* sjt_parent138 = 0;
+    sjs_json_value* sjt_parent139 = 0;
 
-    sjt_call36._refCount = 1;
+    sjt_call95._refCount = 1;
 #line 48 "lib/sj-lib-json/value.sj"
-    sjt_call36.offset = 0;
+    sjt_call95.offset = 0;
 #line 48
-    sjt_call36.count = 1;
+    sjt_call95.count = 1;
 #line 48
-    sjt_call36.data._refCount = 1;
+    sjt_call95.data._refCount = 1;
 #line 48
-    sjt_call36.data.v = &sjg_string6;
+    sjt_call95.data.v = &sjg_string9;
 #line 48
-    sjf_array_char(&sjt_call36.data);
+    sjf_array_char(&sjt_call95.data);
 #line 16 "lib/sj-lib-common/string.sj"
-    sjt_call36._isnullterminated = false;
+    sjt_call95._isnullterminated = false;
 #line 16
-    sjf_string(&sjt_call36);
+    sjf_string(&sjt_call95);
 #line 48 "lib/sj-lib-json/value.sj"
-    sjt_parent93 = &sjt_call36;
+    sjt_parent138 = &sjt_call95;
 #line 47
-    sjt_functionParam162 = _1;
+    sjt_functionParam210 = _1;
 #line 47
-    sjf_string_add(sjt_parent93, sjt_functionParam162, &sjt_call35);
+    sjf_string_add(sjt_parent138, sjt_functionParam210, &sjt_call94);
 #line 48
-    sjt_parent92 = &sjt_call35;
+    sjt_parent137 = &sjt_call94;
 #line 48
-    sjt_call37._refCount = 1;
+    sjt_call96._refCount = 1;
 #line 48
-    sjt_call37.offset = 0;
+    sjt_call96.offset = 0;
 #line 48
-    sjt_call37.count = 4;
+    sjt_call96.count = 4;
 #line 48
-    sjt_call37.data._refCount = 1;
+    sjt_call96.data._refCount = 1;
 #line 48
-    sjt_call37.data.v = &sjg_string7;
+    sjt_call96.data.v = &sjg_string10;
 #line 48
-    sjf_array_char(&sjt_call37.data);
+    sjf_array_char(&sjt_call96.data);
 #line 16 "lib/sj-lib-common/string.sj"
-    sjt_call37._isnullterminated = false;
+    sjt_call96._isnullterminated = false;
 #line 16
-    sjf_string(&sjt_call37);
+    sjf_string(&sjt_call96);
 #line 48 "lib/sj-lib-json/value.sj"
-    sjt_functionParam163 = &sjt_call37;
+    sjt_functionParam211 = &sjt_call96;
 #line 48
-    sjf_string_add(sjt_parent92, sjt_functionParam163, &sjt_call34);
+    sjf_string_add(sjt_parent137, sjt_functionParam211, &sjt_call93);
 #line 48
-    sjt_parent91 = &sjt_call34;
+    sjt_parent136 = &sjt_call93;
 #line 47
-    sjt_parent94 = _2;
+    sjt_parent139 = _2;
 #line 47
-    sjf_json_value_render(sjt_parent94, &sjt_call38);
+    sjf_json_value_render(sjt_parent139, &sjt_call97);
 #line 48
-    sjt_functionParam164 = &sjt_call38;
+    sjt_functionParam212 = &sjt_call97;
 #line 48
-    sjf_string_add_heap(sjt_parent91, sjt_functionParam164, _return);
+    sjf_string_add_heap(sjt_parent136, sjt_functionParam212, _return);
 
-    if (sjt_call34._refCount == 1) { sjf_string_destroy(&sjt_call34); }
+    if (sjt_call93._refCount == 1) { sjf_string_destroy(&sjt_call93); }
 ;
-    if (sjt_call35._refCount == 1) { sjf_string_destroy(&sjt_call35); }
+    if (sjt_call94._refCount == 1) { sjf_string_destroy(&sjt_call94); }
 ;
-    if (sjt_call36._refCount == 1) { sjf_string_destroy(&sjt_call36); }
+    if (sjt_call95._refCount == 1) { sjf_string_destroy(&sjt_call95); }
 ;
-    if (sjt_call37._refCount == 1) { sjf_string_destroy(&sjt_call37); }
+    if (sjt_call96._refCount == 1) { sjf_string_destroy(&sjt_call96); }
 ;
-    if (sjt_call38._refCount == 1) { sjf_string_destroy(&sjt_call38); }
+    if (sjt_call97._refCount == 1) { sjf_string_destroy(&sjt_call97); }
 ;
 }
 
@@ -4644,95 +5121,196 @@ void sjf_lambda3_heap(sjs_lambda3* _this) {
 }
 
 void sjf_lambda3_invoke(sjs_lambda3* _parent, sjs_json_value* _1, sjs_string* _return) {
-    sjs_json_value* sjt_parent73 = 0;
+    sjs_json_value* sjt_parent118 = 0;
 
 #line 44 "lib/sj-lib-json/value.sj"
-    sjt_parent73 = _1;
+    sjt_parent118 = _1;
 #line 44
-    sjf_json_value_render(sjt_parent73, _return);
+    sjf_json_value_render(sjt_parent118, _return);
 }
 
 void sjf_lambda3_invoke_heap(sjs_lambda3* _parent, sjs_json_value* _1, sjs_string** _return) {
-    sjs_json_value* sjt_parent74 = 0;
+    sjs_json_value* sjt_parent119 = 0;
 
 #line 44 "lib/sj-lib-json/value.sj"
-    sjt_parent74 = _1;
+    sjt_parent119 = _1;
 #line 44
-    sjf_json_value_render_heap(sjt_parent74, _return);
+    sjf_json_value_render_heap(sjt_parent119, _return);
+}
+
+void sjf_lambda6(sjs_lambda6* _this) {
+}
+
+void sjf_lambda6_copy(sjs_lambda6* _this, sjs_lambda6* _from) {
+}
+
+void sjf_lambda6_destroy(sjs_lambda6* _this) {
+}
+
+void sjf_lambda6_heap(sjs_lambda6* _this) {
+}
+
+void sjf_lambda6_invoke(sjs_lambda6* _parent, sjs_string* _1, sjs_json_value* _2) {
+    sjs_string sjt_call63 = { -1 };
+    sjs_string sjt_call64 = { -1 };
+    sjs_string sjt_call65 = { -1 };
+    sjs_string sjt_call66 = { -1 };
+    sjs_string* sjt_functionParam176 = 0;
+    sjs_string* sjt_functionParam177 = 0;
+    sjs_string* sjt_functionParam178 = 0;
+    sjs_string* sjt_parent106 = 0;
+    sjs_string* sjt_parent107 = 0;
+    sjs_json_value* sjt_parent148 = 0;
+
+#line 10 "test2.sj"
+    sjt_parent107 = _1;
+#line 10
+    sjt_call65._refCount = 1;
+#line 11
+    sjt_call65.offset = 0;
+#line 11
+    sjt_call65.count = 4;
+#line 11
+    sjt_call65.data._refCount = 1;
+#line 11
+    sjt_call65.data.v = &sjg_string7;
+#line 11
+    sjf_array_char(&sjt_call65.data);
+#line 16 "lib/sj-lib-common/string.sj"
+    sjt_call65._isnullterminated = false;
+#line 16
+    sjf_string(&sjt_call65);
+#line 11 "test2.sj"
+    sjt_functionParam177 = &sjt_call65;
+#line 11
+    sjf_string_add(sjt_parent107, sjt_functionParam177, &sjt_call64);
+#line 11
+    sjt_parent106 = &sjt_call64;
+#line 10
+    sjt_parent148 = _2;
+#line 10
+    sjf_json_value_render(sjt_parent148, &sjt_call66);
+#line 11
+    sjt_functionParam178 = &sjt_call66;
+#line 11
+    sjf_string_add(sjt_parent106, sjt_functionParam178, &sjt_call63);
+#line 11
+    sjt_functionParam176 = &sjt_call63;
+#line 11
+    sjf_debug_writeline(sjt_functionParam176);
+
+    if (sjt_call63._refCount == 1) { sjf_string_destroy(&sjt_call63); }
+;
+    if (sjt_call64._refCount == 1) { sjf_string_destroy(&sjt_call64); }
+;
+    if (sjt_call65._refCount == 1) { sjf_string_destroy(&sjt_call65); }
+;
+    if (sjt_call66._refCount == 1) { sjf_string_destroy(&sjt_call66); }
+;
+}
+
+void sjf_lambda7(sjs_lambda7* _this) {
+}
+
+void sjf_lambda7_copy(sjs_lambda7* _this, sjs_lambda7* _from) {
+}
+
+void sjf_lambda7_destroy(sjs_lambda7* _this) {
+}
+
+void sjf_lambda7_heap(sjs_lambda7* _this) {
+}
+
+void sjf_lambda7_invoke(sjs_lambda7* _parent, sjs_json_value* _1) {
+    sjs_string sjt_call124 = { -1 };
+    sjs_string* sjt_functionParam230 = 0;
+    sjs_json_value* sjt_parent154 = 0;
+
+#line 13 "test2.sj"
+    sjt_parent154 = _1;
+#line 13
+    sjf_json_value_asstring(sjt_parent154, &sjt_call124);
+#line 14
+    sjt_functionParam230 = &sjt_call124;
+#line 14
+    sjf_debug_writeline(sjt_functionParam230);
+
+    if (sjt_call124._refCount == 1) { sjf_string_destroy(&sjt_call124); }
+;
 }
 
 void sjf_list_string(sjs_list_string* _this) {
 }
 
 void sjf_list_string_add(sjs_list_string* _parent, sjs_string* item) {
-    int32_t sjt_capture46;
-    int32_t sjt_capture47;
-    sjs_array_string sjt_funcold21 = { -1 };
-    int32_t sjt_functionParam152;
-    sjs_string* sjt_functionParam153 = 0;
-    sjs_array_string* sjt_parent78 = 0;
-    sjs_array_string* sjt_parent79 = 0;
-    sjs_array_string* sjt_parent83 = 0;
-    sjs_array_string* sjt_parent84 = 0;
+    int32_t sjt_capture69;
+    int32_t sjt_capture70;
+    sjs_array_string sjt_funcold25 = { -1 };
+    int32_t sjt_functionParam200;
+    sjs_string* sjt_functionParam201 = 0;
+    sjs_array_string* sjt_parent123 = 0;
+    sjs_array_string* sjt_parent124 = 0;
+    sjs_array_string* sjt_parent128 = 0;
+    sjs_array_string* sjt_parent129 = 0;
 
 #line 29 "lib/sj-lib-common/array.sj"
-    sjt_parent78 = &_parent->arr;
+    sjt_parent123 = &_parent->arr;
 #line 29
-    sjf_array_string_getcount(sjt_parent78, &sjt_capture46);
+    sjf_array_string_getcount(sjt_parent123, &sjt_capture69);
 #line 35
-    sjt_parent79 = &_parent->arr;
+    sjt_parent124 = &_parent->arr;
 #line 35
-    sjf_array_string_gettotalcount(sjt_parent79, &sjt_capture47);
-    if (sjt_capture46 == sjt_capture47) {
-        int32_t sjt_capture48;
-        int32_t sjt_functionParam147;
-        int32_t sjt_functionParam148;
-        int32_t sjt_functionParam149;
-        int32_t sjt_functionParam150;
-        int32_t sjt_functionParam151;
-        sjs_array_string* sjt_parent80 = 0;
-        sjs_array_string* sjt_parent81 = 0;
-        sjs_array_string* sjt_parent82 = 0;
+    sjf_array_string_gettotalcount(sjt_parent124, &sjt_capture70);
+    if (sjt_capture69 == sjt_capture70) {
+        int32_t sjt_capture71;
+        int32_t sjt_functionParam195;
+        int32_t sjt_functionParam196;
+        int32_t sjt_functionParam197;
+        int32_t sjt_functionParam198;
+        int32_t sjt_functionParam199;
+        sjs_array_string* sjt_parent125 = 0;
+        sjs_array_string* sjt_parent126 = 0;
+        sjs_array_string* sjt_parent127 = 0;
 
 #line 168 "lib/sj-lib-common/array.sj"
-        sjt_parent80 = &_parent->arr;
+        sjt_parent125 = &_parent->arr;
 #line 46 "lib/sj-lib-common/list.sj"
-        sjt_functionParam147 = 0;
+        sjt_functionParam195 = 0;
 #line 29 "lib/sj-lib-common/array.sj"
-        sjt_parent81 = &_parent->arr;
+        sjt_parent126 = &_parent->arr;
 #line 29
-        sjf_array_string_getcount(sjt_parent81, &sjt_functionParam148);
+        sjf_array_string_getcount(sjt_parent126, &sjt_functionParam196);
 #line 46 "lib/sj-lib-common/list.sj"
-        sjt_functionParam150 = 10;
+        sjt_functionParam198 = 10;
 #line 35 "lib/sj-lib-common/array.sj"
-        sjt_parent82 = &_parent->arr;
+        sjt_parent127 = &_parent->arr;
 #line 35
-        sjf_array_string_gettotalcount(sjt_parent82, &sjt_capture48);
+        sjf_array_string_gettotalcount(sjt_parent127, &sjt_capture71);
 #line 46 "lib/sj-lib-common/list.sj"
-        sjt_functionParam151 = sjt_capture48 * 2;
+        sjt_functionParam199 = sjt_capture71 * 2;
 #line 46
-        sjf_i32_max(sjt_functionParam150, sjt_functionParam151, &sjt_functionParam149);
+        sjf_i32_max(sjt_functionParam198, sjt_functionParam199, &sjt_functionParam197);
 #line 46
-        sjf_array_string_clone(sjt_parent80, sjt_functionParam147, sjt_functionParam148, sjt_functionParam149, &sjt_funcold21);
+        sjf_array_string_clone(sjt_parent125, sjt_functionParam195, sjt_functionParam196, sjt_functionParam197, &sjt_funcold25);
 #line 46
         if (_parent->arr._refCount == 1) { sjf_array_string_destroy(&_parent->arr); }
 ;
 #line 168 "lib/sj-lib-common/array.sj"
-        sjf_array_string_copy(&_parent->arr, &sjt_funcold21);
+        sjf_array_string_copy(&_parent->arr, &sjt_funcold25);
     }
 
 #line 52
-    sjt_parent83 = &_parent->arr;
+    sjt_parent128 = &_parent->arr;
 #line 29
-    sjt_parent84 = &_parent->arr;
+    sjt_parent129 = &_parent->arr;
 #line 29
-    sjf_array_string_getcount(sjt_parent84, &sjt_functionParam152);
+    sjf_array_string_getcount(sjt_parent129, &sjt_functionParam200);
 #line 44 "lib/sj-lib-common/list.sj"
-    sjt_functionParam153 = item;
+    sjt_functionParam201 = item;
 #line 44
-    sjf_array_string_initat(sjt_parent83, sjt_functionParam152, sjt_functionParam153);
+    sjf_array_string_initat(sjt_parent128, sjt_functionParam200, sjt_functionParam201);
 
-    if (sjt_funcold21._refCount == 1) { sjf_array_string_destroy(&sjt_funcold21); }
+    if (sjt_funcold25._refCount == 1) { sjf_array_string_destroy(&sjt_funcold25); }
 ;
 }
 
@@ -4935,62 +5513,62 @@ void sjf_string_add(sjs_string* _parent, sjs_string* item, sjs_string* _return) 
 #line 20 "lib/sj-lib-common/string.sj"
         sjf_string_copy(_return, _parent);
     } else {
-        bool sjt_capture40;
-        int32_t sjt_capture41;
-        sjs_array_char* sjt_parent47 = 0;
+        bool sjt_capture60;
+        int32_t sjt_capture61;
+        sjs_array_char* sjt_parent78 = 0;
 
 #line 35 "lib/sj-lib-common/array.sj"
-        sjt_parent47 = &_parent->data;
+        sjt_parent78 = &_parent->data;
 #line 35
-        sjf_array_char_gettotalcount(sjt_parent47, &sjt_capture41);
-        if (((_parent->offset + _parent->count) + item->count) < sjt_capture41) {
-            int32_t sjt_capture42;
-            sjs_array_char* sjt_parent48 = 0;
+        sjf_array_char_gettotalcount(sjt_parent78, &sjt_capture61);
+        if (((_parent->offset + _parent->count) + item->count) < sjt_capture61) {
+            int32_t sjt_capture62;
+            sjs_array_char* sjt_parent79 = 0;
 
 #line 29 "lib/sj-lib-common/array.sj"
-            sjt_parent48 = &_parent->data;
+            sjt_parent79 = &_parent->data;
 #line 29
-            sjf_array_char_getcount(sjt_parent48, &sjt_capture42);
+            sjf_array_char_getcount(sjt_parent79, &sjt_capture62);
 #line 24 "lib/sj-lib-common/string.sj"
-            sjt_capture40 = ((_parent->offset + _parent->count) == sjt_capture42);
+            sjt_capture60 = ((_parent->offset + _parent->count) == sjt_capture62);
         } else {
 #line 24 "lib/sj-lib-common/string.sj"
-            sjt_capture40 = false;
+            sjt_capture60 = false;
         }
 
-        if (sjt_capture40) {
+        if (sjt_capture60) {
             int32_t i;
             int32_t newcount;
-            int32_t sjt_forEnd1;
-            int32_t sjt_forStart1;
+            int32_t sjt_forEnd2;
+            int32_t sjt_forStart2;
 
 #line 25 "lib/sj-lib-common/string.sj"
             newcount = _parent->count;
 #line 27
-            sjt_forStart1 = 0;
+            sjt_forStart2 = 0;
 #line 27
-            sjt_forEnd1 = item->count;
+            sjt_forEnd2 = item->count;
 #line 27
-            i = sjt_forStart1;
-            while (i < sjt_forEnd1) {
-                int32_t sjt_functionParam113;
-                char sjt_functionParam114;
-                int32_t sjt_functionParam115;
-                sjs_array_char* sjt_parent49 = 0;
-                sjs_string* sjt_parent50 = 0;
+            i = sjt_forStart2;
+            while (i < sjt_forEnd2) {
+                int32_t sjt_functionParam146;
+                char sjt_functionParam147;
+                int32_t sjt_functionParam148;
+                sjs_array_char* sjt_parent80 = 0;
+                sjs_string* sjt_parent81 = 0;
 
 #line 52 "lib/sj-lib-common/array.sj"
-                sjt_parent49 = &_parent->data;
+                sjt_parent80 = &_parent->data;
 #line 28 "lib/sj-lib-common/string.sj"
-                sjt_functionParam113 = newcount;
+                sjt_functionParam146 = newcount;
 #line 18
-                sjt_parent50 = item;
+                sjt_parent81 = item;
 #line 27
-                sjt_functionParam115 = i;
+                sjt_functionParam148 = i;
 #line 27
-                sjf_string_getat(sjt_parent50, sjt_functionParam115, &sjt_functionParam114);
+                sjf_string_getat(sjt_parent81, sjt_functionParam148, &sjt_functionParam147);
 #line 27
-                sjf_array_char_initat(sjt_parent49, sjt_functionParam113, sjt_functionParam114);
+                sjf_array_char_initat(sjt_parent80, sjt_functionParam146, sjt_functionParam147);
 #line 29
                 newcount = newcount + 1;
 #line 27
@@ -5014,53 +5592,53 @@ void sjf_string_add(sjs_string* _parent, sjs_string* item, sjs_string* _return) 
         } else {
             int32_t i;
             int32_t newcount;
-            int32_t sjt_forEnd2;
-            int32_t sjt_forStart2;
-            int32_t sjt_functionParam116;
-            int32_t sjt_functionParam117;
-            int32_t sjt_functionParam118;
-            sjs_array_char* sjt_parent51 = 0;
-            sjs_array_char* sjt_parent52 = 0;
+            int32_t sjt_forEnd3;
+            int32_t sjt_forStart3;
+            int32_t sjt_functionParam149;
+            int32_t sjt_functionParam150;
+            int32_t sjt_functionParam151;
+            sjs_array_char* sjt_parent82 = 0;
+            sjs_array_char* sjt_parent83 = 0;
 
 #line 168 "lib/sj-lib-common/array.sj"
-            sjt_parent51 = &_parent->data;
+            sjt_parent82 = &_parent->data;
 #line 34 "lib/sj-lib-common/string.sj"
-            sjt_functionParam116 = _parent->offset;
+            sjt_functionParam149 = _parent->offset;
 #line 34
-            sjt_functionParam117 = _parent->count;
+            sjt_functionParam150 = _parent->count;
 #line 34
-            sjt_functionParam118 = ((((_parent->count + item->count) - 1) / 256) + 1) * 256;
+            sjt_functionParam151 = ((((_parent->count + item->count) - 1) / 256) + 1) * 256;
 #line 34
-            sjf_array_char_clone(sjt_parent51, sjt_functionParam116, sjt_functionParam117, sjt_functionParam118, &newdata);
+            sjf_array_char_clone(sjt_parent82, sjt_functionParam149, sjt_functionParam150, sjt_functionParam151, &newdata);
 #line 29 "lib/sj-lib-common/array.sj"
-            sjt_parent52 = &newdata;
+            sjt_parent83 = &newdata;
 #line 29
-            sjf_array_char_getcount(sjt_parent52, &newcount);
+            sjf_array_char_getcount(sjt_parent83, &newcount);
 #line 37 "lib/sj-lib-common/string.sj"
-            sjt_forStart2 = 0;
+            sjt_forStart3 = 0;
 #line 37
-            sjt_forEnd2 = item->count;
+            sjt_forEnd3 = item->count;
 #line 37
-            i = sjt_forStart2;
-            while (i < sjt_forEnd2) {
-                int32_t sjt_functionParam119;
-                char sjt_functionParam120;
-                int32_t sjt_functionParam121;
-                sjs_array_char* sjt_parent53 = 0;
-                sjs_string* sjt_parent54 = 0;
+            i = sjt_forStart3;
+            while (i < sjt_forEnd3) {
+                int32_t sjt_functionParam152;
+                char sjt_functionParam153;
+                int32_t sjt_functionParam154;
+                sjs_array_char* sjt_parent84 = 0;
+                sjs_string* sjt_parent85 = 0;
 
 #line 52 "lib/sj-lib-common/array.sj"
-                sjt_parent53 = &newdata;
+                sjt_parent84 = &newdata;
 #line 38 "lib/sj-lib-common/string.sj"
-                sjt_functionParam119 = newcount;
+                sjt_functionParam152 = newcount;
 #line 18
-                sjt_parent54 = item;
+                sjt_parent85 = item;
 #line 37
-                sjt_functionParam121 = i;
+                sjt_functionParam154 = i;
 #line 37
-                sjf_string_getat(sjt_parent54, sjt_functionParam121, &sjt_functionParam120);
+                sjf_string_getat(sjt_parent85, sjt_functionParam154, &sjt_functionParam153);
 #line 37
-                sjf_array_char_initat(sjt_parent53, sjt_functionParam119, sjt_functionParam120);
+                sjf_array_char_initat(sjt_parent84, sjt_functionParam152, sjt_functionParam153);
 #line 39
                 newcount = newcount + 1;
 #line 37
@@ -5097,62 +5675,62 @@ void sjf_string_add_heap(sjs_string* _parent, sjs_string* item, sjs_string** _re
 #line 20 "lib/sj-lib-common/string.sj"
         sjf_string_copy((*_return), _parent);
     } else {
-        bool sjt_capture43;
-        int32_t sjt_capture44;
-        sjs_array_char* sjt_parent55 = 0;
+        bool sjt_capture63;
+        int32_t sjt_capture64;
+        sjs_array_char* sjt_parent86 = 0;
 
 #line 35 "lib/sj-lib-common/array.sj"
-        sjt_parent55 = &_parent->data;
+        sjt_parent86 = &_parent->data;
 #line 35
-        sjf_array_char_gettotalcount(sjt_parent55, &sjt_capture44);
-        if (((_parent->offset + _parent->count) + item->count) < sjt_capture44) {
-            int32_t sjt_capture45;
-            sjs_array_char* sjt_parent56 = 0;
+        sjf_array_char_gettotalcount(sjt_parent86, &sjt_capture64);
+        if (((_parent->offset + _parent->count) + item->count) < sjt_capture64) {
+            int32_t sjt_capture65;
+            sjs_array_char* sjt_parent87 = 0;
 
 #line 29 "lib/sj-lib-common/array.sj"
-            sjt_parent56 = &_parent->data;
+            sjt_parent87 = &_parent->data;
 #line 29
-            sjf_array_char_getcount(sjt_parent56, &sjt_capture45);
+            sjf_array_char_getcount(sjt_parent87, &sjt_capture65);
 #line 24 "lib/sj-lib-common/string.sj"
-            sjt_capture43 = ((_parent->offset + _parent->count) == sjt_capture45);
+            sjt_capture63 = ((_parent->offset + _parent->count) == sjt_capture65);
         } else {
 #line 24 "lib/sj-lib-common/string.sj"
-            sjt_capture43 = false;
+            sjt_capture63 = false;
         }
 
-        if (sjt_capture43) {
+        if (sjt_capture63) {
             int32_t i;
             int32_t newcount;
-            int32_t sjt_forEnd3;
-            int32_t sjt_forStart3;
+            int32_t sjt_forEnd4;
+            int32_t sjt_forStart4;
 
 #line 25 "lib/sj-lib-common/string.sj"
             newcount = _parent->count;
 #line 27
-            sjt_forStart3 = 0;
+            sjt_forStart4 = 0;
 #line 27
-            sjt_forEnd3 = item->count;
+            sjt_forEnd4 = item->count;
 #line 27
-            i = sjt_forStart3;
-            while (i < sjt_forEnd3) {
-                int32_t sjt_functionParam122;
-                char sjt_functionParam123;
-                int32_t sjt_functionParam124;
-                sjs_array_char* sjt_parent57 = 0;
-                sjs_string* sjt_parent58 = 0;
+            i = sjt_forStart4;
+            while (i < sjt_forEnd4) {
+                int32_t sjt_functionParam155;
+                char sjt_functionParam156;
+                int32_t sjt_functionParam157;
+                sjs_array_char* sjt_parent88 = 0;
+                sjs_string* sjt_parent89 = 0;
 
 #line 52 "lib/sj-lib-common/array.sj"
-                sjt_parent57 = &_parent->data;
+                sjt_parent88 = &_parent->data;
 #line 28 "lib/sj-lib-common/string.sj"
-                sjt_functionParam122 = newcount;
+                sjt_functionParam155 = newcount;
 #line 18
-                sjt_parent58 = item;
+                sjt_parent89 = item;
 #line 27
-                sjt_functionParam124 = i;
+                sjt_functionParam157 = i;
 #line 27
-                sjf_string_getat(sjt_parent58, sjt_functionParam124, &sjt_functionParam123);
+                sjf_string_getat(sjt_parent89, sjt_functionParam157, &sjt_functionParam156);
 #line 27
-                sjf_array_char_initat(sjt_parent57, sjt_functionParam122, sjt_functionParam123);
+                sjf_array_char_initat(sjt_parent88, sjt_functionParam155, sjt_functionParam156);
 #line 29
                 newcount = newcount + 1;
 #line 27
@@ -5178,53 +5756,53 @@ void sjf_string_add_heap(sjs_string* _parent, sjs_string* item, sjs_string** _re
         } else {
             int32_t i;
             int32_t newcount;
-            int32_t sjt_forEnd4;
-            int32_t sjt_forStart4;
-            int32_t sjt_functionParam125;
-            int32_t sjt_functionParam126;
-            int32_t sjt_functionParam127;
-            sjs_array_char* sjt_parent59 = 0;
-            sjs_array_char* sjt_parent60 = 0;
+            int32_t sjt_forEnd5;
+            int32_t sjt_forStart5;
+            int32_t sjt_functionParam158;
+            int32_t sjt_functionParam159;
+            int32_t sjt_functionParam160;
+            sjs_array_char* sjt_parent90 = 0;
+            sjs_array_char* sjt_parent91 = 0;
 
 #line 168 "lib/sj-lib-common/array.sj"
-            sjt_parent59 = &_parent->data;
+            sjt_parent90 = &_parent->data;
 #line 34 "lib/sj-lib-common/string.sj"
-            sjt_functionParam125 = _parent->offset;
+            sjt_functionParam158 = _parent->offset;
 #line 34
-            sjt_functionParam126 = _parent->count;
+            sjt_functionParam159 = _parent->count;
 #line 34
-            sjt_functionParam127 = ((((_parent->count + item->count) - 1) / 256) + 1) * 256;
+            sjt_functionParam160 = ((((_parent->count + item->count) - 1) / 256) + 1) * 256;
 #line 34
-            sjf_array_char_clone(sjt_parent59, sjt_functionParam125, sjt_functionParam126, sjt_functionParam127, &newdata);
+            sjf_array_char_clone(sjt_parent90, sjt_functionParam158, sjt_functionParam159, sjt_functionParam160, &newdata);
 #line 29 "lib/sj-lib-common/array.sj"
-            sjt_parent60 = &newdata;
+            sjt_parent91 = &newdata;
 #line 29
-            sjf_array_char_getcount(sjt_parent60, &newcount);
+            sjf_array_char_getcount(sjt_parent91, &newcount);
 #line 37 "lib/sj-lib-common/string.sj"
-            sjt_forStart4 = 0;
+            sjt_forStart5 = 0;
 #line 37
-            sjt_forEnd4 = item->count;
+            sjt_forEnd5 = item->count;
 #line 37
-            i = sjt_forStart4;
-            while (i < sjt_forEnd4) {
-                int32_t sjt_functionParam128;
-                char sjt_functionParam129;
-                int32_t sjt_functionParam130;
-                sjs_array_char* sjt_parent61 = 0;
-                sjs_string* sjt_parent62 = 0;
+            i = sjt_forStart5;
+            while (i < sjt_forEnd5) {
+                int32_t sjt_functionParam161;
+                char sjt_functionParam162;
+                int32_t sjt_functionParam163;
+                sjs_array_char* sjt_parent92 = 0;
+                sjs_string* sjt_parent93 = 0;
 
 #line 52 "lib/sj-lib-common/array.sj"
-                sjt_parent61 = &newdata;
+                sjt_parent92 = &newdata;
 #line 38 "lib/sj-lib-common/string.sj"
-                sjt_functionParam128 = newcount;
+                sjt_functionParam161 = newcount;
 #line 18
-                sjt_parent62 = item;
+                sjt_parent93 = item;
 #line 37
-                sjt_functionParam130 = i;
+                sjt_functionParam163 = i;
 #line 37
-                sjf_string_getat(sjt_parent62, sjt_functionParam130, &sjt_functionParam129);
+                sjf_string_getat(sjt_parent93, sjt_functionParam163, &sjt_functionParam162);
 #line 37
-                sjf_array_char_initat(sjt_parent61, sjt_functionParam128, sjt_functionParam129);
+                sjf_array_char_initat(sjt_parent92, sjt_functionParam161, sjt_functionParam162);
 #line 39
                 newcount = newcount + 1;
 #line 37
@@ -5489,65 +6067,6 @@ void sjf_string_substr_heap(sjs_string* _parent, int32_t o, int32_t c, sjs_strin
 ;
 }
 
-void sjf_test(sjs_string* s) {
-    sjs_json_value data = { -1 };
-    sjs_string* sjt_functionParam111 = 0;
-
-#line 3 "test1.sj"
-    sjt_functionParam111 = s;
-#line 3
-    sjf_json_parse(sjt_functionParam111, &data);
-    if (((data._refCount != -1 ? &data : 0) != 0)) {
-        sjs_json_value* ifValue1 = 0;
-        sjs_string sjt_call7 = { -1 };
-        sjs_string* sjt_functionParam112 = 0;
-        sjs_json_value* sjt_parent103 = 0;
-
-#line 5 "test1.sj"
-        ifValue1 = (data._refCount != -1 ? &data : 0);
-#line 39 "lib/sj-lib-json/value.sj"
-        sjt_parent103 = ifValue1;
-#line 39
-        sjf_json_value_render(sjt_parent103, &sjt_call7);
-#line 6 "test1.sj"
-        sjt_functionParam112 = &sjt_call7;
-#line 6
-        sjf_debug_writeline(sjt_functionParam112);
-
-        if (sjt_call7._refCount == 1) { sjf_string_destroy(&sjt_call7); }
-;
-    } else {
-        sjs_string sjt_call55 = { -1 };
-        sjs_string* sjt_functionParam175 = 0;
-
-        sjt_call55._refCount = 1;
-#line 8 "test1.sj"
-        sjt_call55.offset = 0;
-#line 8
-        sjt_call55.count = 11;
-#line 8
-        sjt_call55.data._refCount = 1;
-#line 8
-        sjt_call55.data.v = &sjg_string4;
-#line 8
-        sjf_array_char(&sjt_call55.data);
-#line 16 "lib/sj-lib-common/string.sj"
-        sjt_call55._isnullterminated = false;
-#line 16
-        sjf_string(&sjt_call55);
-#line 8 "test1.sj"
-        sjt_functionParam175 = &sjt_call55;
-#line 8
-        sjf_debug_writeline(sjt_functionParam175);
-
-        if (sjt_call55._refCount == 1) { sjf_string_destroy(&sjt_call55); }
-;
-    }
-
-    if (data._refCount == 1) { sjf_json_value_destroy(&data); }
-;
-}
-
 void sjf_tuple2_i32_string(sjs_tuple2_i32_string* _this) {
 }
 
@@ -5732,165 +6251,1157 @@ int main(int argc, char** argv) {
 #line 16
     sjf_string(&g_allthespaces);
 #line 16
-    sjt_call56._refCount = 1;
-#line 12 "test1.sj"
-    sjt_call56.offset = 0;
-#line 12
-    sjt_call56.count = 5;
-#line 12
-    sjt_call56.data._refCount = 1;
-#line 12
-    sjt_call56.data.v = &sjg_string12;
-#line 12
-    sjf_array_char(&sjt_call56.data);
+    sjt_call7._refCount = 1;
+#line 3 "test2.sj"
+    sjt_call7.offset = 0;
+#line 3
+    sjt_call7.count = 88;
+#line 3
+    sjt_call7.data._refCount = 1;
+#line 3
+    sjt_call7.data.v = &sjg_string4;
+#line 3
+    sjf_array_char(&sjt_call7.data);
 #line 16 "lib/sj-lib-common/string.sj"
-    sjt_call56._isnullterminated = false;
+    sjt_call7._isnullterminated = false;
 #line 16
-    sjf_string(&sjt_call56);
-#line 12 "test1.sj"
-    sjt_functionParam176 = &sjt_call56;
-#line 12
-    sjf_test(sjt_functionParam176);
-#line 12
-    sjt_call57._refCount = 1;
-#line 13
-    sjt_call57.offset = 0;
-#line 13
-    sjt_call57.count = 2;
-#line 13
-    sjt_call57.data._refCount = 1;
-#line 13
-    sjt_call57.data.v = &sjg_string13;
-#line 13
-    sjf_array_char(&sjt_call57.data);
+    sjf_string(&sjt_call7);
+#line 3 "test2.sj"
+    sjt_functionParam111 = &sjt_call7;
+#line 3
+    sjf_json_parse(sjt_functionParam111, &g_data);
+    if (((g_data._refCount != -1 ? &g_data : 0) != 0)) {
+        sjs_json_value g_t = { -1 };
+        sjs_json_value* ifValue1 = 0;
+        sjs_json_value sjt_call10 = { -1 };
+        sjs_string sjt_call11 = { -1 };
+        sjs_json_value sjt_call114 = { -1 };
+        sjs_string sjt_call115 = { -1 };
+        sjs_json_value sjt_call116 = { -1 };
+        sjs_string sjt_call117 = { -1 };
+        sjs_json_value sjt_call119 = { -1 };
+        sjs_json_value sjt_call12 = { -1 };
+        sjs_string sjt_call120 = { -1 };
+        sjs_json_value sjt_call121 = { -1 };
+        sjs_string sjt_call122 = { -1 };
+        sjs_lambda7 sjt_call123 = { -1 };
+        sjs_json_value sjt_call13 = { -1 };
+        sjs_string sjt_call14 = { -1 };
+        sjs_json_value sjt_call15 = { -1 };
+        sjs_string sjt_call16 = { -1 };
+        sjs_json_value sjt_call17 = { -1 };
+        sjs_string sjt_call18 = { -1 };
+        sjs_json_value sjt_call19 = { -1 };
+        sjs_string sjt_call20 = { -1 };
+        sjs_json_value sjt_call21 = { -1 };
+        sjs_string sjt_call22 = { -1 };
+        sjs_json_value sjt_call23 = { -1 };
+        sjs_string sjt_call24 = { -1 };
+        sjs_string sjt_call25 = { -1 };
+        sjs_string sjt_call26 = { -1 };
+        sjs_string sjt_call27 = { -1 };
+        sjs_json_value sjt_call28 = { -1 };
+        sjs_string sjt_call29 = { -1 };
+        sjs_json_value sjt_call30 = { -1 };
+        sjs_string sjt_call31 = { -1 };
+        sjs_json_value sjt_call32 = { -1 };
+        sjs_json_value sjt_call33 = { -1 };
+        sjs_string sjt_call34 = { -1 };
+        sjs_json_value sjt_call35 = { -1 };
+        sjs_string sjt_call36 = { -1 };
+        sjs_json_value sjt_call37 = { -1 };
+        sjs_string sjt_call38 = { -1 };
+        sjs_json_value sjt_call39 = { -1 };
+        sjs_string sjt_call40 = { -1 };
+        sjs_json_value sjt_call41 = { -1 };
+        sjs_json_value sjt_call42 = { -1 };
+        sjs_string sjt_call43 = { -1 };
+        sjs_json_value sjt_call44 = { -1 };
+        sjs_string sjt_call45 = { -1 };
+        sjs_json_value sjt_call46 = { -1 };
+        sjs_string sjt_call47 = { -1 };
+        sjs_json_value sjt_call52 = { -1 };
+        sjs_string sjt_call53 = { -1 };
+        sjs_json_value sjt_call54 = { -1 };
+        sjs_string sjt_call55 = { -1 };
+        sjs_json_value sjt_call56 = { -1 };
+        sjs_string sjt_call57 = { -1 };
+        sjs_json_value sjt_call58 = { -1 };
+        sjs_string sjt_call59 = { -1 };
+        sjs_array_value sjt_call60 = { -1 };
+        sjs_string sjt_call61 = { -1 };
+        sjs_lambda6 sjt_call62 = { -1 };
+        sjs_json_value sjt_call8 = { -1 };
+        sjs_string sjt_call9 = { -1 };
+        sjs_json_value* sjt_capture40 = 0;
+        sjs_array_value* sjt_capture41 = 0;
+        sjs_json_value* sjt_capture53 = 0;
+        sjs_array_value* sjt_capture54 = 0;
+        sjs_array_value* sjt_capture66 = 0;
+        sjs_array_value* sjt_capture72 = 0;
+        sjs_string* sjt_functionParam114 = 0;
+        sjs_string* sjt_functionParam124 = 0;
+        sjs_string* sjt_functionParam133 = 0;
+        sjs_string* sjt_functionParam134 = 0;
+        sjs_string* sjt_functionParam135 = 0;
+        sjs_string* sjt_functionParam145 = 0;
+        sjs_string* sjt_functionParam170 = 0;
+        sjs_string* sjt_functionParam174 = 0;
+        sjs_string* sjt_functionParam223 = 0;
+        sjs_array_value* sjt_parent100 = 0;
+        sjs_json_value* sjt_parent101 = 0;
+        sjs_json_value* sjt_parent149 = 0;
+        sjs_json_value* sjt_parent49 = 0;
+        sjs_json_value* sjt_parent65 = 0;
+        sjs_json_value* sjt_parent66 = 0;
+        sjs_json_value* sjt_parent67 = 0;
+        sjs_json_value* sjt_parent68 = 0;
+        sjs_json_value sjt_value5 = { -1 };
+
+#line 4 "test2.sj"
+        ifValue1 = (g_data._refCount != -1 ? &g_data : 0);
+#line 7 "lib/sj-lib-json/value.sj"
+        sjt_parent49 = ifValue1;
+#line 7
+        sjt_call9._refCount = 1;
+#line 5 "test2.sj"
+        sjt_call9.offset = 0;
+#line 5
+        sjt_call9.count = 7;
+#line 5
+        sjt_call9.data._refCount = 1;
+#line 5
+        sjt_call9.data.v = &sjg_string5;
+#line 5
+        sjf_array_char(&sjt_call9.data);
 #line 16 "lib/sj-lib-common/string.sj"
-    sjt_call57._isnullterminated = false;
+        sjt_call9._isnullterminated = false;
 #line 16
-    sjf_string(&sjt_call57);
-#line 13 "test1.sj"
-    sjt_functionParam177 = &sjt_call57;
-#line 13
-    sjf_test(sjt_functionParam177);
-#line 13
-    sjt_call58._refCount = 1;
-#line 14
-    sjt_call58.offset = 0;
-#line 14
-    sjt_call58.count = 12;
-#line 14
-    sjt_call58.data._refCount = 1;
-#line 14
-    sjt_call58.data.v = &sjg_string14;
-#line 14
-    sjf_array_char(&sjt_call58.data);
+        sjf_string(&sjt_call9);
+#line 5 "test2.sj"
+        sjt_functionParam114 = &sjt_call9;
+#line 5
+        sjf_json_value_getat(sjt_parent49, sjt_functionParam114, &sjt_call8);
+        if ((sjt_call8._refCount != -1 ? &sjt_call8 : 0) != 0) {
+            sjs_json_value* sjt_capture42 = 0;
+            sjs_string* sjt_functionParam115 = 0;
+            sjs_json_value* sjt_parent50 = 0;
+
+#line 7 "lib/sj-lib-json/value.sj"
+            sjt_parent50 = ifValue1;
+#line 7
+            sjt_call11._refCount = 1;
+#line 5 "test2.sj"
+            sjt_call11.offset = 0;
+#line 5
+            sjt_call11.count = 7;
+#line 5
+            sjt_call11.data._refCount = 1;
+#line 5
+            sjt_call11.data.v = &sjg_string5;
+#line 5
+            sjf_array_char(&sjt_call11.data);
 #line 16 "lib/sj-lib-common/string.sj"
-    sjt_call58._isnullterminated = false;
+            sjt_call11._isnullterminated = false;
 #line 16
-    sjf_string(&sjt_call58);
-#line 14 "test1.sj"
-    sjt_functionParam178 = &sjt_call58;
-#line 14
-    sjf_test(sjt_functionParam178);
-#line 14
-    sjt_call59._refCount = 1;
+            sjf_string(&sjt_call11);
+#line 5 "test2.sj"
+            sjt_functionParam115 = &sjt_call11;
+#line 5
+            sjf_json_value_getat(sjt_parent50, sjt_functionParam115, &sjt_call10);
+#line 5
+            sjt_capture42 = (sjt_call10._refCount != -1 ? &sjt_call10 : 0);
+#line 5
+            sjt_capture41 = (sjt_capture42->a._refCount != -1 ? &sjt_capture42->a : 0);
+        } else {
+#line 5 "test2.sj"
+            sjt_capture41 = 0;
+        }
+
+        if (sjt_capture41 != 0) {
+            sjs_string* sjt_functionParam116 = 0;
+            int32_t sjt_functionParam118;
+            sjs_array_value* sjt_parent51 = 0;
+            sjs_json_value* sjt_parent52 = 0;
+            sjs_json_value* sjt_value4 = 0;
+
+#line 7 "lib/sj-lib-json/value.sj"
+            sjt_parent52 = ifValue1;
+#line 7
+            sjt_call14._refCount = 1;
+#line 5 "test2.sj"
+            sjt_call14.offset = 0;
+#line 5
+            sjt_call14.count = 7;
+#line 5
+            sjt_call14.data._refCount = 1;
+#line 5
+            sjt_call14.data.v = &sjg_string5;
+#line 5
+            sjf_array_char(&sjt_call14.data);
+#line 16 "lib/sj-lib-common/string.sj"
+            sjt_call14._isnullterminated = false;
+#line 16
+            sjf_string(&sjt_call14);
+#line 5 "test2.sj"
+            sjt_functionParam116 = &sjt_call14;
+#line 5
+            sjf_json_value_getat(sjt_parent52, sjt_functionParam116, &sjt_call13);
+            if ((sjt_call13._refCount != -1 ? &sjt_call13 : 0) != 0) {
+                sjs_json_value* sjt_capture43 = 0;
+                sjs_string* sjt_functionParam117 = 0;
+                sjs_json_value* sjt_parent53 = 0;
+
+#line 7 "lib/sj-lib-json/value.sj"
+                sjt_parent53 = ifValue1;
+#line 7
+                sjt_call16._refCount = 1;
+#line 5 "test2.sj"
+                sjt_call16.offset = 0;
+#line 5
+                sjt_call16.count = 7;
+#line 5
+                sjt_call16.data._refCount = 1;
+#line 5
+                sjt_call16.data.v = &sjg_string5;
+#line 5
+                sjf_array_char(&sjt_call16.data);
+#line 16 "lib/sj-lib-common/string.sj"
+                sjt_call16._isnullterminated = false;
+#line 16
+                sjf_string(&sjt_call16);
+#line 5 "test2.sj"
+                sjt_functionParam117 = &sjt_call16;
+#line 5
+                sjf_json_value_getat(sjt_parent53, sjt_functionParam117, &sjt_call15);
+#line 5
+                sjt_capture43 = (sjt_call15._refCount != -1 ? &sjt_call15 : 0);
+#line 41 "lib/sj-lib-common/array.sj"
+                sjt_parent51 = (sjt_capture43->a._refCount != -1 ? &sjt_capture43->a : 0);
+            } else {
+#line 5 "test2.sj"
+                sjt_parent51 = 0;
+            }
+
+#line 5
+            sjt_functionParam118 = 0;
+#line 5
+            sjf_array_value_getat(sjt_parent51, sjt_functionParam118, &sjt_call12);
+#line 5
+            sjt_value4 = &sjt_call12;
+#line 5
+            sjt_capture40 = sjt_value4;
+        } else {
+#line 5 "test2.sj"
+            sjt_capture40 = 0;
+        }
+
+        if (sjt_capture40 != 0) {
+            sjs_array_value* sjt_capture44 = 0;
+            sjs_string* sjt_functionParam119 = 0;
+            sjs_json_value* sjt_parent54 = 0;
+
+#line 7 "lib/sj-lib-json/value.sj"
+            sjt_parent54 = ifValue1;
+#line 7
+            sjt_call18._refCount = 1;
+#line 5 "test2.sj"
+            sjt_call18.offset = 0;
+#line 5
+            sjt_call18.count = 7;
+#line 5
+            sjt_call18.data._refCount = 1;
+#line 5
+            sjt_call18.data.v = &sjg_string5;
+#line 5
+            sjf_array_char(&sjt_call18.data);
+#line 16 "lib/sj-lib-common/string.sj"
+            sjt_call18._isnullterminated = false;
+#line 16
+            sjf_string(&sjt_call18);
+#line 5 "test2.sj"
+            sjt_functionParam119 = &sjt_call18;
+#line 5
+            sjf_json_value_getat(sjt_parent54, sjt_functionParam119, &sjt_call17);
+            if ((sjt_call17._refCount != -1 ? &sjt_call17 : 0) != 0) {
+                sjs_json_value* sjt_capture45 = 0;
+                sjs_string* sjt_functionParam120 = 0;
+                sjs_json_value* sjt_parent55 = 0;
+
+#line 7 "lib/sj-lib-json/value.sj"
+                sjt_parent55 = ifValue1;
+#line 7
+                sjt_call20._refCount = 1;
+#line 5 "test2.sj"
+                sjt_call20.offset = 0;
+#line 5
+                sjt_call20.count = 7;
+#line 5
+                sjt_call20.data._refCount = 1;
+#line 5
+                sjt_call20.data.v = &sjg_string5;
+#line 5
+                sjf_array_char(&sjt_call20.data);
+#line 16 "lib/sj-lib-common/string.sj"
+                sjt_call20._isnullterminated = false;
+#line 16
+                sjf_string(&sjt_call20);
+#line 5 "test2.sj"
+                sjt_functionParam120 = &sjt_call20;
+#line 5
+                sjf_json_value_getat(sjt_parent55, sjt_functionParam120, &sjt_call19);
+#line 5
+                sjt_capture45 = (sjt_call19._refCount != -1 ? &sjt_call19 : 0);
+#line 5
+                sjt_capture44 = (sjt_capture45->a._refCount != -1 ? &sjt_capture45->a : 0);
+            } else {
+#line 5 "test2.sj"
+                sjt_capture44 = 0;
+            }
+
+            if (sjt_capture44 != 0) {
+                sjs_string* sjt_functionParam121 = 0;
+                int32_t sjt_functionParam123;
+                sjs_array_value* sjt_parent56 = 0;
+                sjs_json_value* sjt_parent57 = 0;
+
+#line 7 "lib/sj-lib-json/value.sj"
+                sjt_parent57 = ifValue1;
+#line 7
+                sjt_call22._refCount = 1;
+#line 5 "test2.sj"
+                sjt_call22.offset = 0;
+#line 5
+                sjt_call22.count = 7;
+#line 5
+                sjt_call22.data._refCount = 1;
+#line 5
+                sjt_call22.data.v = &sjg_string5;
+#line 5
+                sjf_array_char(&sjt_call22.data);
+#line 16 "lib/sj-lib-common/string.sj"
+                sjt_call22._isnullterminated = false;
+#line 16
+                sjf_string(&sjt_call22);
+#line 5 "test2.sj"
+                sjt_functionParam121 = &sjt_call22;
+#line 5
+                sjf_json_value_getat(sjt_parent57, sjt_functionParam121, &sjt_call21);
+                if ((sjt_call21._refCount != -1 ? &sjt_call21 : 0) != 0) {
+                    sjs_json_value* sjt_capture46 = 0;
+                    sjs_string* sjt_functionParam122 = 0;
+                    sjs_json_value* sjt_parent58 = 0;
+
+#line 7 "lib/sj-lib-json/value.sj"
+                    sjt_parent58 = ifValue1;
+#line 7
+                    sjt_call24._refCount = 1;
+#line 5 "test2.sj"
+                    sjt_call24.offset = 0;
+#line 5
+                    sjt_call24.count = 7;
+#line 5
+                    sjt_call24.data._refCount = 1;
+#line 5
+                    sjt_call24.data.v = &sjg_string5;
+#line 5
+                    sjf_array_char(&sjt_call24.data);
+#line 16 "lib/sj-lib-common/string.sj"
+                    sjt_call24._isnullterminated = false;
+#line 16
+                    sjf_string(&sjt_call24);
+#line 5 "test2.sj"
+                    sjt_functionParam122 = &sjt_call24;
+#line 5
+                    sjf_json_value_getat(sjt_parent58, sjt_functionParam122, &sjt_call23);
+#line 5
+                    sjt_capture46 = (sjt_call23._refCount != -1 ? &sjt_call23 : 0);
+#line 41 "lib/sj-lib-common/array.sj"
+                    sjt_parent56 = (sjt_capture46->a._refCount != -1 ? &sjt_capture46->a : 0);
+                } else {
+#line 5 "test2.sj"
+                    sjt_parent56 = 0;
+                }
+
+#line 5
+                sjt_functionParam123 = 0;
+#line 5
+                sjf_array_value_getat(sjt_parent56, sjt_functionParam123, &sjt_value5);
+#line 5
+                sjs_json_value* copyoption28 = &sjt_value5;
+                if (copyoption28 != 0) {
+                    g_t._refCount = 1;
+#line 5 "test2.sj"
+                    sjf_json_value_copy(&g_t, copyoption28);
+                } else {
+                    g_t._refCount = -1;
+                }
+            } else {
+#line 5 "test2.sj"
+                g_t._refCount = -1;
+            }
+        } else {
+            g_t._refCount = 1;
+#line 3 "lib/sj-lib-json/value.sj"
+            g_t.s._refCount = -1;
+#line 4
+            g_t.a._refCount = -1;
+#line 5
+            g_t.h._refCount = -1;
+#line 5
+            sjf_json_value(&g_t);
+        }
+
+#line 15 "lib/sj-lib-json/value.sj"
+        sjt_parent65 = &g_t;
 #line 15
-    sjt_call59.offset = 0;
+        sjf_json_value_asstring(sjt_parent65, &sjt_call25);
+#line 6 "test2.sj"
+        sjt_functionParam124 = &sjt_call25;
+#line 6
+        sjf_debug_writeline(sjt_functionParam124);
+#line 15 "lib/sj-lib-json/value.sj"
+        sjt_parent66 = &g_t;
 #line 15
-    sjt_call59.count = 3;
-#line 15
-    sjt_call59.data._refCount = 1;
-#line 15
-    sjt_call59.data.v = &sjg_string15;
-#line 15
-    sjf_array_char(&sjt_call59.data);
+        sjf_json_value_asstring(sjt_parent66, &sjt_call26);
+#line 7 "test2.sj"
+        sjt_functionParam133 = &sjt_call26;
+#line 7
+        sjf_debug_writeline(sjt_functionParam133);
+#line 7 "lib/sj-lib-json/value.sj"
+        sjt_parent68 = ifValue1;
+#line 7
+        sjt_call29._refCount = 1;
+#line 8 "test2.sj"
+        sjt_call29.offset = 0;
+#line 8
+        sjt_call29.count = 7;
+#line 8
+        sjt_call29.data._refCount = 1;
+#line 8
+        sjt_call29.data.v = &sjg_string5;
+#line 8
+        sjf_array_char(&sjt_call29.data);
 #line 16 "lib/sj-lib-common/string.sj"
-    sjt_call59._isnullterminated = false;
+        sjt_call29._isnullterminated = false;
 #line 16
-    sjf_string(&sjt_call59);
-#line 15 "test1.sj"
-    sjt_functionParam179 = &sjt_call59;
-#line 15
-    sjf_test(sjt_functionParam179);
-#line 15
-    sjt_call60._refCount = 1;
-#line 16
-    sjt_call60.offset = 0;
-#line 16
-    sjt_call60.count = 19;
-#line 16
-    sjt_call60.data._refCount = 1;
-#line 16
-    sjt_call60.data.v = &sjg_string16;
-#line 16
-    sjf_array_char(&sjt_call60.data);
+        sjf_string(&sjt_call29);
+#line 8 "test2.sj"
+        sjt_functionParam135 = &sjt_call29;
+#line 8
+        sjf_json_value_getat(sjt_parent68, sjt_functionParam135, &sjt_call28);
+        if ((sjt_call28._refCount != -1 ? &sjt_call28 : 0) != 0) {
+            sjs_json_value* sjt_capture55 = 0;
+            sjs_string* sjt_functionParam136 = 0;
+            sjs_json_value* sjt_parent69 = 0;
+
+#line 7 "lib/sj-lib-json/value.sj"
+            sjt_parent69 = ifValue1;
+#line 7
+            sjt_call31._refCount = 1;
+#line 8 "test2.sj"
+            sjt_call31.offset = 0;
+#line 8
+            sjt_call31.count = 7;
+#line 8
+            sjt_call31.data._refCount = 1;
+#line 8
+            sjt_call31.data.v = &sjg_string5;
+#line 8
+            sjf_array_char(&sjt_call31.data);
 #line 16 "lib/sj-lib-common/string.sj"
-    sjt_call60._isnullterminated = false;
+            sjt_call31._isnullterminated = false;
 #line 16
-    sjf_string(&sjt_call60);
-#line 16 "test1.sj"
-    sjt_functionParam180 = &sjt_call60;
-#line 16
-    sjf_test(sjt_functionParam180);
-#line 16
-    sjt_call61._refCount = 1;
-#line 17
-    sjt_call61.offset = 0;
-#line 17
-    sjt_call61.count = 32;
-#line 17
-    sjt_call61.data._refCount = 1;
-#line 17
-    sjt_call61.data.v = &sjg_string17;
-#line 17
-    sjf_array_char(&sjt_call61.data);
+            sjf_string(&sjt_call31);
+#line 8 "test2.sj"
+            sjt_functionParam136 = &sjt_call31;
+#line 8
+            sjf_json_value_getat(sjt_parent69, sjt_functionParam136, &sjt_call30);
+#line 8
+            sjt_capture55 = (sjt_call30._refCount != -1 ? &sjt_call30 : 0);
+#line 8
+            sjt_capture54 = (sjt_capture55->a._refCount != -1 ? &sjt_capture55->a : 0);
+        } else {
+#line 8 "test2.sj"
+            sjt_capture54 = 0;
+        }
+
+        if (sjt_capture54 != 0) {
+            sjs_string* sjt_functionParam137 = 0;
+            int32_t sjt_functionParam139;
+            sjs_array_value* sjt_parent70 = 0;
+            sjs_json_value* sjt_parent71 = 0;
+            sjs_json_value* sjt_value6 = 0;
+
+#line 7 "lib/sj-lib-json/value.sj"
+            sjt_parent71 = ifValue1;
+#line 7
+            sjt_call34._refCount = 1;
+#line 8 "test2.sj"
+            sjt_call34.offset = 0;
+#line 8
+            sjt_call34.count = 7;
+#line 8
+            sjt_call34.data._refCount = 1;
+#line 8
+            sjt_call34.data.v = &sjg_string5;
+#line 8
+            sjf_array_char(&sjt_call34.data);
 #line 16 "lib/sj-lib-common/string.sj"
-    sjt_call61._isnullterminated = false;
+            sjt_call34._isnullterminated = false;
 #line 16
-    sjf_string(&sjt_call61);
-#line 17 "test1.sj"
-    sjt_functionParam181 = &sjt_call61;
-#line 17
-    sjf_test(sjt_functionParam181);
-#line 17
-    sjt_call62._refCount = 1;
-#line 18
-    sjt_call62.offset = 0;
-#line 18
-    sjt_call62.count = 300;
-#line 18
-    sjt_call62.data._refCount = 1;
-#line 18
-    sjt_call62.data.v = &sjg_string18;
-#line 18
-    sjf_array_char(&sjt_call62.data);
+            sjf_string(&sjt_call34);
+#line 8 "test2.sj"
+            sjt_functionParam137 = &sjt_call34;
+#line 8
+            sjf_json_value_getat(sjt_parent71, sjt_functionParam137, &sjt_call33);
+            if ((sjt_call33._refCount != -1 ? &sjt_call33 : 0) != 0) {
+                sjs_json_value* sjt_capture56 = 0;
+                sjs_string* sjt_functionParam138 = 0;
+                sjs_json_value* sjt_parent72 = 0;
+
+#line 7 "lib/sj-lib-json/value.sj"
+                sjt_parent72 = ifValue1;
+#line 7
+                sjt_call36._refCount = 1;
+#line 8 "test2.sj"
+                sjt_call36.offset = 0;
+#line 8
+                sjt_call36.count = 7;
+#line 8
+                sjt_call36.data._refCount = 1;
+#line 8
+                sjt_call36.data.v = &sjg_string5;
+#line 8
+                sjf_array_char(&sjt_call36.data);
 #line 16 "lib/sj-lib-common/string.sj"
-    sjt_call62._isnullterminated = false;
+                sjt_call36._isnullterminated = false;
 #line 16
-    sjf_string(&sjt_call62);
-#line 18 "test1.sj"
-    sjt_functionParam182 = &sjt_call62;
-#line 18
-    sjf_test(sjt_functionParam182);
-#line 18
-    sjt_call63._refCount = 1;
-#line 19
-    sjt_call63.offset = 0;
-#line 19
-    sjt_call63.count = 369;
-#line 19
-    sjt_call63.data._refCount = 1;
-#line 19
-    sjt_call63.data.v = &sjg_string19;
-#line 19
-    sjf_array_char(&sjt_call63.data);
+                sjf_string(&sjt_call36);
+#line 8 "test2.sj"
+                sjt_functionParam138 = &sjt_call36;
+#line 8
+                sjf_json_value_getat(sjt_parent72, sjt_functionParam138, &sjt_call35);
+#line 8
+                sjt_capture56 = (sjt_call35._refCount != -1 ? &sjt_call35 : 0);
+#line 41 "lib/sj-lib-common/array.sj"
+                sjt_parent70 = (sjt_capture56->a._refCount != -1 ? &sjt_capture56->a : 0);
+            } else {
+#line 8 "test2.sj"
+                sjt_parent70 = 0;
+            }
+
+#line 8
+            sjt_functionParam139 = 0;
+#line 8
+            sjf_array_value_getat(sjt_parent70, sjt_functionParam139, &sjt_call32);
+#line 8
+            sjt_value6 = &sjt_call32;
+#line 8
+            sjt_capture53 = sjt_value6;
+        } else {
+#line 8 "test2.sj"
+            sjt_capture53 = 0;
+        }
+
+        if (sjt_capture53 != 0) {
+            sjs_array_value* sjt_capture57 = 0;
+            sjs_string* sjt_functionParam140 = 0;
+            sjs_json_value* sjt_parent73 = 0;
+
+#line 7 "lib/sj-lib-json/value.sj"
+            sjt_parent73 = ifValue1;
+#line 7
+            sjt_call38._refCount = 1;
+#line 8 "test2.sj"
+            sjt_call38.offset = 0;
+#line 8
+            sjt_call38.count = 7;
+#line 8
+            sjt_call38.data._refCount = 1;
+#line 8
+            sjt_call38.data.v = &sjg_string5;
+#line 8
+            sjf_array_char(&sjt_call38.data);
 #line 16 "lib/sj-lib-common/string.sj"
-    sjt_call63._isnullterminated = false;
+            sjt_call38._isnullterminated = false;
 #line 16
-    sjf_string(&sjt_call63);
-#line 19 "test1.sj"
-    sjt_functionParam183 = &sjt_call63;
-#line 19
-    sjf_test(sjt_functionParam183);
+            sjf_string(&sjt_call38);
+#line 8 "test2.sj"
+            sjt_functionParam140 = &sjt_call38;
+#line 8
+            sjf_json_value_getat(sjt_parent73, sjt_functionParam140, &sjt_call37);
+            if ((sjt_call37._refCount != -1 ? &sjt_call37 : 0) != 0) {
+                sjs_json_value* sjt_capture58 = 0;
+                sjs_string* sjt_functionParam141 = 0;
+                sjs_json_value* sjt_parent74 = 0;
+
+#line 7 "lib/sj-lib-json/value.sj"
+                sjt_parent74 = ifValue1;
+#line 7
+                sjt_call40._refCount = 1;
+#line 8 "test2.sj"
+                sjt_call40.offset = 0;
+#line 8
+                sjt_call40.count = 7;
+#line 8
+                sjt_call40.data._refCount = 1;
+#line 8
+                sjt_call40.data.v = &sjg_string5;
+#line 8
+                sjf_array_char(&sjt_call40.data);
+#line 16 "lib/sj-lib-common/string.sj"
+                sjt_call40._isnullterminated = false;
+#line 16
+                sjf_string(&sjt_call40);
+#line 8 "test2.sj"
+                sjt_functionParam141 = &sjt_call40;
+#line 8
+                sjf_json_value_getat(sjt_parent74, sjt_functionParam141, &sjt_call39);
+#line 8
+                sjt_capture58 = (sjt_call39._refCount != -1 ? &sjt_call39 : 0);
+#line 8
+                sjt_capture57 = (sjt_capture58->a._refCount != -1 ? &sjt_capture58->a : 0);
+            } else {
+#line 8 "test2.sj"
+                sjt_capture57 = 0;
+            }
+
+            if (sjt_capture57 != 0) {
+                sjs_string* sjt_functionParam142 = 0;
+                int32_t sjt_functionParam144;
+                sjs_array_value* sjt_parent75 = 0;
+                sjs_json_value* sjt_parent76 = 0;
+                sjs_json_value* sjt_value7 = 0;
+
+#line 7 "lib/sj-lib-json/value.sj"
+                sjt_parent76 = ifValue1;
+#line 7
+                sjt_call43._refCount = 1;
+#line 8 "test2.sj"
+                sjt_call43.offset = 0;
+#line 8
+                sjt_call43.count = 7;
+#line 8
+                sjt_call43.data._refCount = 1;
+#line 8
+                sjt_call43.data.v = &sjg_string5;
+#line 8
+                sjf_array_char(&sjt_call43.data);
+#line 16 "lib/sj-lib-common/string.sj"
+                sjt_call43._isnullterminated = false;
+#line 16
+                sjf_string(&sjt_call43);
+#line 8 "test2.sj"
+                sjt_functionParam142 = &sjt_call43;
+#line 8
+                sjf_json_value_getat(sjt_parent76, sjt_functionParam142, &sjt_call42);
+                if ((sjt_call42._refCount != -1 ? &sjt_call42 : 0) != 0) {
+                    sjs_json_value* sjt_capture59 = 0;
+                    sjs_string* sjt_functionParam143 = 0;
+                    sjs_json_value* sjt_parent77 = 0;
+
+#line 7 "lib/sj-lib-json/value.sj"
+                    sjt_parent77 = ifValue1;
+#line 7
+                    sjt_call45._refCount = 1;
+#line 8 "test2.sj"
+                    sjt_call45.offset = 0;
+#line 8
+                    sjt_call45.count = 7;
+#line 8
+                    sjt_call45.data._refCount = 1;
+#line 8
+                    sjt_call45.data.v = &sjg_string5;
+#line 8
+                    sjf_array_char(&sjt_call45.data);
+#line 16 "lib/sj-lib-common/string.sj"
+                    sjt_call45._isnullterminated = false;
+#line 16
+                    sjf_string(&sjt_call45);
+#line 8 "test2.sj"
+                    sjt_functionParam143 = &sjt_call45;
+#line 8
+                    sjf_json_value_getat(sjt_parent77, sjt_functionParam143, &sjt_call44);
+#line 8
+                    sjt_capture59 = (sjt_call44._refCount != -1 ? &sjt_call44 : 0);
+#line 41 "lib/sj-lib-common/array.sj"
+                    sjt_parent75 = (sjt_capture59->a._refCount != -1 ? &sjt_capture59->a : 0);
+                } else {
+#line 8 "test2.sj"
+                    sjt_parent75 = 0;
+                }
+
+#line 8
+                sjt_functionParam144 = 0;
+#line 8
+                sjf_array_value_getat(sjt_parent75, sjt_functionParam144, &sjt_call41);
+#line 8
+                sjt_value7 = &sjt_call41;
+#line 8
+                sjt_parent67 = sjt_value7;
+            } else {
+#line 8 "test2.sj"
+                sjt_parent67 = 0;
+            }
+        } else {
+            sjt_call46._refCount = 1;
+#line 3 "lib/sj-lib-json/value.sj"
+            sjt_call46.s._refCount = -1;
+#line 4
+            sjt_call46.a._refCount = -1;
+#line 5
+            sjt_call46.h._refCount = -1;
+#line 5
+            sjf_json_value(&sjt_call46);
+#line 8 "test2.sj"
+            sjt_parent67 = &sjt_call46;
+        }
+
+#line 8
+        sjf_json_value_asstring(sjt_parent67, &sjt_call27);
+#line 8
+        sjt_functionParam134 = &sjt_call27;
+#line 8
+        sjf_debug_writeline(sjt_functionParam134);
+#line 7 "lib/sj-lib-json/value.sj"
+        sjt_parent101 = ifValue1;
+#line 7
+        sjt_call53._refCount = 1;
+#line 9 "test2.sj"
+        sjt_call53.offset = 0;
+#line 9
+        sjt_call53.count = 7;
+#line 9
+        sjt_call53.data._refCount = 1;
+#line 9
+        sjt_call53.data.v = &sjg_string5;
+#line 9
+        sjf_array_char(&sjt_call53.data);
+#line 16 "lib/sj-lib-common/string.sj"
+        sjt_call53._isnullterminated = false;
+#line 16
+        sjf_string(&sjt_call53);
+#line 9 "test2.sj"
+        sjt_functionParam170 = &sjt_call53;
+#line 9
+        sjf_json_value_getat(sjt_parent101, sjt_functionParam170, &sjt_call52);
+        if ((sjt_call52._refCount != -1 ? &sjt_call52 : 0) != 0) {
+            sjs_json_value* sjt_capture67 = 0;
+            sjs_string* sjt_functionParam171 = 0;
+            sjs_json_value* sjt_parent102 = 0;
+
+#line 7 "lib/sj-lib-json/value.sj"
+            sjt_parent102 = ifValue1;
+#line 7
+            sjt_call55._refCount = 1;
+#line 9 "test2.sj"
+            sjt_call55.offset = 0;
+#line 9
+            sjt_call55.count = 7;
+#line 9
+            sjt_call55.data._refCount = 1;
+#line 9
+            sjt_call55.data.v = &sjg_string5;
+#line 9
+            sjf_array_char(&sjt_call55.data);
+#line 16 "lib/sj-lib-common/string.sj"
+            sjt_call55._isnullterminated = false;
+#line 16
+            sjf_string(&sjt_call55);
+#line 9 "test2.sj"
+            sjt_functionParam171 = &sjt_call55;
+#line 9
+            sjf_json_value_getat(sjt_parent102, sjt_functionParam171, &sjt_call54);
+#line 9
+            sjt_capture67 = (sjt_call54._refCount != -1 ? &sjt_call54 : 0);
+#line 9
+            sjt_capture66 = (sjt_capture67->a._refCount != -1 ? &sjt_capture67->a : 0);
+        } else {
+#line 9 "test2.sj"
+            sjt_capture66 = 0;
+        }
+
+        if (sjt_capture66 != 0) {
+            sjs_string* sjt_functionParam172 = 0;
+            sjs_json_value* sjt_parent103 = 0;
+
+#line 7 "lib/sj-lib-json/value.sj"
+            sjt_parent103 = ifValue1;
+#line 7
+            sjt_call57._refCount = 1;
+#line 9 "test2.sj"
+            sjt_call57.offset = 0;
+#line 9
+            sjt_call57.count = 7;
+#line 9
+            sjt_call57.data._refCount = 1;
+#line 9
+            sjt_call57.data.v = &sjg_string5;
+#line 9
+            sjf_array_char(&sjt_call57.data);
+#line 16 "lib/sj-lib-common/string.sj"
+            sjt_call57._isnullterminated = false;
+#line 16
+            sjf_string(&sjt_call57);
+#line 9 "test2.sj"
+            sjt_functionParam172 = &sjt_call57;
+#line 9
+            sjf_json_value_getat(sjt_parent103, sjt_functionParam172, &sjt_call56);
+            if ((sjt_call56._refCount != -1 ? &sjt_call56 : 0) != 0) {
+                sjs_json_value* sjt_capture68 = 0;
+                sjs_string* sjt_functionParam173 = 0;
+                sjs_json_value* sjt_parent104 = 0;
+
+#line 7 "lib/sj-lib-json/value.sj"
+                sjt_parent104 = ifValue1;
+#line 7
+                sjt_call59._refCount = 1;
+#line 9 "test2.sj"
+                sjt_call59.offset = 0;
+#line 9
+                sjt_call59.count = 7;
+#line 9
+                sjt_call59.data._refCount = 1;
+#line 9
+                sjt_call59.data.v = &sjg_string5;
+#line 9
+                sjf_array_char(&sjt_call59.data);
+#line 16 "lib/sj-lib-common/string.sj"
+                sjt_call59._isnullterminated = false;
+#line 16
+                sjf_string(&sjt_call59);
+#line 9 "test2.sj"
+                sjt_functionParam173 = &sjt_call59;
+#line 9
+                sjf_json_value_getat(sjt_parent104, sjt_functionParam173, &sjt_call58);
+#line 9
+                sjt_capture68 = (sjt_call58._refCount != -1 ? &sjt_call58 : 0);
+#line 294 "lib/sj-lib-common/array.sj"
+                sjt_parent100 = (sjt_capture68->a._refCount != -1 ? &sjt_capture68->a : 0);
+            } else {
+#line 9 "test2.sj"
+                sjt_parent100 = 0;
+            }
+        } else {
+            sjt_call60._refCount = 1;
+#line 27 "lib/sj-lib-common/array.sj"
+            sjt_call60.v = 0;
+#line 27
+            sjf_array_value(&sjt_call60);
+#line 9 "test2.sj"
+            sjt_parent100 = &sjt_call60;
+        }
+
+#line 9
+        sjt_call61._refCount = 1;
+#line 294 "lib/sj-lib-common/array.sj"
+        sjt_call61.offset = 0;
+#line 294
+        sjt_call61.count = 2;
+#line 294
+        sjt_call61.data._refCount = 1;
+#line 294
+        sjt_call61.data.v = &sjg_string6;
+#line 294
+        sjf_array_char(&sjt_call61.data);
+#line 16 "lib/sj-lib-common/string.sj"
+        sjt_call61._isnullterminated = false;
+#line 16
+        sjf_string(&sjt_call61);
+#line 294 "lib/sj-lib-common/array.sj"
+        sjt_functionParam174 = &sjt_call61;
+#line 294
+        sjf_array_value_asstring(sjt_parent100, sjt_functionParam174, &sjt_call47);
+#line 9 "test2.sj"
+        sjt_functionParam145 = &sjt_call47;
+#line 9
+        sjf_debug_writeline(sjt_functionParam145);
+        if ((ifValue1->h._refCount != -1 ? &ifValue1->h : 0) != 0) {
+            cb_string_value_void sjt_functionParam175;
+            sjs_hash_string_value* sjt_parent105 = 0;
+
+#line 96 "lib/sj-lib-common/hash.sj"
+            sjt_parent105 = (ifValue1->h._refCount != -1 ? &ifValue1->h : 0);
+#line 10 "test2.sj"
+            sjs_lambda6* lambainit1;
+#line 10
+            sjt_call62._refCount = 1;
+#line 10
+            sjf_lambda6(&sjt_call62);
+#line 10
+            lambainit1 = &sjt_call62;
+#line 10
+            sjt_functionParam175._parent = (sjs_object*)lambainit1;
+#line 10
+            sjt_functionParam175._cb = (void(*)(sjs_object*,sjs_string*,sjs_json_value*))sjf_lambda6_invoke;
+#line 10
+            sjf_hash_string_value_each(sjt_parent105, sjt_functionParam175);
+        }
+
+#line 7 "lib/sj-lib-json/value.sj"
+        sjt_parent149 = ifValue1;
+#line 7
+        sjt_call115._refCount = 1;
+#line 13 "test2.sj"
+        sjt_call115.offset = 0;
+#line 13
+        sjt_call115.count = 7;
+#line 13
+        sjt_call115.data._refCount = 1;
+#line 13
+        sjt_call115.data.v = &sjg_string5;
+#line 13
+        sjf_array_char(&sjt_call115.data);
+#line 16 "lib/sj-lib-common/string.sj"
+        sjt_call115._isnullterminated = false;
+#line 16
+        sjf_string(&sjt_call115);
+#line 13 "test2.sj"
+        sjt_functionParam223 = &sjt_call115;
+#line 13
+        sjf_json_value_getat(sjt_parent149, sjt_functionParam223, &sjt_call114);
+        if ((sjt_call114._refCount != -1 ? &sjt_call114 : 0) != 0) {
+            sjs_json_value* sjt_capture73 = 0;
+            sjs_string* sjt_functionParam224 = 0;
+            sjs_json_value* sjt_parent150 = 0;
+
+#line 7 "lib/sj-lib-json/value.sj"
+            sjt_parent150 = ifValue1;
+#line 7
+            sjt_call117._refCount = 1;
+#line 13 "test2.sj"
+            sjt_call117.offset = 0;
+#line 13
+            sjt_call117.count = 7;
+#line 13
+            sjt_call117.data._refCount = 1;
+#line 13
+            sjt_call117.data.v = &sjg_string5;
+#line 13
+            sjf_array_char(&sjt_call117.data);
+#line 16 "lib/sj-lib-common/string.sj"
+            sjt_call117._isnullterminated = false;
+#line 16
+            sjf_string(&sjt_call117);
+#line 13 "test2.sj"
+            sjt_functionParam224 = &sjt_call117;
+#line 13
+            sjf_json_value_getat(sjt_parent150, sjt_functionParam224, &sjt_call116);
+#line 13
+            sjt_capture73 = (sjt_call116._refCount != -1 ? &sjt_call116 : 0);
+#line 13
+            sjt_capture72 = (sjt_capture73->a._refCount != -1 ? &sjt_capture73->a : 0);
+        } else {
+#line 13 "test2.sj"
+            sjt_capture72 = 0;
+        }
+
+        if (sjt_capture72 != 0) {
+            sjs_string* sjt_functionParam227 = 0;
+            cb_value_void sjt_functionParam229;
+            sjs_array_value* sjt_parent151 = 0;
+            sjs_json_value* sjt_parent152 = 0;
+
+#line 7 "lib/sj-lib-json/value.sj"
+            sjt_parent152 = ifValue1;
+#line 7
+            sjt_call120._refCount = 1;
+#line 13 "test2.sj"
+            sjt_call120.offset = 0;
+#line 13
+            sjt_call120.count = 7;
+#line 13
+            sjt_call120.data._refCount = 1;
+#line 13
+            sjt_call120.data.v = &sjg_string5;
+#line 13
+            sjf_array_char(&sjt_call120.data);
+#line 16 "lib/sj-lib-common/string.sj"
+            sjt_call120._isnullterminated = false;
+#line 16
+            sjf_string(&sjt_call120);
+#line 13 "test2.sj"
+            sjt_functionParam227 = &sjt_call120;
+#line 13
+            sjf_json_value_getat(sjt_parent152, sjt_functionParam227, &sjt_call119);
+            if ((sjt_call119._refCount != -1 ? &sjt_call119 : 0) != 0) {
+                sjs_json_value* sjt_capture74 = 0;
+                sjs_string* sjt_functionParam228 = 0;
+                sjs_json_value* sjt_parent153 = 0;
+
+#line 7 "lib/sj-lib-json/value.sj"
+                sjt_parent153 = ifValue1;
+#line 7
+                sjt_call122._refCount = 1;
+#line 13 "test2.sj"
+                sjt_call122.offset = 0;
+#line 13
+                sjt_call122.count = 7;
+#line 13
+                sjt_call122.data._refCount = 1;
+#line 13
+                sjt_call122.data.v = &sjg_string5;
+#line 13
+                sjf_array_char(&sjt_call122.data);
+#line 16 "lib/sj-lib-common/string.sj"
+                sjt_call122._isnullterminated = false;
+#line 16
+                sjf_string(&sjt_call122);
+#line 13 "test2.sj"
+                sjt_functionParam228 = &sjt_call122;
+#line 13
+                sjf_json_value_getat(sjt_parent153, sjt_functionParam228, &sjt_call121);
+#line 13
+                sjt_capture74 = (sjt_call121._refCount != -1 ? &sjt_call121 : 0);
+#line 108 "lib/sj-lib-common/array.sj"
+                sjt_parent151 = (sjt_capture74->a._refCount != -1 ? &sjt_capture74->a : 0);
+            } else {
+#line 13 "test2.sj"
+                sjt_parent151 = 0;
+            }
+
+#line 13
+            sjs_lambda7* lambainit8;
+#line 13
+            sjt_call123._refCount = 1;
+#line 13
+            sjf_lambda7(&sjt_call123);
+#line 13
+            lambainit8 = &sjt_call123;
+#line 13
+            sjt_functionParam229._parent = (sjs_object*)lambainit8;
+#line 13
+            sjt_functionParam229._cb = (void(*)(sjs_object*,sjs_json_value*))sjf_lambda7_invoke;
+#line 13
+            sjf_array_value_each(sjt_parent151, sjt_functionParam229);
+        }
+
+        if (g_t._refCount == 1) { sjf_json_value_destroy(&g_t); }
+;
+        if (sjt_call10._refCount == 1) { sjf_json_value_destroy(&sjt_call10); }
+;
+        if (sjt_call11._refCount == 1) { sjf_string_destroy(&sjt_call11); }
+;
+        if (sjt_call114._refCount == 1) { sjf_json_value_destroy(&sjt_call114); }
+;
+        if (sjt_call115._refCount == 1) { sjf_string_destroy(&sjt_call115); }
+;
+        if (sjt_call116._refCount == 1) { sjf_json_value_destroy(&sjt_call116); }
+;
+        if (sjt_call117._refCount == 1) { sjf_string_destroy(&sjt_call117); }
+;
+        if (sjt_call119._refCount == 1) { sjf_json_value_destroy(&sjt_call119); }
+;
+        if (sjt_call12._refCount == 1) { sjf_json_value_destroy(&sjt_call12); }
+;
+        if (sjt_call120._refCount == 1) { sjf_string_destroy(&sjt_call120); }
+;
+        if (sjt_call121._refCount == 1) { sjf_json_value_destroy(&sjt_call121); }
+;
+        if (sjt_call122._refCount == 1) { sjf_string_destroy(&sjt_call122); }
+;
+        if (sjt_call123._refCount == 1) { sjf_lambda7_destroy(&sjt_call123); }
+;
+        if (sjt_call13._refCount == 1) { sjf_json_value_destroy(&sjt_call13); }
+;
+        if (sjt_call14._refCount == 1) { sjf_string_destroy(&sjt_call14); }
+;
+        if (sjt_call15._refCount == 1) { sjf_json_value_destroy(&sjt_call15); }
+;
+        if (sjt_call16._refCount == 1) { sjf_string_destroy(&sjt_call16); }
+;
+        if (sjt_call17._refCount == 1) { sjf_json_value_destroy(&sjt_call17); }
+;
+        if (sjt_call18._refCount == 1) { sjf_string_destroy(&sjt_call18); }
+;
+        if (sjt_call19._refCount == 1) { sjf_json_value_destroy(&sjt_call19); }
+;
+        if (sjt_call20._refCount == 1) { sjf_string_destroy(&sjt_call20); }
+;
+        if (sjt_call21._refCount == 1) { sjf_json_value_destroy(&sjt_call21); }
+;
+        if (sjt_call22._refCount == 1) { sjf_string_destroy(&sjt_call22); }
+;
+        if (sjt_call23._refCount == 1) { sjf_json_value_destroy(&sjt_call23); }
+;
+        if (sjt_call24._refCount == 1) { sjf_string_destroy(&sjt_call24); }
+;
+        if (sjt_call25._refCount == 1) { sjf_string_destroy(&sjt_call25); }
+;
+        if (sjt_call26._refCount == 1) { sjf_string_destroy(&sjt_call26); }
+;
+        if (sjt_call27._refCount == 1) { sjf_string_destroy(&sjt_call27); }
+;
+        if (sjt_call28._refCount == 1) { sjf_json_value_destroy(&sjt_call28); }
+;
+        if (sjt_call29._refCount == 1) { sjf_string_destroy(&sjt_call29); }
+;
+        if (sjt_call30._refCount == 1) { sjf_json_value_destroy(&sjt_call30); }
+;
+        if (sjt_call31._refCount == 1) { sjf_string_destroy(&sjt_call31); }
+;
+        if (sjt_call32._refCount == 1) { sjf_json_value_destroy(&sjt_call32); }
+;
+        if (sjt_call33._refCount == 1) { sjf_json_value_destroy(&sjt_call33); }
+;
+        if (sjt_call34._refCount == 1) { sjf_string_destroy(&sjt_call34); }
+;
+        if (sjt_call35._refCount == 1) { sjf_json_value_destroy(&sjt_call35); }
+;
+        if (sjt_call36._refCount == 1) { sjf_string_destroy(&sjt_call36); }
+;
+        if (sjt_call37._refCount == 1) { sjf_json_value_destroy(&sjt_call37); }
+;
+        if (sjt_call38._refCount == 1) { sjf_string_destroy(&sjt_call38); }
+;
+        if (sjt_call39._refCount == 1) { sjf_json_value_destroy(&sjt_call39); }
+;
+        if (sjt_call40._refCount == 1) { sjf_string_destroy(&sjt_call40); }
+;
+        if (sjt_call41._refCount == 1) { sjf_json_value_destroy(&sjt_call41); }
+;
+        if (sjt_call42._refCount == 1) { sjf_json_value_destroy(&sjt_call42); }
+;
+        if (sjt_call43._refCount == 1) { sjf_string_destroy(&sjt_call43); }
+;
+        if (sjt_call44._refCount == 1) { sjf_json_value_destroy(&sjt_call44); }
+;
+        if (sjt_call45._refCount == 1) { sjf_string_destroy(&sjt_call45); }
+;
+        if (sjt_call46._refCount == 1) { sjf_json_value_destroy(&sjt_call46); }
+;
+        if (sjt_call47._refCount == 1) { sjf_string_destroy(&sjt_call47); }
+;
+        if (sjt_call52._refCount == 1) { sjf_json_value_destroy(&sjt_call52); }
+;
+        if (sjt_call53._refCount == 1) { sjf_string_destroy(&sjt_call53); }
+;
+        if (sjt_call54._refCount == 1) { sjf_json_value_destroy(&sjt_call54); }
+;
+        if (sjt_call55._refCount == 1) { sjf_string_destroy(&sjt_call55); }
+;
+        if (sjt_call56._refCount == 1) { sjf_json_value_destroy(&sjt_call56); }
+;
+        if (sjt_call57._refCount == 1) { sjf_string_destroy(&sjt_call57); }
+;
+        if (sjt_call58._refCount == 1) { sjf_json_value_destroy(&sjt_call58); }
+;
+        if (sjt_call59._refCount == 1) { sjf_string_destroy(&sjt_call59); }
+;
+        if (sjt_call60._refCount == 1) { sjf_array_value_destroy(&sjt_call60); }
+;
+        if (sjt_call61._refCount == 1) { sjf_string_destroy(&sjt_call61); }
+;
+        if (sjt_call62._refCount == 1) { sjf_lambda6_destroy(&sjt_call62); }
+;
+        if (sjt_call8._refCount == 1) { sjf_json_value_destroy(&sjt_call8); }
+;
+        if (sjt_call9._refCount == 1) { sjf_string_destroy(&sjt_call9); }
+;
+        if (sjt_value5._refCount == 1) { sjf_json_value_destroy(&sjt_value5); }
+;
+    }
     main_destroy();
     return 0;
 }
@@ -5899,27 +7410,15 @@ void main_destroy() {
 
     if (g_allthespaces._refCount == 1) { sjf_string_destroy(&g_allthespaces); }
 ;
+    if (g_data._refCount == 1) { sjf_json_value_destroy(&g_data); }
+;
     if (g_log._refCount == 1) { sjf_log_destroy(&g_log); }
 ;
     if (g_log_excludeall._refCount == 1) { sjf_hash_type_bool_destroy(&g_log_excludeall); }
 ;
     if (g_log_includeall._refCount == 1) { sjf_hash_type_bool_destroy(&g_log_includeall); }
 ;
-    if (sjt_call56._refCount == 1) { sjf_string_destroy(&sjt_call56); }
-;
-    if (sjt_call57._refCount == 1) { sjf_string_destroy(&sjt_call57); }
-;
-    if (sjt_call58._refCount == 1) { sjf_string_destroy(&sjt_call58); }
-;
-    if (sjt_call59._refCount == 1) { sjf_string_destroy(&sjt_call59); }
-;
-    if (sjt_call60._refCount == 1) { sjf_string_destroy(&sjt_call60); }
-;
-    if (sjt_call61._refCount == 1) { sjf_string_destroy(&sjt_call61); }
-;
-    if (sjt_call62._refCount == 1) { sjf_string_destroy(&sjt_call62); }
-;
-    if (sjt_call63._refCount == 1) { sjf_string_destroy(&sjt_call63); }
+    if (sjt_call7._refCount == 1) { sjf_string_destroy(&sjt_call7); }
 ;
     if (sjt_value1._refCount == 1) { sjf_hash_type_bool_destroy(&sjt_value1); }
 ;
